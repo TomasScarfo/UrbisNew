@@ -67,7 +67,7 @@ export default {
 #intro {
   background-color:gainsboro;
   width: 36%;
-  margin-left: 100px;
+  margin-left: 180px;
   padding-top: 2%;
   padding-bottom: 2%;
   text-align: center;
@@ -133,7 +133,7 @@ export default {
 }
 .box-tasvir{
   width: 600px;
-  margin-left: 365px;
+  margin-left: 310px;
 }
 .box-tasvir img{
   width: 200px;
