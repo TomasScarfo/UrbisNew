@@ -31,10 +31,20 @@ export default {
 
 </script>
 
+
+
 <style scoped>
 
+<<<<<<< HEAD
 #encab{
   height: 178px;
+=======
+.icon {
+  padding: 10px;
+  margin: 10px;
+  width: 180px;
+  float: right;
+>>>>>>> a7fe228c53f128b10b38a1f201cf1b20e214fda1
 }
 
 .icon-2 {

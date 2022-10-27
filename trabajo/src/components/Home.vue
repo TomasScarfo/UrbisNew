@@ -64,6 +64,7 @@ export default {
 </script>
 
 <style scoped>
+
 #intro {
   background-color:gainsboro;
   width: 36%;
