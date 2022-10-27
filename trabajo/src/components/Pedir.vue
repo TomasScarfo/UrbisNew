@@ -1,0 +1,146 @@
+<template>
+  <h1>HAGA SU PEDIDO</h1>
+
+  <hr>
+
+  <form enctype="text/plain" id="form">
+
+    <table border="8" style="margin: 0 auto;">
+      <tbody>
+      <tr>
+        <td>Nombre y apellido</td>
+        <td>
+          <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
+        </td>
+      </tr>
+
+      <tr>
+        <td>Teléfono</td>
+        <td>
+          <input type="tel" name="telefono" id="" maxlength="10">
+        </td>
+      </tr>
+      <tr>
+        <td>Modo de Entrega</td>
+        <td>
+          <input type="radio" name="modo" id="" value="Takeaway">Takeaway
+          <input type="radio" name="modo" id="" value="Delivery">Delivery
+        </td>
+      </tr>
+      <tr>
+        <td>¿Qué desea encargar?</td>
+        <td>
+          Entrada <select name="entrada" id="" v-model="entrada">
+          <option value="-">-</option>
+          <option value="Rabas">Rabas</option>
+          <option value="Tortilla">Tortilla</option>
+          <option value="Buñuelos">Buñuelos</option>
+          <option value="Burrata">Burrata</option>
+        </select>
+          <br>
+          Plato principal <select name="princi" id="" v-model="plato">
+          <option value="-">-</option>
+          <option value="Milanesa">Milanesa</option>
+          <option value="Fideos">Fideos</option>
+          <option value="Carne al horno">Carne al horno</option>
+          <option value="Ñoquis">Ñoquis</option>
+        </select>
+          <br>
+          Postre <select name="postre" id="" v-model="postre">
+          <option value="-">-</option>
+          <option value="Ensalada de fruta">Ensalada de fruta</option>
+          <option value="Flan">Flan</option>
+          <option value="Helado">Helado</option>
+          <option value="Tiramisu">Tiramisu</option>
+        </select>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          <p>Horario de Entrega</p>
+        </td>
+        <td>
+          <input type="time" name="fecha" id="" v-model="horaEntrega">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <br><br>
+    <footer id="footer">
+      <input type="" value="Enviar" v-model="listaPedidos.appendData(['{{ plato }}'])">
+      <input type="" value="Limpiar">
+    </footer>
+  </form>
+
+  <br/>
+  <br/>
+
+  <div>
+    <h1>Hola {{ nombre }}! Este es el resumen de tu Pedido</h1>
+    <h3> Entrada: {{ entrada }}</h3>
+    <h3> Plato principal: {{ plato }}</h3>
+    <h3> Postre: {{ postre }}</h3>
+    <h3>Horario de entrega: {{ horaEntrega }}</h3>
+
+  </div>
+
+</template>
+
+<script>
+export default {
+  name: "Pedir-tag",
+  data() {
+    return {
+      horaEntrega: "",
+      nombre: "",
+      entrada : "",
+      plato: "",
+      postre: "",
+    }
+  }
+}
+</script>
+
+<style scoped>
+body{
+  text-align: center;
+  /*background-image: url('img/fondo.jpg');*/
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#form {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+}
+
+#form th,
+#form td {
+  padding: 12px 15px;
+}
+
+#form tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#form tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+#form tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+hr{
+  border:#1e253d solid 1px;
+}
+
+footer{
+  text-align: center;
+}
+</style>
