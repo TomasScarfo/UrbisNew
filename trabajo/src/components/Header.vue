@@ -30,7 +30,10 @@ export default {
 
 </script>
 
+
+
 <style scoped>
+
 .icon {
   padding: 10px;
   margin: 10px;

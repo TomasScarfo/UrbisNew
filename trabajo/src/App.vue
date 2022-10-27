@@ -1,4 +1,5 @@
 <template>
+  <div id="all">
   <div id="header-div">
     <Header/>
     <br/>
@@ -10,10 +11,11 @@
   <br/>
 
   <div id="components">
-    <Home v-if="menu.home" v-on:menuEvent="selectedOption()"/>
+    <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
     <Pedir v-if="menu.pedidos"/>
 
+  </div>
   </div>
 
 </template>
@@ -42,25 +44,27 @@ export default {
         home: true,
         carta: false,
         pedidos: false,
+        preguntas: false,
         redes: false,
-        preguntas: false
       }
     }
   },
   methods: {
     selectedOption(option) {
+      console.log(option)
       let oldOption = this.menu.activeOption;
       this.menu.activeOption = option;
       this.menu[oldOption] = false;
-      this.menu[this.menu.activeOption] = true
+      this.menu[this.menu.activeOption] = true;
     }
   }
 }
-
 
 </script>
 
 <style>
 
-
+#all {
+  background-image: url("./assets/fondo.jpg") ;
+}
 </style>

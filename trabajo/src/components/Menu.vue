@@ -16,6 +16,14 @@
         <img src="../assets/buñelos.png">
       </div>
 
+      <div>
+        <img src="../assets/lengua.png">
+      </div>
+
+      <div>
+        <img src="../assets/gambas.png">
+      </div>
+
     </div>
 
     <div class="main-platos">
@@ -29,6 +37,15 @@
         <div class="entrada">
           <p><b>Buñelitos: $600</b></p>
         </div>
+
+        <div class="entrada">
+          <p><b>Lengua: $600</b></p>
+        </div>
+
+        <div class="entrada">
+          <p><b>Gambas: $700</b></p>
+        </div>
+
       </div>
 
     </div>
@@ -45,6 +62,14 @@
         <img src="../assets/ñoquis.png">
       </div>
 
+      <div>
+        <img src="../assets/carne.png">
+      </div>
+
+      <div>
+        <img src="../assets/pollo.png">
+      </div>
+
     </div>
 
     <div class="main-platos">
@@ -57,6 +82,14 @@
 
         <div class="principal">
           <p><b>Ñoquis: $1000</b></p>
+        </div>
+
+        <div class="principal">
+          <p><b>Carne: $1100</b></p>
+        </div>
+
+        <div class="principal">
+          <p><b>Pollo: $900</b></p>
         </div>
 
       </div>
@@ -75,6 +108,14 @@
         <img src="../assets/vigilante.png">
       </div>
 
+      <div>
+        <img src="../assets/helado.png">
+      </div>
+
+      <div>
+        <img src="../assets/cafe.png">
+      </div>
+
     </div>
 
     <div class="main-platos">
@@ -82,12 +123,21 @@
       <div class="m-platos">
 
         <div class="postre">
-          <p><b>Flan: $500</b></p>
+          <p><b>Flan: $600</b></p>
         </div>
 
         <div class="postre">
           <p><b>Vigilante: $500</b></p>
         </div>
+
+        <div class="postre">
+          <p><b>Helado: $400</b></p>
+        </div>
+
+        <div class="postre">
+          <p><b>Cafe: $300</b></p>
+        </div>
+
       </div>
 
     </div>
@@ -101,9 +151,6 @@ export default {
 </script>
 
 <style scoped>
-body{
-  font-family: sans-serif;
-}
 
 .main-platos{
   display: block;
