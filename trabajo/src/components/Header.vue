@@ -1,6 +1,6 @@
 <template>
-    <img src="" alt="" class="icon">
-    <img src="" alt="" class="icon-2">
+    <img src="../assets/placeholder_restaurant.jpg" alt="" class="icon">
+    <img src="../assets/placeholder_restaurant.jpg" alt="" class="icon-2">
 
   <section>
     <h1> {{ title }}</h1>

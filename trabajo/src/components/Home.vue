@@ -24,11 +24,11 @@
     <hr>
     <div class="box-tasvir">
       <marquee behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
-        <img src="img/buñelos.png">
-        <img src="img/milanesa.png" alt="">
-        <img src="img/tortilla.png" alt="">
-        <img src="img/fideos.jpg" alt="">
-        <img src="C:\Users\tomas\OneDrive\Documentos\UCEMA\Segundo\programacion_web\Urbis\trabajo\src\assets\tortilla.png" alt="">
+        <img src="../assets/buñelos.png">
+        <img src="../assets/milanesa.png" alt="">
+        <img src="../assets/tortilla.png" alt="">
+        <img src="../assets/ñoquis.png" alt="">
+        <img src="../assets/vigilante.png" alt="">
       </marquee>
 
     </div>
@@ -43,11 +43,11 @@
 
   <div id='valoracion'>
     <h1>Contanos como fue tu experiencia</h1>
-    <img id='animo-img' src="img/tenedor.png">
+    <img id='animo-img' src="../assets/tenedor.png">
 
     <div id="form">
       <fieldset>
-        <legend for="">Ingrese valoracion entre 1 y 10</legend>
+        <legend>Ingrese valoracion entre 1 y 10</legend>
         <input type="number" name="cara" id="animo-input" min="0" max="10">
         <button> Enviar </button>
         <h2 id="feedback"></h2>

@@ -70,7 +70,7 @@
 
     <br><br>
     <footer id="footer">
-      <input type="" value="Enviar" v-model="listaPedidos.appendData(['{{ plato }}'])">
+      <input type="" value="Enviar">
       <input type="" value="Limpiar">
     </footer>
   </form>

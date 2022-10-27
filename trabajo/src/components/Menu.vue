@@ -10,11 +10,11 @@
       <p><b>ENTRADA</b></p>
 
       <div>
-        <img src="img/tortilla.png">
+        <img src="../assets/tortilla.png">
       </div>
 
       <div>
-        <img src="img/buñelos.png">
+        <img src="../assets/buñelos.png">
       </div>
 
     </div>
@@ -39,11 +39,11 @@
       <p><b>PLATOS</b></p>
 
       <div>
-        <img src="img/milanesa.png">
+        <img src="../assets/milanesa.png">
       </div>
 
       <div>
-        <img src="img/ñoquis.png">
+        <img src="../assets/ñoquis.png">
       </div>
 
     </div>
@@ -69,11 +69,11 @@
       <p><b>POSTRE</b></p>
 
       <div>
-        <img src="img/flan.png">
+        <img src="../assets/flan.png">
       </div>
 
       <div>
-        <img src="img/vigilante.png">
+        <img src="../assets/vigilante.png">
       </div>
 
     </div>
@@ -104,7 +104,7 @@ export default {
 <style scoped>
 body{
   font-family: sans-serif;
-  /*background-image: url('img/fondo.jpg');*/
+  /*background-image: url('../assets/f);*/
 }
 
 .main-platos{
