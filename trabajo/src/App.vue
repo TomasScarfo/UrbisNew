@@ -18,7 +18,6 @@
 
 </template>
 
-
 <script>
 import Header from "@/components/Header";
 import Buttons from "@/components/Botones";

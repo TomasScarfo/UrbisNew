@@ -8,7 +8,6 @@
     <div class="main-platos">
 
       <p><b>ENTRADA</b></p>
-
       <div>
         <img src="../assets/tortilla.png">
       </div>
@@ -104,7 +103,6 @@ export default {
 <style scoped>
 body{
   font-family: sans-serif;
-  /*background-image: url('../assets/f);*/
 }
 
 .main-platos{
