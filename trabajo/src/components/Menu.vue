@@ -153,7 +153,7 @@ export default {
 <style scoped>
 
 .main-platos{
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -169,22 +169,24 @@ export default {
 }
 
 .entrada{
-  margin-top: 100px;
+  margin-top: 82px;
   text-align: left;
   width: 120px;
+  display: flex;
 }
 
 .principal{
-  margin-top: 100px;
+  margin-top: 82px;
   text-align:left;
   width: 120px;
+  display: flex;
 }
 
 .postre{
-  margin-top: 100px;
-  justify-content:center;
+  margin-top: 82px;
   text-align: left;
   width: 120px;
+  display: flex;
 }
 
 img{
