@@ -1,4 +1,5 @@
 <template>
+  <div id="all">
   <div id="header-div">
     <Header/>
     <br/>
@@ -14,6 +15,7 @@
     <Menu v-if="menu.carta"/>
     <Pedir v-if="menu.pedidos"/>
 
+  </div>
   </div>
 
 </template>
@@ -40,8 +42,8 @@ export default {
     return {
       menu: {
         activeOption: 'home',
-        home: true,
-        carta: false,
+        home: false,
+        carta: true,
         pedidos: false,
         redes: false,
         preguntas: false
@@ -62,6 +64,7 @@ export default {
 </script>
 
 <style>
-
-
+#all {
+  background-image: url("./assets/fondo.jpg") ;
+}
 </style>
