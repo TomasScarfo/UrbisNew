@@ -14,21 +14,22 @@
 
       <div id="opciones">
         <img src="../assets/buñelos.png">
-        <p>Buñelos</p>
+        <p>Buñuelos</p>
         <p>$500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/tortilla.png">
+        <img src="../assets/gambas.png">
         <p>Gambas</p>
         <p>$1000</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/tortilla.png">
+        <img src="../assets/lengua.png">
         <p>Lengua</p>
-        <p>500</p>
+        <p>$1000</p>
       </div>
+
     </section>
 
     <section class="principal">
@@ -47,16 +48,17 @@
       </div>
 
       <div id="opciones">
-        <img src="../assets/tortilla.png">
-        <p>Plato</p>
+        <img src="../assets/pollo.png">
+        <p>Pollo</p>
         <p>500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/fideos.jpg">
-        <p>Fideos</p>
+        <img src="../assets/carne.png">
+        <p>Carne</p>
         <p>500</p>
       </div>
+
     </section>
 
     <section class="postre">
@@ -75,14 +77,14 @@
       </div>
 
       <div id="opciones">
-        <img src="../assets/tortilla.png">
-        <p>Plato</p>
+        <img src="../assets/helado.png">
+        <p>Helado</p>
         <p>500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/tortilla.png">
-        <p>Plato</p>
+        <img src="../assets/cafe.png">
+        <p>Cafe</p>
         <p>500</p>
       </div>
     </section>
@@ -97,13 +99,15 @@ export default {
 </script>
 
 <style scoped>
-body{
-  display:flex;
+
+body {
+  display: flex;
   border: 2px solid grey;
   flex-direction: row;
   width: 250px;
   justify-content: space-around;
 }
+
 
 #contenido {
   display:flex
@@ -113,7 +117,7 @@ body{
   margin-left: 22%;
 }
 
-.postre{
+.postre {
   margin-left: 22%;
 }
 
@@ -123,7 +127,6 @@ body{
   flex-direction: row;
   width: 200px;
   justify-content: space-around;
-  padding: 10px auto 10px auto;
   margin-top: 10px;
 }
 
