@@ -14,9 +14,11 @@
     <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
     <Pedir v-if="menu.pedir"/>
+    <Redes v-if="menu.redes"/>
 
   </div>
   </div>
+
 
 </template>
 
@@ -26,6 +28,7 @@ import Buttons from "@/components/Botones";
 import Home from "@/components/Home";
 import Menu from "@/components/Menu";
 import Pedir from "@/components/Pedir";
+import Redes from "@/components/Redes"
 
 
 export default {
@@ -36,6 +39,7 @@ export default {
     Home,
     Menu,
     Pedir,
+    Redes
   },
   data() {
     return {

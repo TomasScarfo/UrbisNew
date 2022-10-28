@@ -34,23 +34,16 @@ export default {
 
 
 <style scoped>
-
-
 #encab {
   height: 178px;
-<<<<<<< HEAD
-}
 
+}
 .icon {
   padding: 10px;
   margin: 10px;
   width: 180px;
   float: right;
-=======
->>>>>>> e8b46692d996ddeeb9fcc6be7c7f4a2dea17b274
 }
-
-
 
 .icon-2 {
   padding: 10px;
