@@ -38,25 +38,25 @@
       <div id="opciones">
         <img src="../assets/milanesa.png">
         <p>Milanesa</p>
-        <p>500</p>
+        <p>$1500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/ñoquis.png">
         <p>Ñoquis</p>
-        <p>500</p>
+        <p>$1300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/pollo.png">
         <p>Pollo</p>
-        <p>500</p>
+        <p>$1300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/carne.png">
         <p>Carne</p>
-        <p>500</p>
+        <p>$1800</p>
       </div>
 
     </section>
@@ -67,25 +67,25 @@
       <div id="opciones">
         <img src="../assets/flan.png">
         <p>Flan</p>
-        <p>500</p>
+        <p>$500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/vigilante.png">
         <p>Vigilante</p>
-        <p>500</p>
+        <p>$500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/helado.png">
         <p>Helado</p>
-        <p>500</p>
+        <p>$300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/cafe.png">
         <p>Cafe</p>
-        <p>500</p>
+        <p>$200</p>
       </div>
     </section>
   </div>
