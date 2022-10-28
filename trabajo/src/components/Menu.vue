@@ -2,97 +2,92 @@
   <h1>MENU</h1>
 
   <hr>
+  <div id="contenido">
+    <section class="entrada">
+      <b>ENTRADA</b>
 
-  <div id="platos">
-
-    <div class="main-platos">
-
-      <p><b>ENTRADA</b></p>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/tortilla.png">
+        <p>Tortilla</p>
+        <p>$700</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/buñelos.png">
+        <p>Buñelos</p>
+        <p>$500</p>
       </div>
 
-    </div>
-
-    <div class="main-platos">
-
-      <div class="m-platos">
-
-        <div class="entrada">
-          <p><b>Tortilla: $500</b></p>
-        </div>
-
-        <div class="entrada">
-          <p><b>Buñelitos: $600</b></p>
-        </div>
+      <div id="opciones">
+        <img src="../assets/tortilla.png">
+        <p>Gambas</p>
+        <p>$1000</p>
       </div>
 
-    </div>
+      <div id="opciones">
+        <img src="../assets/tortilla.png">
+        <p>Lengua</p>
+        <p>500</p>
+      </div>
+    </section>
 
-    <div class="main-platos">
+    <section class="principal">
+      <b>PRINCIPAL</b>
 
-      <p><b>PLATOS</b></p>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/milanesa.png">
+        <p>Milanesa</p>
+        <p>500</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/ñoquis.png">
+        <p>Ñoquis</p>
+        <p>500</p>
       </div>
 
-    </div>
-
-    <div class="main-platos">
-
-      <div class="m-platos">
-
-        <div class="principal">
-          <p><b>Mila napo: $1200</b></p>
-        </div>
-
-        <div class="principal">
-          <p><b>Ñoquis: $1000</b></p>
-        </div>
-
+      <div id="opciones">
+        <img src="../assets/tortilla.png">
+        <p>Plato</p>
+        <p>500</p>
       </div>
 
-    </div>
+      <div id="opciones">
+        <img src="../assets/fideos.jpg">
+        <p>Fideos</p>
+        <p>500</p>
+      </div>
+    </section>
 
-    <div class="main-platos">
+    <section class="postre">
+      <b>POSTRE</b>
 
-      <p><b>POSTRE</b></p>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/flan.png">
+        <p>Flan</p>
+        <p>500</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/vigilante.png">
+        <p>Vigilante</p>
+        <p>500</p>
       </div>
 
-    </div>
-
-    <div class="main-platos">
-
-      <div class="m-platos">
-
-        <div class="postre">
-          <p><b>Flan: $500</b></p>
-        </div>
-
-        <div class="postre">
-          <p><b>Vigilante: $500</b></p>
-        </div>
+      <div id="opciones">
+        <img src="../assets/tortilla.png">
+        <p>Plato</p>
+        <p>500</p>
       </div>
 
-    </div>
+      <div id="opciones">
+        <img src="../assets/tortilla.png">
+        <p>Plato</p>
+        <p>500</p>
+      </div>
+    </section>
   </div>
+
 </template>
 
 <script>
@@ -103,53 +98,45 @@ export default {
 
 <style scoped>
 body{
-  font-family: sans-serif;
-  /*background-image: url('../assets/f);*/
-}
-
-.main-platos{
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#platos{
-  display: flex;
+  display:flex;
+  border: 2px solid grey;
   flex-direction: row;
+  width: 250px;
   justify-content: space-around;
 }
 
-.m-platos{
-  margin-right: 100px;
+#contenido {
+  display:flex
 }
 
-.entrada{
-  margin-top: 100px;
-  text-align: left;
-  width: 120px;
-}
-
-.principal{
-  margin-top: 100px;
-  text-align:left;
-  width: 120px;
+.principal {
+  margin-left: 22%;
 }
 
 .postre{
-  margin-top: 100px;
-  justify-content:center;
-  text-align: left;
-  width: 120px;
+  margin-left: 22%;
 }
 
-img{
-  width: 110px;
-  height: 79px;
-  border-radius: 5px;
-  margin: 25px;
+#opciones {
+  display:flex;
+  border: 2px solid grey;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-around;
+  padding: 10px auto 10px auto;
+  margin-top: 10px;
 }
 
-h1{
+#opciones p{
+  width: 90px;
   text-align: center;
+  padding-top: 30px;
 }
+
+#opciones img{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
 </style>
