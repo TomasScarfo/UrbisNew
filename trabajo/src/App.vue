@@ -3,7 +3,7 @@
   <div id="header-div">
     <Header/>
     <br/>
-    <Buttons/>
+    <Buttons @menu-event="selectedOption"/>
   </div>
 
   <br/>
@@ -13,7 +13,7 @@
   <div id="components">
     <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
-    <Pedir v-if="menu.pedidos"/>
+    <Pedir v-if="menu.pedir"/>
 
   </div>
   </div>
@@ -43,7 +43,7 @@ export default {
         activeOption: 'home',
         home: true,
         carta: false,
-        pedidos: false,
+        pedir: false,
         preguntas: false,
         redes: false,
       }
