@@ -35,7 +35,7 @@
         </div>
 
         <div class="entrada">
-          <p><b>Buñelitos: $600</b></p>
+          <p><b>Buñuelos: $600</b></p>
         </div>
 
         <div class="entrada">
@@ -77,7 +77,7 @@
       <div class="m-platos">
 
         <div class="principal">
-          <p><b>Mila napo: $1200</b></p>
+          <p><b>Milanesa napolitana: $1200</b></p>
         </div>
 
         <div class="principal">
@@ -85,7 +85,7 @@
         </div>
 
         <div class="principal">
-          <p><b>Carne: $1100</b></p>
+          <p><b>Carne al horno: $1100</b></p>
         </div>
 
         <div class="principal">

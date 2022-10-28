@@ -3,7 +3,7 @@
   <div id="header-div">
     <Header/>
     <br/>
-    <Buttons/>
+    <Buttons @menu-event="selectedOption"/>
   </div>
 
   <br/>
