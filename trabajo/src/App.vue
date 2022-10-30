@@ -69,6 +69,7 @@ export default {
 <style>
 
 #all {
-  background-image: url("./assets/fondo.jpg") ;
+  background-image: url("./assets/fondo.jpg");
 }
+
 </style>

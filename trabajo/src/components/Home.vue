@@ -11,8 +11,11 @@
     </div>
   </div>
 
+  <br/>
+  <br/>
+  <br/>
+
   <div id="intro-2">
-    <hr>
     <div class="box-tasvir">
       <marquee behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
         <img src="../assets/buñelos.png">
@@ -22,36 +25,56 @@
         <img src="../assets/vigilante.png" alt="">
       </marquee>
 
-    </div>
-    <h2>Ver mas platos...</h2>
-    <div class="menu-boton">
-      <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
-    </div>
 
-    <br>
+    </div>
     <hr>
-  </div>
-
-  <div id='valoracion'>
-    <h1>Contanos como fue tu experiencia</h1>
-    <img id='animo-img' src="../assets/tenedor.png">
-
-    <div id="form">
-      <fieldset>
-        <legend>Ingrese valoracion entre 1 y 10</legend>
-        <input type="number" name="cara" id="animo-input" min="0" max="10">
-<!--        <button @click="$emit('experiencia')"> Enviar </button>-->
-        <h2 id="feedback"></h2>
-      </fieldset>
+      <h2>Ver mas platos...</h2>
+      <div class="menu-boton">
+        <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
+      </div>
     </div>
+    <hr>
+
+  <div id="valor">
+    <div class="val">
+      <img src="../assets/delivery.png" alt="">
+      <br>
+      <b>ENVIOS RAPIDOS</b>
+      <p>Se realizan envios con normalidad </p>
+      <p> dentro de CABA y GBA </p>
+    </div>
+
+    <div class="val">
+      <img src="../assets/star.png" alt="">
+      <br>
+      <b>PRODUCTOS DE CALIDAD</b>
+      <p> Nuestros productos son 100% confiables </p>
+    </div>
+
+    <div class="val">
+      <img src="../assets/money.png" alt="">
+      <br>
+      <b>MEDIOS DE PAGO</b>
+      <p> Aceptamos todos los medios de pago, </p>
+      <p> incluyendo debito, credito y efectivo </p>
+    </div>
+
+    <div class="val">
+      <img src="../assets/atencionAlCliente.png" alt="">
+      <br>
+      <b>ATENCION AL CLIENTE</b>
+      <p> Puede contactarse con nosotros </p>
+      <p> a traves de nuestras redes sociales </p>
+      <p> y/o telefono </p>
+    </div>
+
   </div>
+
+
 
 </template>
 
-
-
 <script>
-// import * as JS from './Home-JS'
 
 export default {
   name: "Home-tag",
@@ -65,7 +88,7 @@ export default {
 #intro {
   background-color:gainsboro;
   width: 36%;
-  margin-left: 180px;
+  margin-left: 32%;
   padding-top: 2%;
   padding-bottom: 2%;
   text-align: center;
@@ -80,6 +103,7 @@ export default {
   left: 0;
   float: left;
   transition: box-shadow 1s, top 1s, left 1s;
+  margin-bottom: 50px;
 }
 
 #intro:hover {
@@ -122,19 +146,25 @@ export default {
   background-color: rgb(128, 150, 142);
 }
 
-#animo-img {
+#valor {
+  margin-left: 3%px;
+  margin-right: 3%px;
+
+}
+
+.val {
+  flex-direction: column;
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  justify-content: space-around;
+}
+
+.val img{
   width: 100px;
+  height: 100px;
+  border-radius: 5px;
 }
 
-#valoracion{
-  text-align: center;
-  flex-direction: row;
-}
-
-fieldset {
-  width: 30%;
-  text-align: center;
-  margin-left: 35%;
-}
 
 </style>
