@@ -74,14 +74,6 @@
   <br/>
   <br/>
 
-  <div id="resumen">
-    <h1>Hola {{ nombre }}! Este es el resumen de tu Pedido</h1>
-    <h3> Entrada: {{ entrada }}</h3>
-    <h3> Plato principal: {{ plato }}</h3>
-    <h3> Postre: {{ postre }}</h3>
-    <h3>Horario de entrega: {{ horaEntrega }}</h3>
-  </div>
-
   <footer id="footer">
     <input type='submit' value="Enviar">
     <input type="reset" value="Limpiar">
@@ -140,7 +132,4 @@ footer{
   text-align: center;
 }
 
-#resumen {
-  text-align: center;
-}
 </style>

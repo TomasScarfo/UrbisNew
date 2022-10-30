@@ -13,12 +13,15 @@
   <div id="components">
     <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
-    <Pedir v-if="menu.pedir"/>
     <Redes v-if="menu.redes"/>
-
+    <Pedir v-if="menu.pedir"/>
   </div>
-  </div>
+    <br/>
+    <br/>
+    <br/>
 
+    <Footer/>
+  </div>
 
 </template>
 
@@ -28,7 +31,8 @@ import Buttons from "@/components/Botones";
 import Home from "@/components/Home";
 import Menu from "@/components/Menu";
 import Pedir from "@/components/Pedir";
-import Redes from "@/components/Redes"
+import Redes from "@/components/Redes";
+import Footer from "@/components/Footer"
 
 
 export default {
@@ -39,7 +43,8 @@ export default {
     Home,
     Menu,
     Pedir,
-    Redes
+    Redes,
+    Footer
   },
   data() {
     return {
@@ -48,7 +53,6 @@ export default {
         home: true,
         carta: false,
         pedir: false,
-        preguntas: false,
         redes: false,
       }
     }
@@ -68,7 +72,6 @@ export default {
 <style>
 #all {
   background-image: url("./assets/fondo.jpg");
-
 }
 
 
