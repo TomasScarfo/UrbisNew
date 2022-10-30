@@ -36,13 +36,6 @@ export default {
 <style scoped>
 #encab {
   height: 178px;
-
-}
-.icon {
-  padding: 10px;
-  margin: 10px;
-  width: 180px;
-  float: right;
 }
 
 .icon-2 {
@@ -81,8 +74,6 @@ p{
 h5{
   float: right;
   margin-right: 10px;
-
-
 }
 
 </style>

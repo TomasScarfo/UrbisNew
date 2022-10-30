@@ -2,146 +2,94 @@
   <h1>MENU</h1>
 
   <hr>
+  <div id="contenido">
+    <section class="entrada">
+      <b>ENTRADA</b>
 
-  <div id="platos">
-
-    <div class="main-platos">
-
-      <p><b>ENTRADA</b></p>
-      <div>
+      <div id="opciones">
         <img src="../assets/tortilla.png">
+        <p>Tortilla</p>
+        <p>$700</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/buñelos.png">
+        <p>Buñuelos</p>
+        <p>$500</p>
       </div>
 
-      <div>
-        <img src="../assets/lengua.png">
-      </div>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/gambas.png">
+        <p>Gambas</p>
+        <p>$1000</p>
       </div>
 
-    </div>
-
-    <div class="main-platos">
-
-      <div class="m-platos">
-
-        <div class="entrada">
-          <p><b>Tortilla: $500</b></p>
-        </div>
-
-        <div class="entrada">
-          <p><b>Buñuelos: $600</b></p>
-        </div>
-
-        <div class="entrada">
-          <p><b>Lengua: $600</b></p>
-        </div>
-
-        <div class="entrada">
-          <p><b>Gambas: $700</b></p>
-        </div>
-
+      <div id="opciones">
+        <img src="../assets/lengua.png">
+        <p>Lengua</p>
+        <p>$1000</p>
       </div>
 
-    </div>
+    </section>
 
-    <div class="main-platos">
+    <section class="principal">
+      <b>PRINCIPAL</b>
 
-      <p><b>PLATOS</b></p>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/milanesa.png">
+        <p>Milanesa</p>
+        <p>$1500</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/ñoquis.png">
+        <p>Ñoquis</p>
+        <p>$1300</p>
       </div>
 
-      <div>
-        <img src="../assets/carne.png">
-      </div>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/pollo.png">
+        <p>Pollo</p>
+        <p>$1300</p>
       </div>
 
-    </div>
-
-    <div class="main-platos">
-
-      <div class="m-platos">
-
-        <div class="principal">
-          <p><b>Milanesa napolitana: $1200</b></p>
-        </div>
-
-        <div class="principal">
-          <p><b>Ñoquis: $1000</b></p>
-        </div>
-
-        <div class="principal">
-          <p><b>Carne al horno: $1100</b></p>
-        </div>
-
-        <div class="principal">
-          <p><b>Pollo: $900</b></p>
-        </div>
-
+      <div id="opciones">
+        <img src="../assets/carne.png">
+        <p>Carne</p>
+        <p>$1800</p>
       </div>
 
-    </div>
+    </section>
 
-    <div class="main-platos">
+    <section class="postre">
+      <b>POSTRE</b>
 
-      <p><b>POSTRE</b></p>
-
-      <div>
+      <div id="opciones">
         <img src="../assets/flan.png">
+        <p>Flan</p>
+        <p>$500</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/vigilante.png">
+        <p>Vigilante</p>
+        <p>$500</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/helado.png">
+        <p>Helado</p>
+        <p>$300</p>
       </div>
 
-      <div>
+      <div id="opciones">
         <img src="../assets/cafe.png">
+        <p>Cafe</p>
+        <p>$200</p>
       </div>
-
-    </div>
-
-    <div class="main-platos">
-
-      <div class="m-platos">
-
-        <div class="postre">
-          <p><b>Flan: $600</b></p>
-        </div>
-
-        <div class="postre">
-          <p><b>Vigilante: $500</b></p>
-        </div>
-
-        <div class="postre">
-          <p><b>Helado: $400</b></p>
-        </div>
-
-        <div class="postre">
-          <p><b>Cafe: $300</b></p>
-        </div>
-
-      </div>
-
-    </div>
+    </section>
   </div>
+
 </template>
 
 <script>
@@ -152,51 +100,46 @@ export default {
 
 <style scoped>
 
-.main-platos{
+body {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#platos{
-  display: flex;
+  border: 2px solid grey;
   flex-direction: row;
+  width: 250px;
   justify-content: space-around;
 }
 
-.m-platos{
-  margin-right: 100px;
+
+#contenido {
+  display:flex
 }
 
-.entrada{
-  margin-top: 82px;
-  text-align: left;
-  width: 120px;
-  display: flex;
+.principal {
+  margin-left: 22%;
 }
 
-.principal{
-  margin-top: 82px;
-  text-align:left;
-  width: 120px;
-  display: flex;
+.postre {
+  margin-left: 22%;
 }
 
-.postre{
-  margin-top: 82px;
-  text-align: left;
-  width: 120px;
-  display: flex;
+#opciones {
+  display:flex;
+  border: 2px solid grey;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 
-img{
-  width: 110px;
-  height: 79px;
-  border-radius: 5px;
-  margin: 25px;
-}
-
-h1{
+#opciones p{
+  width: 90px;
   text-align: center;
+  padding-top: 30px;
 }
+
+#opciones img{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
 </style>
