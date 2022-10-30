@@ -25,15 +25,13 @@
         <img src="../assets/vigilante.png" alt="">
       </marquee>
 
-
     </div>
-    <hr>
       <h2>Ver mas platos...</h2>
       <div class="menu-boton">
         <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
       </div>
-    </div>
-    <hr>
+  </div>
+
 
   <div id="valor">
     <div class="val">
@@ -41,7 +39,7 @@
       <br>
       <b>ENVIOS RAPIDOS</b>
       <p>Se realizan envios con normalidad </p>
-      <p> dentro de CABA y GBA </p>
+      <p> dentro de CABA y GBA. </p>
     </div>
 
     <div class="val">
@@ -49,6 +47,7 @@
       <br>
       <b>PRODUCTOS DE CALIDAD</b>
       <p> Nuestros productos son 100% confiables </p>
+      <p> y ademas somos lideres del rubro. </p>
     </div>
 
     <div class="val">
@@ -56,7 +55,7 @@
       <br>
       <b>MEDIOS DE PAGO</b>
       <p> Aceptamos todos los medios de pago, </p>
-      <p> incluyendo debito, credito y efectivo </p>
+      <p> incluyendo debito, credito y efectivo. </p>
     </div>
 
     <div class="val">
@@ -64,8 +63,7 @@
       <br>
       <b>ATENCION AL CLIENTE</b>
       <p> Puede contactarse con nosotros </p>
-      <p> a traves de nuestras redes sociales </p>
-      <p> y/o telefono </p>
+      <p> a traves de nuestras redes sociales. </p>
     </div>
 
   </div>
@@ -131,7 +129,6 @@ export default {
 .box-tasvir img{
   width: 200px;
   height: 200px;
-
 }
 
 .menu-boton a{
@@ -147,23 +144,20 @@ export default {
 }
 
 #valor {
-  margin-left: 3%px;
-  margin-right: 3%px;
-
+  place-content: center;
+  display: flex;
 }
 
 .val {
   flex-direction: column;
   text-align: center;
-  width: 20%;
   display: inline-block;
-  justify-content: space-around;
+  margin: 10px;
 }
 
 .val img{
   width: 100px;
   height: 100px;
-  border-radius: 5px;
 }
 
 

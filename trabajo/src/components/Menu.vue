@@ -108,6 +108,9 @@ body {
   justify-content: space-around;
 }
 
+h1 {
+  text-align: center;
+}
 
 #contenido {
   display:flex

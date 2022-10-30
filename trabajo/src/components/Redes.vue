@@ -1,12 +1,12 @@
 <template>
-<div id="all">
+
   <div id="contacto">
     <h1>Contactanos hoy!</h1>
     <h3>Tel: (011) 6886-7852</h3>
     <h3>Instagram: @SomosUrbis</h3>
     <h3>Twitter: @Urbisneta</h3>
   </div>
-</div>
+
 </template>
 
 <script>
@@ -16,10 +16,11 @@ export default {
 </script>
 
 <style scoped>
-#contacto {
 
+#contacto {
   background-color: rgb(221, 225, 228);
-  width: 50%;
+  width: 36%;
+  margin-left: 32%;
   padding-top: 2%;
   padding-bottom: 2%;
   text-align: center;
@@ -32,7 +33,6 @@ export default {
       20px -20px;
   top: 0;
   left: 0;
-  margin-left: 700px;
   transition: box-shadow 1s, top 1s, left 1s;
 }
 

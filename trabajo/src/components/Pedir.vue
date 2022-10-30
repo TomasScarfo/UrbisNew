@@ -1,11 +1,12 @@
 <template>
+
   <h1>HAGA SU PEDIDO</h1>
 
   <hr>
 
   <form enctype="text/plain" id="form">
 
-    <table border="8" style="margin: 0 auto;">
+    <table style="margin: 0 auto;">
       <tbody>
       <tr>
         <td>Nombre y apellido</td>
@@ -89,22 +90,11 @@
     <br/>
     <br/>
 
-
-
 </template>
 
 <script>
 export default {
-  name: "Pedir-tag",
-  data() {
-    return {
-      horaEntrega: "",
-      nombre: "",
-      entrada : "",
-      plato: "",
-      postre: "",
-    }
-  }
+  name: "Pedir-tag"
 }
 </script>
 <style scoped>

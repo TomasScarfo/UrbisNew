@@ -65,11 +65,12 @@ export default {
 }
 
 </script>
-
 <style>
-
 #all {
   background-image: url("./assets/fondo.jpg");
+
 }
+
+
 
 </style>
