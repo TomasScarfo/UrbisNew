@@ -123,8 +123,8 @@ export default {
   margin: 10%;
 }
 .box-tasvir{
-  width: 600px;
-  margin-left: 310px;
+  width: 50%;
+  margin-left: 25%;
 }
 .box-tasvir img{
   width: 200px;
