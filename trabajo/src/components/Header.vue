@@ -1,16 +1,20 @@
 <template>
+  <div id="header-content">
     
-    <img src="../assets/placeholder_restaurant.jpg" alt="" class="icon-2">
+    <img src="../assets/placeholder_restaurant.jpg" alt="">
 
-  <section id="encab">
+
     <h1> {{ title }}</h1>
+
+    <div id="subtitle">
     <a target="_blank" href="https://www.google.com.ar/maps/place/Urbis+Bar+Restaurante/@-34.602708,-58.3732216,17z/data=!3m1!4b1!4m5!3m4!1s0x95a33532cfbb93a1:0x68be8a70e7b328d2!8m2!3d-34.6027124!4d-58.3710329">
       <p>{{ ubicacion }}</p>
     </a>
     <h5>{{horario}}</h5>
+    </div>
 
+  </div>
 
-  </section>
 </template>
 
 <script>
@@ -34,46 +38,38 @@ export default {
 
 
 <style scoped>
-#encab {
-  height: 178px;
-}
 
-.icon-2 {
+#header-content{
+  display: flex;
+  flex-direction: row;
   padding: 10px;
-  margin: 10px;
-  width: 180px;
-  float: left;
+  justify-content: space-around;
+  background: #f6f4ef;
+  border-bottom: 2px solid gray;
+  box-shadow: 0 4px darkgrey;
+  text-align: center;
 }
 
-section{
-  font-size: x-large;
-  border: 2px solid black ;
-  padding-left: 35%;
-  color: black;
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 h1{
-  font-style: oblique;
-  float: left;
-  margin-left: 110px;
-  text-align: center;
-  margin-top: 50px;
+  font-size: 300%;
 
 }
 
-p{
-  font-style: italic;
-  font-size: smaller;
-  margin-left: 230px;
-  margin-top: 85px;
-  color: black;
-  width: 40%;
-  display: flex;
+#subtitle{
+  font-size: 18px;
 }
 
-h5{
-  float: right;
-  margin-right: 10px;
-}
+
+
+
+
+
+
 
 </style>

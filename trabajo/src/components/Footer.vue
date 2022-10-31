@@ -1,5 +1,8 @@
 <template>
-  <p>HOLa</p>
+  <div>
+    <img src="../assets/placeholder_restaurant.jpg" alt="">
+    <p>URBIS RESTO BAR - TODOS LOS DERECHOS RESERVADOS</p>
+  </div>
 </template>
 
 <script>
@@ -10,6 +13,20 @@ export default {
 
 <style scoped>
 
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f6f4ef;
+  border-top: 2px solid gray;
+  box-shadow: 0 -4px darkgrey;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+}
 
 
 </style>
