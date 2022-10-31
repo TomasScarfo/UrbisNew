@@ -1,4 +1,5 @@
 <template>
+
   <div id="all">
   <div id="header-div">
     <Header/>
@@ -63,8 +64,8 @@ export default {
 </script>
 
 <style>
-
-#all {
-  background-image: url("./assets/fondo.jpg") ;
+#all{
+  background-color:lightgrey;
 }
+
 </style>

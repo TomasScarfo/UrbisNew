@@ -25,6 +25,7 @@ export default {
   align-self: center;
   margin-left: 35%;
   margin-right: 30%;
+
 }
 
 #botones a {
