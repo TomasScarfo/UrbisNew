@@ -8,10 +8,10 @@
 
     <div id="subtitle">
       <div id="loc">
-        <img src="../assets/location.jpg" id="loc-img">
-        <a target="_blank" href= {{direccion}}>
-          <p>{{ ubicacion }}</p>
+        <a href= "https://www.google.com.ar/maps/place/Urbis+Bar+Restaurante/@-34.602708,-58.3732216,17z/data=!3m1!4b1!4m5!3m4!1s0x95a33532cfbb93a1:0x68be8a70e7b328d2!8m2!3d-34.6027124!4d-58.3710329" target="_blank">
+          <img src="../assets/location.jpg" id="loc-img">
         </a>
+        <p>{{ ubicacion }}</p>
       </div>
       <h5>{{horario}}</h5>
     </div>
@@ -29,8 +29,6 @@ export default {
       title: 'Urbis Resto Bar',
       ubicacion: '25 de Mayo 437',
       horario: 'Lunes a Viernes, de 8 a 18 horas',
-      direccion: "https://www.google.com.ar/maps/place/Urbis+Bar+Restaurante/@-34.602708,-58.3732216,17z/data=!3m1!4b1!4m5!3m4!1s0x95a33532cfbb93a1:0x68be8a70e7b328d2!8m2!3d-34.6027124!4d-58.3710329"
-
     }
   }
 }
@@ -46,7 +44,7 @@ export default {
   flex-direction: row;
   padding: 10px;
   justify-content: space-around;
-  background: #f6f4ef;
+  background: #f3f3f3;
   border-bottom: 2px solid gray;
   box-shadow: 0 4px darkgrey;
   text-align: center;
@@ -55,7 +53,6 @@ export default {
 #logo {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
 
 h1{

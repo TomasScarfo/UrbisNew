@@ -128,15 +128,16 @@ h1 {
   display:flex;
   border: 2px solid grey;
   flex-direction: row;
-  width: 200px;
+  width: 220px;
   justify-content: space-around;
   margin-top: 10px;
+
 }
 
 #opciones p{
   width: 90px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 #opciones img{

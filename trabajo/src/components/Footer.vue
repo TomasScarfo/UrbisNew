@@ -18,7 +18,7 @@ div{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f6f4ef;
+  background: #f3f3f3;
   border-top: 2px solid gray;
   box-shadow: 0 -4px darkgrey;
 }
@@ -26,7 +26,6 @@ div{
 img{
   width: 100px;
   height: 100px;
-  border-radius: 60%;
 }
 
 
