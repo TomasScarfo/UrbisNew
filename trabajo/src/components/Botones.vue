@@ -34,6 +34,7 @@ export default {
   background-color: black;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #botones span:hover {

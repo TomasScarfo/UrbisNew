@@ -13,7 +13,6 @@ createApp(App).mount('#app')
 const routes = [
     {path: '/', name: "HomeRoute", component: app},
     {path: '/PedidosOnline', name: "PedidosRoute", component: Pedir},
-
     {path: '*', name: "PageNotFound", component: NotFound}
 ];
 
