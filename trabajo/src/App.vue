@@ -14,7 +14,6 @@
     <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
     <Redes v-if="menu.redes"/>
-    <Pedir v-if="menu.pedir"/>
   </div>
     <br/>
     <br/>

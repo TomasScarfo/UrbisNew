@@ -1,38 +1,27 @@
+import * as Vue from 'vue';
+import * as  VueRouter from 'vue-router';
+
 import { createApp } from 'vue'
 import App from './App.vue'
+import app from "@/App";
+import Pedir from "@/components/Pedir";
+import NotFound from "@/components/NotFound";
 
 createApp(App).mount('#app')
 
-console.log('adfsg')
-function newOrder() {
-    let nombre = document.getElementById("nombre").value;
-    let telefono = document.getElementById("telefono").value;
-    let entrega = document.getElementById("entrega").value;
-    let entrada = document.getElementById("entrada").value;
-    let plato = document.getElementById("plato").value;
-    let postre = document.getElementById("postre").value;
-    let horario = document.getElementById("horario").value;
 
-    let axios = "https://unpkg.com/axios/dist/axios.min.js";
-    axios.post('http://127.0.0.1:5500/api/v1/new_order/',
-        {
-            "nombre": nombre,
-            "telefono": telefono,
-            "entrega": entrega,
-            "entrada": entrada,
-            "plato": plato,
-            "postre": postre,
-            "horario": horario,
-        })
-        .then(function () {
-            let msj = document.getElementById('mensaje');
-            msj.value = 'ORDEN DE COMPRA REALIZADA CORRECTAMENTE'
-            msj.hidden= false
-        })
+const routes = [
+    {path: '/', name: "HomeRoute", component: app},
+    {path: '/PedidosOnline', name: "PedidosRoute", component: Pedir},
 
-        .catch(function (error) {
-            alert("No se pudo guardar correctamente");
-            console.log(error);
-        })
-}
-newOrder()
+    {path: '*', name: "PageNotFound", component: NotFound}
+];
+
+const router = VueRouter.createRouter({
+    history: VueRouter.createWebHashHistory(),
+    routes,
+});
+
+const create = Vue.createApp(App);
+create.use(router);
+create.mount('#app');
