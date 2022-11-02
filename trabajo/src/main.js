@@ -9,7 +9,6 @@ import NotFound from "@/components/NotFound";
 
 createApp(App).mount('#app')
 
-
 const routes = [
     {path: '/', name: "HomeRoute", component: app},
     {path: '/PedidosOnline', name: "PedidosRoute", component: Pedir},

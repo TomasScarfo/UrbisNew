@@ -7,25 +7,25 @@
       <b>ENTRADA</b>
 
       <div id="opciones">
-        <img src="../assets/tortilla.png">
+        <img src="../assets/img/tortilla.png">
         <p>Tortilla</p>
         <p>$700</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/buñelos.png">
+        <img src="../assets/img/buñelos.png">
         <p>Buñuelos</p>
         <p>$500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/gambas.png">
+        <img src="../assets/img/gambas.png">
         <p>Gambas</p>
         <p>$1000</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/lengua.png">
+        <img src="../assets/img/lengua.png">
         <p>Lengua</p>
         <p>$1000</p>
       </div>
@@ -36,25 +36,25 @@
       <b>PRINCIPAL</b>
 
       <div id="opciones">
-        <img src="../assets/milanesa.png">
+        <img src="../assets/img/milanesa.png">
         <p>Milanesa</p>
         <p>$1500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/ñoquis.png">
+        <img src="../assets/img/ñoquis.png">
         <p>Ñoquis</p>
         <p>$1300</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/pollo.png">
+        <img src="../assets/img/pollo.png">
         <p>Pollo</p>
         <p>$1300</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/carne.png">
+        <img src="../assets/img/carne.png">
         <p>Carne</p>
         <p>$1800</p>
       </div>
@@ -65,25 +65,25 @@
       <b>POSTRE</b>
 
       <div id="opciones">
-        <img src="../assets/flan.png">
+        <img src="../assets/img/flan.png">
         <p>Flan</p>
         <p>$500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/vigilante.png">
+        <img src="../assets/img/vigilante.png">
         <p>Vigilante</p>
         <p>$500</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/helado.png">
+        <img src="../assets/img/helado.png">
         <p>Helado</p>
         <p>$300</p>
       </div>
 
       <div id="opciones">
-        <img src="../assets/cafe.png">
+        <img src="../assets/img/cafe.png">
         <p>Cafe</p>
         <p>$200</p>
       </div>

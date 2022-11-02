@@ -1,9 +1,9 @@
 const estado = {
-    excelente: "./emoticonos.png",
-    buena: "./feliz.png",
-    intermedio: "./pensando.png",
-    mala: "./triste.png",
-    muyMala: "./muy-triste.png"
+    excelente: "./img/emoticonos.png",
+    buena: "./img/feliz.png",
+    intermedio: "./img/pensando.png",
+    mala: "./img/triste.png",
+    muyMala: "./img/muy-triste.png"
 }
 
 function experiencia() {
@@ -39,6 +39,9 @@ function experiencia() {
     msj.innerHTML = p
 }
 
+const funcion = experiencia
+
 export {
-    experiencia
-};
+    funcion,
+    estado
+}

@@ -18,11 +18,11 @@
   <div id="intro-2">
     <div class="box-tasvir">
       <marquee behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
-        <img src="../assets/buñelos.png">
-        <img src="../assets/milanesa.png" alt="">
-        <img src="../assets/tortilla.png" alt="">
-        <img src="../assets/ñoquis.png" alt="">
-        <img src="../assets/vigilante.png" alt="">
+        <img src="../assets/img/buñelos.png">
+        <img src="../assets/img/milanesa.png" alt="">
+        <img src="../assets/img/tortilla.png" alt="">
+        <img src="../assets/img/ñoquis.png" alt="">
+        <img src="../assets/img/vigilante.png" alt="">
       </marquee>
 
     </div>
@@ -35,7 +35,7 @@
 
   <div id="valor">
     <div class="val">
-      <img src="../assets/delivery.png" alt="">
+      <img src="../assets/img/delivery.png" alt="">
       <br>
       <b>ENVIOS RAPIDOS</b>
       <p>Se realizan envios con normalidad </p>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="val">
-      <img src="../assets/star.png" alt="">
+      <img src="../assets/img/star.png" alt="">
       <br>
       <b>PRODUCTOS DE CALIDAD</b>
       <p> Nuestros productos son 100% confiables </p>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="val">
-      <img src="../assets/money.png" alt="">
+      <img src="../assets/img/money.png" alt="">
       <br>
       <b>MEDIOS DE PAGO</b>
       <p> Aceptamos todos los medios de pago, </p>
@@ -59,7 +59,7 @@
     </div>
 
     <div class="val">
-      <img src="../assets/atencionAlCliente.png" alt="">
+      <img src="../assets/img/atencionAlCliente.png" alt="">
       <br>
       <b>ATENCION AL CLIENTE</b>
       <p> Puede contactarse con nosotros </p>
@@ -70,7 +70,7 @@
 
 <!--  <div id='valoracion'>-->
 <!--    <h1>Contanos como fue tu experiencia</h1>-->
-<!--    <img id='animo-img' src="../assets/tenedor.png">-->
+<!--    <img id='animo-img' src="../assets/img/tenedor.png">-->
 
 <!--    <div id="form">-->
 <!--      <fieldset>-->
@@ -88,11 +88,19 @@
 </template>
 
 <script>
-// import {experiencia} from "@/assets/js/Home-JS";
-// @import('../assets/js/Home-JS')
+
+// import {funcion, estado} from "@/assets/js/Home-JS"
+
 export default {
   name: "Home-tag",
   emits: ['menuEvent'],
+  // data() {
+  //   return {
+  //     experiencia: funcion,
+  //     estadoImg: estado
+  //
+  //   }
+  // }
 }
 
 </script>

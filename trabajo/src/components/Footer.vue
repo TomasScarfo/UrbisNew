@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/placeholder_restaurant.jpg" alt="">
+    <img src="../assets/img/placeholder_restaurant.jpg" alt="">
     <p>URBIS RESTO BAR - TODOS LOS DERECHOS RESERVADOS</p>
   </div>
 </template>
