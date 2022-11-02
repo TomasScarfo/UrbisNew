@@ -1,15 +1,14 @@
 <template>
-  <div id="intro-contacto">
-
-    <div id="intro">
-      <h1>Sobre Nosotros</h1>
-      <p>En Urbis buscamos generar una sensación de hogar</p>
-      <p>en las personas que nos visitan todos los mediodias,</p>
-      <p>con platos abundantes y de excelente calidad.</p>
-      <p>Todos nuestros productos son de elaboración propia:</p>
-      <p>carnes, pastas artesanales, minutas y muchos mas.</p>
+    <div id="intro-contacto">
+      <div id="intro">
+        <h1>Sobre Nosotros</h1>
+        <p>En Urbis buscamos generar una sensación de hogar</p>
+        <p>en las personas que nos visitan todos los mediodias,</p>
+        <p>con platos abundantes y de excelente calidad.</p>
+        <p>Todos nuestros productos son de elaboración propia:</p>
+        <p>carnes, pastas artesanales, minutas y muchos mas.</p>
+      </div>
     </div>
-  </div>
 
   <br/>
   <br/>
@@ -30,7 +29,7 @@
       <div class="menu-boton">
         <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
       </div>
-  </div>
+    </div>
 
 
   <div id="valor">
@@ -146,6 +145,11 @@ export default {
   text-align: center;
   margin: 10%;
 }
+
+#intro-2 a{
+  cursor: pointer;
+}
+
 .box-tasvir{
   width: 50%;
   margin-left: 25%;

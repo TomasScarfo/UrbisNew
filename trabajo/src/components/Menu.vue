@@ -113,7 +113,7 @@ h1 {
 }
 
 #contenido {
-  display:flex
+  display: flex;
 }
 
 .principal {
@@ -131,6 +131,7 @@ h1 {
   width: 220px;
   justify-content: space-around;
   margin-top: 10px;
+  padding: 5px;
 
 }
 

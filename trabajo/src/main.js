@@ -1,6 +1,7 @@
 import * as Vue from 'vue';
 import * as  VueRouter from 'vue-router';
 
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import app from "@/App";
@@ -11,7 +12,7 @@ createApp(App).mount('#app')
 
 const routes = [
     {path: '/', name: "HomeRoute", component: app},
-    {path: '/PedidosOnline', name: "PedidosRoute", component: Pedir},
+    {path: '/Pedidos-online', name: "PedidosRoute", component: Pedir},
     {path: '*', name: "PageNotFound", component: NotFound}
 ];
 
@@ -23,3 +24,4 @@ const router = VueRouter.createRouter({
 const create = Vue.createApp(App);
 create.use(router);
 create.mount('#app');
+

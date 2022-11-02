@@ -78,4 +78,5 @@ export default {
   background-image: url("./assets/img/fondo.jpg");
 }
 
+
 </style>
