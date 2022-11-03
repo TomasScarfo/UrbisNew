@@ -1,5 +1,9 @@
 <template>
     <div id="intro-contacto">
+      <br/>
+      <br/>
+      <br/>
+
       <div id="intro">
         <h1>Sobre Nosotros</h1>
         <p>En Urbis buscamos generar una sensación de hogar</p>
@@ -8,6 +12,9 @@
         <p>Todos nuestros productos son de elaboración propia:</p>
         <p>carnes, pastas artesanales, minutas y muchos mas.</p>
       </div>
+      <br/>
+      <br/>
+
     </div>
 
   <br/>
@@ -16,8 +23,8 @@
 
   <div id="intro-2">
     <div class="box-tasvir">
-      <marquee behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
-        <img src="../assets/img/buñelos.png">
+      <marquee behavior="scroll" direction="left" scrollamount="100" scrolldelay="800">
+        <img src="../assets/img/buñelos.png" alt="">
         <img src="../assets/img/milanesa.png" alt="">
         <img src="../assets/img/tortilla.png" alt="">
         <img src="../assets/img/ñoquis.png" alt="">
@@ -122,7 +129,6 @@ export default {
       20px -20px;
   top: 0;
   left: 0;
-  float: left;
   transition: box-shadow 1s, top 1s, left 1s;
   margin-bottom: 50px;
 }
@@ -139,11 +145,11 @@ export default {
 
 #intro-contacto{
   place-content: center;
+  background-image: url("../assets/img/restaurante-fon.jpg");
 }
 
 #intro-2{
   text-align: center;
-  margin: 10%;
 }
 
 #intro-2 a{
