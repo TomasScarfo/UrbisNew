@@ -1,5 +1,6 @@
 <template>
-
+  <Header/>
+  <TheButtons/>
   <h1>HAGA SU PEDIDO</h1>
 
   <hr>
@@ -82,11 +83,21 @@
     <br/>
     <br/>
 
+  <Footer/>
 </template>
 
 <script>
+import TheButtons from "@/components/Botones";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 export default {
-  name: "Pedir-tag"
+  name: "Pedir-tag",
+  components: {
+    TheButtons,
+    Header,
+    Footer,
+  }
 }
 </script>
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
 
-  <div id="all">
+  <div id="app">
 
     <img src="../assets/img/NotFound.png" alt="">
 
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-#all {
+#app{
   flex-direction: column;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;

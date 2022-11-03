@@ -1,11 +1,17 @@
 <template>
   <div id="botones">
-    <span v-on:click="$emit('menuEvent', 'home')"> Inicio</span> |
-    <span v-on:click="$emit('menuEvent', 'carta')"> Menú</span> |
-    <router-link :to="{ name: 'PedidosRoute' }">
+    <router-link to='/'>
+      <span> Inicio</span>
+    </router-link> |
+    <router-link to='/Menu'>
+      <span>Menú</span>
+    </router-link>
+      <router-link to='/PedidosOnline'> |
       <span> Pedidos Online </span>
     </router-link> |
-    <span v-on:click="$emit('menuEvent', 'redes')">Redes</span>
+    <router-link to='/Redes'>
+      <span>Redes</span>
+    </router-link>
   </div>
 </template>
 
