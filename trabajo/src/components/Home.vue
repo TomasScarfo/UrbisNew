@@ -94,7 +94,7 @@
 
 <script>
 
-// import {funcion, estado} from "@/assets/js/Home-JS"
+//import {funcion, estado} from "@/assets/js/Home-JS"
 
 export default {
   name: "Home-tag",
@@ -143,6 +143,9 @@ export default {
 }
 
 #intro-contacto{
+  margin-left: 17%;
+  width: 65%;
+  height: 400px;
   place-content: center;
   background-image: url("../assets/img/restaurante-fon.jpg");
 }

@@ -75,7 +75,7 @@ export default {
 
 <style>
 #all {
-  background-image: url("./assets/img/fondo.jpg");
+  background-color: linen;
 }
 
 
