@@ -9,9 +9,6 @@
 
 
 export default {
-<<<<<<< HEAD
-  name: 'App'
-=======
   name: 'App',
   components: {
     Buttons,
