@@ -53,8 +53,8 @@ export default {
     return {
       menu: {
         activeOption: 'home',
-        home: true,
-        carta: false,
+        home: false,
+        carta: true,
         pedir: false,
         redes: false,
       }

@@ -36,9 +36,10 @@
       <b>PRINCIPAL</b>
 
       <div id="opciones">
-        <img src="../assets/img/milanesa.png">
+        <img src="../assets/img/milanesa.png" v-bind:title="milanga">
         <p>Milanesa</p>
         <p>$1500</p>
+        <sub>De pollo o ternera acompañada de una guarnición a elección</sub>
       </div>
 
       <div id="opciones">
@@ -94,7 +95,12 @@
 
 <script>
 export default {
-  name: "Menu-tag"
+  name: "Menu-tag",
+  data() {
+    return {
+      milanga:"De pollo o ternera acompañada de una guarnición a elección"
+    }
+  }
 }
 </script>
 
@@ -127,6 +133,7 @@ h1 {
 #opciones {
   display:flex;
   border: 2px solid grey;
+  border-radius: 15px;
   flex-direction: row;
   width: 220px;
   justify-content: space-around;
@@ -136,9 +143,11 @@ h1 {
 }
 
 #opciones p{
-  width: 90px;
   text-align: center;
-  padding-top: 20px;
+}
+
+#opciones sub{
+  vertical-align: bottom;
 }
 
 #opciones img{
