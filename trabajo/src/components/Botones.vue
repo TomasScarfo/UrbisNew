@@ -24,7 +24,7 @@ export default {
   padding: 15px;
   opacity: 1;
   align-self: center;
-  margin-left: 35%;
+  margin-left:39%;
   margin-right: 30%;
 
 }

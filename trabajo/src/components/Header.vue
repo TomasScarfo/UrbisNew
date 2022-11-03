@@ -58,6 +58,7 @@ export default {
 
 h1{
   font-size: 300%;
+  margin-left: 9%;
 
 }
 
