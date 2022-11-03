@@ -99,14 +99,11 @@
 
 <script>
 
-<<<<<<< HEAD
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Botones from "@/components/Botones";
-=======
-//import {funcion, estado} from "@/assets/js/Home-JS"
 
->>>>>>> 6062f6b8701e753904259aab40ae01275f805983
 export default {
   name: "Home-tag",
   emits: ['menuEvent'],
