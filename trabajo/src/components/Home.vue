@@ -180,6 +180,7 @@ export default {
 #valor {
   place-content: center;
   display: flex;
+  margin-top: 50px;
 }
 
 .val {
