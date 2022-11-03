@@ -1,15 +1,14 @@
 <template>
-  <div id="intro-contacto">
-
-    <div id="intro">
-      <h1>Sobre Nosotros</h1>
-      <p>En Urbis buscamos generar una sensación de hogar</p>
-      <p>en las personas que nos visitan todos los mediodias,</p>
-      <p>con platos abundantes y de excelente calidad.</p>
-      <p>Todos nuestros productos son de elaboración propia:</p>
-      <p>carnes, pastas artesanales, minutas y muchos mas.</p>
+    <div id="intro-contacto">
+      <div id="intro">
+        <h1>Sobre Nosotros</h1>
+        <p>En Urbis buscamos generar una sensación de hogar</p>
+        <p>en las personas que nos visitan todos los mediodias,</p>
+        <p>con platos abundantes y de excelente calidad.</p>
+        <p>Todos nuestros productos son de elaboración propia:</p>
+        <p>carnes, pastas artesanales, minutas y muchos mas.</p>
+      </div>
     </div>
-  </div>
 
   <br/>
   <br/>
@@ -18,11 +17,11 @@
   <div id="intro-2">
     <div class="box-tasvir">
       <marquee behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
-        <img src="../assets/buñelos.png">
-        <img src="../assets/milanesa.png" alt="">
-        <img src="../assets/tortilla.png" alt="">
-        <img src="../assets/ñoquis.png" alt="">
-        <img src="../assets/vigilante.png" alt="">
+        <img src="../assets/img/buñelos.png">
+        <img src="../assets/img/milanesa.png" alt="">
+        <img src="../assets/img/tortilla.png" alt="">
+        <img src="../assets/img/ñoquis.png" alt="">
+        <img src="../assets/img/vigilante.png" alt="">
       </marquee>
 
     </div>
@@ -30,12 +29,12 @@
       <div class="menu-boton">
         <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
       </div>
-  </div>
+    </div>
 
 
   <div id="valor">
     <div class="val">
-      <img src="../assets/delivery.png" alt="">
+      <img src="../assets/img/delivery.png" alt="">
       <br>
       <b>ENVIOS RAPIDOS</b>
       <p>Se realizan envios con normalidad </p>
@@ -43,7 +42,7 @@
     </div>
 
     <div class="val">
-      <img src="../assets/star.png" alt="">
+      <img src="../assets/img/star.png" alt="">
       <br>
       <b>PRODUCTOS DE CALIDAD</b>
       <p> Nuestros productos son 100% confiables </p>
@@ -51,7 +50,7 @@
     </div>
 
     <div class="val">
-      <img src="../assets/money.png" alt="">
+      <img src="../assets/img/money.png" alt="">
       <br>
       <b>MEDIOS DE PAGO</b>
       <p> Aceptamos todos los medios de pago, </p>
@@ -59,7 +58,7 @@
     </div>
 
     <div class="val">
-      <img src="../assets/atencionAlCliente.png" alt="">
+      <img src="../assets/img/atencionAlCliente.png" alt="">
       <br>
       <b>ATENCION AL CLIENTE</b>
       <p> Puede contactarse con nosotros </p>
@@ -68,15 +67,39 @@
 
   </div>
 
+<!--  <div id='valoracion'>-->
+<!--    <h1>Contanos como fue tu experiencia</h1>-->
+<!--    <img id='animo-img' src="../assets/img/tenedor.png">-->
+
+<!--    <div id="form">-->
+<!--      <fieldset>-->
+<!--        <legend>Ingrese valoracion entre 1 y 10</legend>-->
+<!--        <input type="number" name="cara" id="animo-input" min="0" max="10">-->
+<!--        <button onclick="experiencia">-->
+<!--          Enviar-->
+<!--        </button>-->
+<!--        <h2 id="feedback"></h2>-->
+<!--      </fieldset>-->
+<!--    </div>-->
+<!--  </div>-->
 
 
 </template>
 
 <script>
 
+// import {funcion, estado} from "@/assets/js/Home-JS"
+
 export default {
   name: "Home-tag",
-  emits: ['menuEvent']
+  emits: ['menuEvent'],
+  // data() {
+  //   return {
+  //     experiencia: funcion,
+  //     estadoImg: estado
+  //
+  //   }
+  // }
 }
 
 </script>
@@ -122,6 +145,11 @@ export default {
   text-align: center;
   margin: 10%;
 }
+
+#intro-2 a{
+  cursor: pointer;
+}
+
 .box-tasvir{
   width: 50%;
   margin-left: 25%;
@@ -160,5 +188,18 @@ export default {
   height: 100px;
 }
 
+#animo-img {
+  width: 100px;
+}
 
+#valoracion{
+  text-align: center;
+  flex-direction: row;
+}
+
+fieldset {
+  width: 30%;
+  text-align: center;
+  margin-left: 35%;
+}
 </style>

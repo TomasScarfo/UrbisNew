@@ -14,6 +14,10 @@
     <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
     <Redes v-if="menu.redes"/>
+    <Pedir v-if="menu.pedir"/>
+
+
+
   </div>
     <br/>
     <br/>
@@ -71,7 +75,8 @@ export default {
 
 <style>
 #all {
-  background-image: url("./assets/fondo.jpg");
+  background-image: url("./assets/img/fondo.jpg");
 }
+
 
 </style>

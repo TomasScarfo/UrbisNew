@@ -24,4 +24,4 @@ const router = VueRouter.createRouter({
 const create = Vue.createApp(App);
 create.use(router);
 create.mount('#app');
-git add *
+
