@@ -39,9 +39,10 @@
       <b>PRINCIPAL</b>
 
       <div id="opciones">
-        <img src="../assets/img/milanesa.png">
+        <img src="../assets/img/milanesa.png" v-bind:title="milanga">
         <p>Milanesa</p>
         <p>$1500</p>
+        <p>De pollo o ternera acompañada de una guarnición a elección</p>
       </div>
 
       <div id="opciones">
@@ -102,10 +103,17 @@ import TheButtons from "@/components/Botones";
 
 export default {
   name: "Menu-tag",
+<<<<<<< HEAD
   components: {
     TheButtons,
     Header,
     Footer,
+=======
+  data() {
+    return {
+      milanga:"De pollo o ternera acompañada de una guarnición a elección"
+    }
+>>>>>>> 6062f6b8701e753904259aab40ae01275f805983
   }
 }
 </script>
@@ -139,6 +147,7 @@ h1 {
 #opciones {
   display:flex;
   border: 2px solid grey;
+  border-radius: 15px;
   flex-direction: row;
   width: 220px;
   justify-content: space-around;
@@ -148,9 +157,11 @@ h1 {
 }
 
 #opciones p{
-  width: 90px;
   text-align: center;
-  padding-top: 20px;
+}
+
+#opciones sub{
+  vertical-align: bottom;
 }
 
 #opciones img{
