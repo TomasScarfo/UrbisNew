@@ -103,19 +103,13 @@ import TheButtons from "@/components/Botones";
 
 export default {
   name: "Menu-tag",
-<<<<<<< HEAD
   components: {
     TheButtons,
     Header,
     Footer,
-=======
-  data() {
-    return {
-      milanga:"De pollo o ternera acompañada de una guarnición a elección"
-    }
->>>>>>> 6062f6b8701e753904259aab40ae01275f805983
-  }
+      }
 }
+
 </script>
 
 <style scoped>
