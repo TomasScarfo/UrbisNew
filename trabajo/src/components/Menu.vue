@@ -1,4 +1,7 @@
 <template>
+  <Header/>
+  <TheButtons/>
+
   <h1>MENU</h1>
 
   <hr>
@@ -98,18 +101,23 @@
       </div>
     </section>
   </div>
-
+<Footer/>
 </template>
 
 <script>
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import TheButtons from "@/components/Botones";
+
 export default {
   name: "Menu-tag",
-  data() {
-    return {
-      milanga:"De pollo o ternera acompañada de una guarnición a elección"
-    }
-  }
+  components: {
+    TheButtons,
+    Header,
+    Footer,
+      }
 }
+
 </script>
 
 <style scoped>
