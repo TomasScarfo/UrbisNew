@@ -39,7 +39,7 @@
         <img src="../assets/img/milanesa.png" v-bind:title="milanga">
         <p>Milanesa</p>
         <p>$1500</p>
-        <sub>De pollo o ternera acompañada de una guarnición a elección</sub>
+        <p>De pollo o ternera acompañada de una guarnición a elección</p>
       </div>
 
       <div id="opciones">
