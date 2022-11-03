@@ -1,17 +1,23 @@
 <template>
-   <div class="todo">
-    <img src="../assets/placeholder_restaurant.jpg" alt="" class="icon-2">
+  <div id="header-content">
 
-    <section id="encab">
-      <h1> {{ title }}</h1>
-      <a target="_blank" href="https://www.google.com.ar/maps/place/Urbis+Bar+Restaurante/@-34.602708,-58.3732216,17z/data=!3m1!4b1!4m5!3m4!1s0x95a33532cfbb93a1:0x68be8a70e7b328d2!8m2!3d-34.6027124!4d-58.3710329">
+    <img src="../assets/placeholder_restaurant.jpg" id="logo">
+
+
+    <h1> {{ title }}</h1>
+
+    <div id="subtitle">
+      <div id="loc">
+        <a href= "https://www.google.com.ar/maps/place/Urbis+Bar+Restaurante/@-34.602708,-58.3732216,17z/data=!3m1!4b1!4m5!3m4!1s0x95a33532cfbb93a1:0x68be8a70e7b328d2!8m2!3d-34.6027124!4d-58.3710329" target="_blank">
+          <img src="../assets/location.jpg" id="loc-img" v-bind:title="direccion">
+        </a>
         <p>{{ ubicacion }}</p>
-      </a>
-      <h5>{{horario}}</h5>
+      </div>
+      <h5>{{ horario }}</h5>
+    </div>
 
+  </div>
 
-    </section>
-   </div>
 </template>
 
 <script>
@@ -20,12 +26,10 @@ export default {
   name: 'the-Header',
   data() {
     return {
-      date: '27/10/2022',
-      clima: '18° C - Nublado',
       title: 'Urbis Resto Bar',
       ubicacion: '25 de Mayo 437',
-      horario: 'Lunes a Viernes, de 8 a 18 horas'
-
+      horario: 'Lunes a Viernes, de 8 a 18 horas',
+      direccion: "Llevame!! - GoogleMaps"
     }
   }
 }
@@ -36,52 +40,42 @@ export default {
 
 <style scoped>
 
-
-#encab {
-  height: 178px;
-}
-
-
-
-.icon-2 {
+#header-content{
+  display: flex;
+  flex-direction: row;
   padding: 10px;
-  margin: 10px;
-  width: 180px;
-  float: left;
+  justify-content: space-around;
+  background: #f3f3f3;
+  border-bottom: 2px solid gray;
+  box-shadow: 0 4px darkgrey;
+  text-align: center;
 }
 
-section{
-  font-size: x-large;
-  border: 2px solid black ;
-  padding-left: 35%;
-  color: black;
+#logo {
+  width: 100px;
+  height: 100px;
 }
 
 h1{
-  font-style: oblique;
-  float: left;
-  margin-left: 110px;
-  text-align: center;
-  margin-top: 50px;
+  font-size: 300%;
 
 }
 
-p{
-  font-style: italic;
-  font-size: smaller;
-  margin-left: 230px;
-  margin-top: 85px;
-  color: black;
-  width: 40%;
+#subtitle {
+  font-size: 18px;
+  display: inline-block;
+  flex-direction: row;
+}
+
+#loc-img {
+  width: 20px;
+  height: 20px;
+  margin: 18px;
+
+}
+
+#loc {
+  flex-direction: row;
   display: flex;
 }
-
-h5{
-  float: right;
-  margin-right: 10px;
-}
-.todo{
-  background-color: azure;
-}
-
 </style>

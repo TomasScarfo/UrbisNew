@@ -1,5 +1,4 @@
 <template>
-
   <div id="all">
   <div id="header-div">
     <Header/>
@@ -14,9 +13,13 @@
   <div id="components">
     <Home v-if="menu.home" v-on:menuEvent="selectedOption"/>
     <Menu v-if="menu.carta"/>
-    <Pedir v-if="menu.pedir"/>
-
+    <Redes v-if="menu.redes"/>
   </div>
+    <br/>
+    <br/>
+    <br/>
+
+    <Footer/>
   </div>
 
 </template>
@@ -26,7 +29,9 @@ import Header from "@/components/Header";
 import Buttons from "@/components/Botones";
 import Home from "@/components/Home";
 import Menu from "@/components/Menu";
-import Pedir from "@/components/Pedir";
+//import Pedir from "@/components/Pedir";
+import Redes from "@/components/Redes";
+import Footer from "@/components/Footer"
 
 
 export default {
@@ -36,7 +41,9 @@ export default {
     Header,
     Home,
     Menu,
-    Pedir,
+    //Pedir,
+    Redes,
+    Footer
   },
   data() {
     return {
@@ -45,7 +52,6 @@ export default {
         home: true,
         carta: false,
         pedir: false,
-        preguntas: false,
         redes: false,
       }
     }
@@ -64,8 +70,8 @@ export default {
 </script>
 
 <style>
-#all{
-  background-color:lightgrey;
+#all {
+  background-image: url("./assets/fondo.jpg");
 }
 
 </style>

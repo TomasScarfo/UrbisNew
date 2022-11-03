@@ -1,11 +1,12 @@
 <template>
+
   <h1>HAGA SU PEDIDO</h1>
 
   <hr>
 
   <form enctype="text/plain" id="form">
 
-    <table border="8" style="margin: 0 auto;">
+    <table style="margin: 0 auto;">
       <tbody>
       <tr>
         <td>Nombre y apellido</td>
@@ -32,18 +33,18 @@
         <td>
           Entrada <select name="entrada" id="" v-model="entrada">
           <option value="-">-</option>
-          <option value="Rabas">Rabas</option>
+          <option value="Rabas">Gambas</option>
           <option value="Tortilla">Tortilla</option>
           <option value="Buñuelos">Buñuelos</option>
-          <option value="Burrata">Burrata</option>
+          <option value="Burrata">Lengua</option>
         </select>
           <br>
           Plato principal <select name="princi" id="" v-model="plato">
           <option value="-">-</option>
           <option value="Milanesa">Milanesa</option>
-          <option value="Fideos">Fideos</option>
+          <option value="Fideos">Ñoquis</option>
           <option value="Carne al horno">Carne al horno</option>
-          <option value="Ñoquis">Ñoquis</option>
+          <option value="Ñoquis">Pollo</option>
         </select>
           <br>
           Postre <select name="postre" id="" v-model="postre">
@@ -51,7 +52,7 @@
           <option value="Ensalada de fruta">Ensalada de fruta</option>
           <option value="Flan">Flan</option>
           <option value="Helado">Helado</option>
-          <option value="Tiramisu">Tiramisu</option>
+          <option value="Tiramisu">Cafe</option>
         </select>
         </td>
       </tr>
@@ -68,47 +69,34 @@
       </tbody>
     </table>
 
-    <br><br>
-    <footer id="footer">
-      <input type="" value="Enviar">
-      <input type="" value="Limpiar">
-    </footer>
   </form>
 
   <br/>
   <br/>
 
-  <div>
-    <h1>Hola {{ nombre }}! Este es el resumen de tu Pedido</h1>
-    <h3> Entrada: {{ entrada }}</h3>
-    <h3> Plato principal: {{ plato }}</h3>
-    <h3> Postre: {{ postre }}</h3>
-    <h3>Horario de entrega: {{ horaEntrega }}</h3>
+  <footer id="footer">
+    <input type='submit' value="Enviar">
+    <input type="reset" value="Limpiar">
+  </footer>
 
-  </div>
+    <br/>
+    <br/>
 
 </template>
 
 <script>
 export default {
-  name: "Pedir-tag",
-  data() {
-    return {
-      horaEntrega: "",
-      nombre: "",
-      entrada : "",
-      plato: "",
-      postre: "",
-    }
-  }
+  name: "Pedir-tag"
 }
 </script>
-
 <style scoped>
 body{
   text-align: center;
-  /*background-image: url('img/fondo.jpg');*/
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
 }
 
 #form {
@@ -143,4 +131,5 @@ hr{
 footer{
   text-align: center;
 }
+
 </style>

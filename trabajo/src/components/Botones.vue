@@ -1,10 +1,11 @@
 <template>
   <div id="botones">
-    <a v-on:click="$emit('menuEvent', 'home')"> Inicio</a> |
-    <a v-on:click="$emit('menuEvent', 'carta')"> Menú</a> |
-    <a v-on:click="$emit('menuEvent', 'pedidos')"> Pedidos</a> |
-    <a v-on:click="$emit('menuEvent', 'preguntas')"> Preguntas Frecuentes</a> |
-    <a v-on:click="$emit('menuEvent', 'redes')">Redes</a>
+    <span v-on:click="$emit('menuEvent', 'home')"> Inicio</span> |
+    <span v-on:click="$emit('menuEvent', 'carta')"> Menú</span> |
+    <router-link :to="{ name: 'PedidosRoute' }">
+      <span> Pedidos Online </span>
+    </router-link> |
+    <span v-on:click="$emit('menuEvent', 'redes')">Redes</span>
   </div>
 </template>
 
@@ -28,7 +29,7 @@ export default {
 
 }
 
-#botones a {
+#botones span {
   padding: 10px;
   text-decoration: rgb(188, 194, 192);
   background-color: black;
@@ -36,7 +37,7 @@ export default {
   border-radius: 10px;
 }
 
-#botones a:hover {
+#botones span:hover {
   background-color: rgb(128, 150, 142);
 }
 
