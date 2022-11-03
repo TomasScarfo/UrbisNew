@@ -1,4 +1,6 @@
 <template>
+  <TheHeader/>
+  <TheButtons/>
 
   <div id="contacto">
     <h1>Contactanos hoy!</h1>
@@ -7,11 +9,21 @@
     <h3>Twitter: @Urbisneta</h3>
   </div>
 
+  <FooterTag/>
 </template>
 
 <script>
+import FooterTag from "@/components/Footer";
+import TheHeader from "@/components/Header";
+import TheButtons from "@/components/Botones";
+
 export default {
-  name: "Redes-tag"
+  name: "Redes-tag",
+  components: {
+    TheButtons,
+    TheHeader,
+    FooterTag
+  }
 }
 </script>
 

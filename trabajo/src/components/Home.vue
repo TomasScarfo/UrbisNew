@@ -1,4 +1,8 @@
 <template>
+
+  <Header/>
+  <Botones/>
+
     <div id="intro-contacto">
       <br/>
       <br/>
@@ -91,23 +95,25 @@
     </div>
   </div>
 
+  <Footer/>
 
 </template>
 
 <script>
 
-//import {funcion, estado} from "@/assets/js/Home-JS"
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Botones from "@/components/Botones";
 
 export default {
   name: "Home-tag",
   emits: ['menuEvent'],
-  // data() {
-  //   return {
-  //     experiencia: funcion,
-  //     estadoImg: estado
-  //
-  //   }
-  // }
+  components: {
+    Header,
+    Footer,
+    Botones
+  }
 }
 
 </script>

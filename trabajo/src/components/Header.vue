@@ -1,8 +1,9 @@
 <template>
   <div id="header-content">
 
-    <img src="../assets/img/placeholder_restaurant.jpg" id="logo">
-
+    <router-link :to="{name: 'HomeRoute'}">
+      <img src="../assets/img/placeholder_restaurant.jpg" id="logo" alt="">
+    </router-link>
 
     <h1> {{ title }}</h1>
 

@@ -2,18 +2,22 @@ import * as Vue from 'vue';
 import * as  VueRouter from 'vue-router';
 
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import app from "@/App";
-import Pedir from "@/components/Pedir";
+import App from "@/App";
 import NotFound from "@/components/NotFound";
+import Home from "@/components/Home";
+import Menu from "@/components/Menu";
+import Pedir from "@/components/Pedir";
+import Redes from "@/components/Redes";
 
-createApp(App).mount('#app')
 
 const routes = [
-    {path: '/', name: "HomeRoute", component: app},
-    {path: '/Pedidos-online', name: "PedidosRoute", component: Pedir},
-    {path: '*', name: "PageNotFound", component: NotFound}
+    {path: '/', name: "HomeRoute", component: Home},
+    {path: '/Menu', name: "Menu", component: Menu},
+    {path: '/PedidosOnline', name: "PedidosOnline", component: Pedir},
+    {path: '/Redes', name: "Redes", component: Redes},
+
+
+    {path: '/:pathMatch(.*)*', component: NotFound}
 ];
 
 const router = VueRouter.createRouter({
@@ -21,7 +25,6 @@ const router = VueRouter.createRouter({
     routes,
 });
 
-const create = Vue.createApp(App);
-create.use(router);
-create.mount('#app');
-
+const app = Vue.createApp(App);
+app.use(router);
+app.mount('#app');
