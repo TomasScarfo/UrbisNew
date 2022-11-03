@@ -33,7 +33,7 @@ import Header from "@/components/Header";
 import Buttons from "@/components/Botones";
 import Home from "@/components/Home";
 import Menu from "@/components/Menu";
-import Pedir from "@/components/Pedir";
+//import Pedir from "@/components/Pedir";
 import Redes from "@/components/Redes";
 import Footer from "@/components/Footer"
 
@@ -45,7 +45,7 @@ export default {
     Header,
     Home,
     Menu,
-    Pedir,
+    //Pedir,
     Redes,
     Footer
   },
@@ -75,7 +75,7 @@ export default {
 
 <style>
 #all {
-  background-image: url("./assets/img/fondo.jpg");
+  background-color: linen;
 }
 
 

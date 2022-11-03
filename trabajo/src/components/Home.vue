@@ -74,28 +74,27 @@
 
   </div>
 
-<!--  <div id='valoracion'>-->
-<!--    <h1>Contanos como fue tu experiencia</h1>-->
-<!--    <img id='animo-img' src="../assets/img/tenedor.png">-->
-
-<!--    <div id="form">-->
-<!--      <fieldset>-->
-<!--        <legend>Ingrese valoracion entre 1 y 10</legend>-->
-<!--        <input type="number" name="cara" id="animo-input" min="0" max="10">-->
-<!--        <button onclick="experiencia">-->
-<!--          Enviar-->
-<!--        </button>-->
-<!--        <h2 id="feedback"></h2>-->
-<!--      </fieldset>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div id='valoracion'>
+    <h1>Contanos como fue tu experiencia</h1>
+    <img id='animo-img' src="../assets/img/tenedor.png">
+    <div id="form">
+      <fieldset>
+        <legend>Ingrese valoracion entre 1 y 10</legend>
+        <input type="number" name="cara" id="animo-input" min="0" max="10">
+        <button onclick="experiencia">
+          Enviar
+        </button>
+        <h2 id="feedback"></h2>
+      </fieldset>
+    </div>
+  </div>
 
 
 </template>
 
 <script>
 
-// import {funcion, estado} from "@/assets/js/Home-JS"
+//import {funcion, estado} from "@/assets/js/Home-JS"
 
 export default {
   name: "Home-tag",
@@ -144,6 +143,9 @@ export default {
 }
 
 #intro-contacto{
+  margin-left: 17%;
+  width: 65%;
+  height: 400px;
   place-content: center;
   background-image: url("../assets/img/restaurante-fon.jpg");
 }
