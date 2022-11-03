@@ -9,25 +9,27 @@
       <div id="opciones">
         <img src="../assets/img/tortilla.png">
         <p>Tortilla</p>
-        <p>$700</p>
+        <sub>Tortilla de papa, verdura o acelga</sub>
+        <p id="precio">$700</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/buñelos.png">
         <p>Buñuelos</p>
-        <p>$500</p>
+        <sub>8 buñuelos caseros al estilo Urbis</sub>
+        <p id="precio">$700</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/gambas.png">
         <p>Gambas</p>
-        <p>$1000</p>
+        <p id="precio">$1000</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/lengua.png">
         <p>Lengua</p>
-        <p>$1000</p>
+        <p id="precio">$1000</p>
       </div>
 
     </section>
@@ -38,26 +40,29 @@
       <div id="opciones">
         <img src="../assets/img/milanesa.png" v-bind:title="milanga">
         <p>Milanesa</p>
-        <p>$1500</p>
-        <p>De pollo o ternera acompañada de una guarnición a elección</p>
+        <sub>De pollo o ternera acompañada de una guarnición a elección</sub>
+        <p id="precio">$1500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/ñoquis.png">
         <p>Ñoquis</p>
-        <p>$1300</p>
+        <sub>Servidos con salsa rosa, carbonara o bolognesa</sub>
+        <p id="precio">$1300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/pollo.png">
         <p>Pollo</p>
-        <p>$1300</p>
+        <sub>Pollo al horno acompañado con una guarnición a elección</sub>
+        <p id="precio">$1300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/carne.png">
         <p>Carne</p>
-        <p>$1800</p>
+        <sub>Carne al horno acompañado con una guarnición a elección</sub>
+        <p id="precio">$1800</p>
       </div>
 
     </section>
@@ -68,25 +73,28 @@
       <div id="opciones">
         <img src="../assets/img/flan.png">
         <p>Flan</p>
-        <p>$500</p>
+        <sub>Flan casero simple o mixto</sub>
+        <p id="precio">$500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/vigilante.png">
         <p>Vigilante</p>
-        <p>$500</p>
+        <p id="precio">$500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/helado.png">
         <p>Helado</p>
-        <p>$300</p>
+        <sub>Americana, chocolate o dulce de leche</sub>
+        <p id="precio">$300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/cafe.png">
         <p>Cafe</p>
-        <p>$200</p>
+        <sub>Cafe negro</sub>
+        <p id="precio">$200</p>
       </div>
     </section>
   </div>
@@ -134,26 +142,26 @@ h1 {
   display:flex;
   border: 2px solid grey;
   border-radius: 15px;
-  flex-direction: row;
+  flex-direction: column;
   width: 220px;
   justify-content: space-around;
   margin-top: 10px;
   padding: 5px;
-
-}
-
-#opciones p{
-  text-align: center;
-}
-
-#opciones sub{
-  vertical-align: bottom;
 }
 
 #opciones img{
-  width: 100px;
-  height: 100px;
+  width: 220px;
+  height: 130px;
   border-radius: 5px;
+}
+
+#opciones p{
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+#precio{
+  font-weight: bold;
 }
 
 </style>
