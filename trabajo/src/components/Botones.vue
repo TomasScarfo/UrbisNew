@@ -1,16 +1,16 @@
 <template>
   <div id="botones">
-    <router-link to='/'>
+    <router-link :to="{name: 'HomeRoute'}">
       <span> Inicio</span>
     </router-link>
-    <router-link to='/Menu'>
+    <router-link :to='{name: "Menu"}'>
       <span>Menú</span>
     </router-link>
-      <router-link to='/PedidosOnline'>
+      <router-link :to="{name: 'PedidosOnline'}">
       <span> Pedidos Online </span>
     </router-link>
-    <router-link to='/Redes'>
-      <span>Redes</span>
+    <router-link :to="{name: 'Reseñas'}">
+      <span>Reseñas</span>
     </router-link>
   </div>
 </template>
