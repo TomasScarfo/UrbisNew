@@ -30,7 +30,7 @@ export default {
   padding: 15px;
   opacity: 1;
   align-self: center;
-  margin: 30px 37% 30px 37%;
+  margin: 36px 37% 30px 39%;
 }
 
 #botones span {

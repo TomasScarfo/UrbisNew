@@ -40,7 +40,9 @@
     </div>
       <h2>Ver mas platos...</h2>
       <div class="menu-boton">
-        <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
+        <router-link :to='{name: "Menu"}'>
+          <span>Menú</span>
+        </router-link>
       </div>
     </div>
 
@@ -123,7 +125,7 @@ export default {
 #intro {
   background-color:gainsboro;
   width: 36%;
-  margin: 0 32% 0 32%;
+  margin: 0 34% 0 22%;
   padding: 2% 10% 2% 10%;
   text-align: center;
   border-style: solid;
@@ -149,7 +151,7 @@ export default {
 }
 
 #intro-contacto{
-  margin-left: 17%;
+  margin-left: 18%;
   width: 65%;
   height: 400px;
   place-content: center;
