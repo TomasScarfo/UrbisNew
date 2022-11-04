@@ -1,31 +1,31 @@
-const estado = {
-    excelente: "./img/emoticonos.png",
-    buena: "./img/feliz.png",
-    intermedio: "./img/pensando.png",
-    mala: "./img/triste.png",
-    muyMala: "./img/muy-triste.png"
-}
+// const estado = {
+//     excelente: "./img/emoticonos.png",
+//     buena: "./img/feliz.png",
+//     intermedio: "./img/pensando.png",
+//     mala: "./img/triste.png",
+//     muyMala: "./img/muy-triste.png"
+// };
 
 function experiencia() {
-    var a = document.getElementById("animo-input").value
+    const a = document.getElementById("animo-input").value;
 
-    var imgPath = null
-    var p = null
+    let imgPath = null;
+    let p = null;
 
     if (10 >= a && a > 8) {
-        imgPath = estado.excelente
+        imgPath = 'trabajo/src/assets/img/emoticonos.png'
         p = 'Wow! Estamos agradecidos'
     } else if (8 >= a && a > 6) {
-        imgPath = estado.buena
+        imgPath = 'trabajo/src/assets/img/feliz.png'
         p = 'Wow! Estamos agradecidos'
     } else if (6 >= a && a > 4) {
-        imgPath = estado.intermedio
+        imgPath = 'trabajo/src/assets/img/pensando.png'
         p = 'Gracias por valorarnos!'
     } else if (4 >= a && a > 2) {
-        imgPath = estado.mala
+        imgPath = 'trabajo/src/assets/img/triste.png'
         p = 'Intentaremos mejorar!'
     } else if (a <= 2 && a >= 0) {
-        imgPath = estado.muyMala
+        imgPath = 'trabajo/src/assets/img/muy-triste.png'
         p = 'Intentaremos mejorar!'
     } else {
         alert('Valor invalido, ingrese un numero entre 1-10')
@@ -33,10 +33,10 @@ function experiencia() {
         p = 'Algo salio Mal'
     }
 
-    var cara = document.getElementById('animo-img')
-    var msj = document.getElementById('feedback')
+    const cara = document.getElementById('animo-img');
+    const msj = document.getElementById('feedback');
     cara.src = imgPath
     msj.innerHTML = p
 }
 
-export {experiencia, estado}
+export {experiencia}

@@ -41,10 +41,12 @@ export default {
   border-radius: 10px;
   cursor: pointer;
   margin: 1px;
+  text-decoration: none;
 }
 
 #botones span:hover {
   background-color: rgb(128, 150, 142);
+  text-decoration: none;
 }
 
 </style>
