@@ -5,13 +5,11 @@
   <div class="contact_form">
 
     <div class="formulario">
-      <h1>Formulario de contacto</h1>
+      <h1>DEJANOS TU OPINION!</h1>
       <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
 
 
-      <form method="post">
-
-
+      <form method="">
         <p>
           <label for="nombre" class="colocar_nombre">Nombre
             <span class="obligatorio">*</span>
@@ -30,12 +28,6 @@
           <label for="telefone" class="colocar_telefono">Teléfono
           </label>
           <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-        </p>
-
-        <p>
-          <label for="website" class="colocar_website">Sitio web
-          </label>
-          <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
         </p>
 
         <p>
@@ -152,6 +144,11 @@ button{
   cursor: pointer;
 }
 
+button:hover {
+  background-color: saddlebrown;
+  border-color: saddlebrown;
+  opacity: 90%;
+}
 
 button p{
   color: #fff;
@@ -159,7 +156,7 @@ button p{
 
 
 span{
-  color: #burlywood;
+  color: burlywood;
 }
 
 
@@ -171,9 +168,9 @@ span{
 
 h1{
   font-size: 39px;
-  text-align: letf;
+  text-align: left;
   padding-bottom: 20px;
-  color: burlywood;
+  color: saddlebrown;
 }
 
 
@@ -197,13 +194,13 @@ p{
 
 .formulario input:focus{
   outline:0;
-  border: 1px solid #97d848;
+  border: 1px solid firebrick;
 }
 
 
 .formulario textarea:focus{
   outline:0;
-  border: 1px solid #97d848;
+  border: 1px solid firebrick;
 }
 
 

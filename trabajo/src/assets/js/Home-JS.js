@@ -39,9 +39,4 @@ function experiencia() {
     msj.innerHTML = p
 }
 
-const funcion = experiencia
-
-export {
-    funcion,
-    estado
-}
+export {experiencia, estado}
