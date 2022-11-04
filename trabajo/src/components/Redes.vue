@@ -28,7 +28,9 @@ export default {
 </script>
 
 <style scoped>
-
+#all {
+  background-color: linen;
+}
 #contacto {
   background-color: rgb(221, 225, 228);
   width: 36%;

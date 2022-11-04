@@ -121,9 +121,8 @@ export default {
 #intro {
   background-color:gainsboro;
   width: 36%;
-  margin-left: 32%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin: 0 32% 0 32%;
+  padding: 2% 10% 2% 10%;
   text-align: center;
   border-style: solid;
   border-width: 3px;
@@ -135,7 +134,6 @@ export default {
   top: 0;
   left: 0;
   transition: box-shadow 1s, top 1s, left 1s;
-  margin-bottom: 50px;
 }
 
 #intro:hover {

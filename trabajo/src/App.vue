@@ -15,9 +15,5 @@ export default {
 </script>
 
 <style>
-#all {
-  background-color: linen;
-}
-
 
 </style>

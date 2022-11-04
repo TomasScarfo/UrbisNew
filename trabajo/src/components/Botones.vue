@@ -2,13 +2,13 @@
   <div id="botones">
     <router-link to='/'>
       <span> Inicio</span>
-    </router-link> |
+    </router-link>
     <router-link to='/Menu'>
       <span>Menú</span>
     </router-link>
-      <router-link to='/PedidosOnline'> |
+      <router-link to='/PedidosOnline'>
       <span> Pedidos Online </span>
-    </router-link> |
+    </router-link>
     <router-link to='/Redes'>
       <span>Redes</span>
     </router-link>
@@ -26,13 +26,11 @@ export default {
 
 #botones {
   height: auto;
-  width: 40%;
+  width: 25%;
   padding: 15px;
   opacity: 1;
   align-self: center;
-  margin-left:39%;
-  margin-right: 30%;
-
+  margin: 30px 37% 30px 37%;
 }
 
 #botones span {
@@ -42,6 +40,7 @@ export default {
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  margin: 1px;
 }
 
 #botones span:hover {
