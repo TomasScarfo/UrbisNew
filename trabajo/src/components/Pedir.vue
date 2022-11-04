@@ -40,7 +40,7 @@
           <option value="Burrata">Lengua</option>
         </select>
           <br>
-          Plato principal <select name="princi" id="" v-model="plato">
+          Plato <select name="princi" id="" v-model="plato">
           <option value="-">-</option>
           <option value="Milanesa">Milanesa</option>
           <option value="Fideos">Ñoquis</option>
@@ -69,19 +69,12 @@
       </tr>
       </tbody>
     </table>
-
+    <hr/>
+    <footer id="footer">
+      <input type='submit' value="Enviar">
+      <input type="reset" value="Limpiar">
+    </footer>
   </form>
-
-  <br/>
-  <br/>
-
-  <footer id="footer">
-    <input type='submit' value="Enviar">
-    <input type="reset" value="Limpiar">
-  </footer>
-
-    <br/>
-    <br/>
 
   <Footer/>
 </template>
@@ -116,6 +109,8 @@ h1 {
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
+  border: 1px solid;
+  width: 416px;
 }
 
 #form th,
@@ -124,11 +119,11 @@ h1 {
 }
 
 #form tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid grey;
 }
 
 #form tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background-color: burlywood;
 }
 
 #form tbody tr:last-of-type {
@@ -141,6 +136,7 @@ hr{
 
 footer{
   text-align: center;
+  padding: 10px;
 }
 
 </style>

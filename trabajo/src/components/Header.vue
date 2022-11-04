@@ -55,6 +55,7 @@ export default {
 #logo {
   width: 100px;
   height: 100px;
+  margin-top: 10px;
 }
 
 h1{
