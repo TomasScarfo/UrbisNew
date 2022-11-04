@@ -76,10 +76,18 @@
     </footer>
   </form>
 
+<!--  <div class="order-items">-->
+<!--    <OrderItem v-for="(item, index) in entradas" v-bind:key="index"-->
+<!--               v-bind:name="item.producto"-->
+<!--               v-bind:description="item.descripcion"-->
+<!--               v-bind:price="item.precio"-->
+<!--    />-->
+
   <Footer/>
 </template>
 
 <script>
+import {entradas, postre, principal} from "@/assets/js/Opciones";
 import TheButtons from "@/components/Botones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -90,6 +98,18 @@ export default {
     TheButtons,
     Header,
     Footer,
+  },
+  data() {
+    return {
+      entradas: entradas,
+      platoPrincipal: principal,
+      postre: postre,
+    }
+  },
+  props: {
+    producto: String,
+    descripcion: String,
+    precio: Number
   }
 }
 </script>
@@ -105,12 +125,13 @@ h1 {
 
 #form {
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
   border: 1px solid;
   width: 416px;
+  margin-right: 40%;
+
 }
 
 #form th,
@@ -140,3 +161,4 @@ footer{
 }
 
 </style>
+

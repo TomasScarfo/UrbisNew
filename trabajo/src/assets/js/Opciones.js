@@ -61,15 +61,21 @@ const postre = [
         img: '',
         precio: 500
     },{
-        producto: 'Pollo',
-        descripcion: 'Pollo al horno con guarnición a elección',
+        producto: 'Helado',
+        descripcion: 'Americana, chocolate o dulce de leche',
         img: '',
-        precio: 1300
+        precio: 300
     },{
-        producto: 'Carne',
-        descripcion: 'Carne al horno con guarnición a elección',
+        producto: 'Cafe',
+        descripcion: 'Cafe negro',
         img: '',
-        precio: 1800
+        precio: 200
     },
 ]
 
+
+export {
+    entradas,
+    principal,
+    postre,
+}
