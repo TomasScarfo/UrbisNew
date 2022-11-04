@@ -80,20 +80,20 @@
 
   </div>
 
-  <div id='valoracion'>
-    <h1>Contanos como fue tu experiencia</h1>
-    <img id='animo-img' src="../assets/img/tenedor.png">
-    <div id="form">
-      <fieldset>
-        <legend>Ingrese valoracion entre 1 y 10</legend>
-        <input type="number" name="cara" id="animo-input" min="0" max="10">
-        <button onclick="experiencia">
-          Enviar
-        </button>
-        <h2 id="feedback"></h2>
-      </fieldset>
-    </div>
-  </div>
+<!--  <div id='valoracion'>-->
+<!--    <h1>Contanos como fue tu experiencia</h1>-->
+<!--    <img id='animo-img' src="../assets/img/tenedor.png">-->
+<!--    <div id="form">-->
+<!--      <fieldset>-->
+<!--        <legend>Ingrese valoracion entre 1 y 10</legend>-->
+<!--        <input type="number" name="cara" id="animo-input" min="0" max="10">-->
+<!--        <button onclick="experiencia">-->
+<!--          Enviar-->
+<!--        </button>-->
+<!--        <h2 id="feedback"></h2>-->
+<!--      </fieldset>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <Footer/>
 
@@ -112,8 +112,8 @@ export default {
   components: {
     Header,
     Footer,
-    Botones
-  }
+    Botones,
+  },
 }
 
 </script>
@@ -123,9 +123,8 @@ export default {
 #intro {
   background-color:gainsboro;
   width: 36%;
-  margin-left: 32%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin: 0 32% 0 32%;
+  padding: 2% 10% 2% 10%;
   text-align: center;
   border-style: solid;
   border-width: 3px;
@@ -137,7 +136,6 @@ export default {
   top: 0;
   left: 0;
   transition: box-shadow 1s, top 1s, left 1s;
-  margin-bottom: 50px;
 }
 
 #intro:hover {

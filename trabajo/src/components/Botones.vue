@@ -1,16 +1,16 @@
 <template>
   <div id="botones">
-    <router-link to='/'>
+    <router-link :to="{name: 'HomeRoute'}">
       <span> Inicio</span>
-    </router-link> |
-    <router-link to='/Menu'>
+    </router-link>
+    <router-link :to='{name: "Menu"}'>
       <span>Menú</span>
     </router-link>
-      <router-link to='/PedidosOnline'> |
+      <router-link :to="{name: 'PedidosOnline'}">
       <span> Pedidos Online </span>
-    </router-link> |
-    <router-link to='/Redes'>
-      <span>Redes</span>
+    </router-link>
+    <router-link :to="{name: 'Reseñas'}">
+      <span>Reseñas</span>
     </router-link>
   </div>
 </template>
@@ -26,13 +26,11 @@ export default {
 
 #botones {
   height: auto;
-  width: 40%;
+  width: 25%;
   padding: 15px;
   opacity: 1;
   align-self: center;
-  margin-left:39%;
-  margin-right: 30%;
-
+  margin: 30px 37% 30px 37%;
 }
 
 #botones span {
@@ -42,6 +40,7 @@ export default {
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  margin: 1px;
 }
 
 #botones span:hover {

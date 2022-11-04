@@ -21,6 +21,7 @@ div{
   background: #f3f3f3;
   border-top: 2px solid gray;
   box-shadow: 0 -4px darkgrey;
+  margin: 20px;
 }
 
 img{

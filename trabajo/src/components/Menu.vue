@@ -26,12 +26,14 @@
       <div id="opciones">
         <img src="../assets/img/gambas.png">
         <p>Gambas</p>
+        <sub>Al ajillo</sub>
         <p id="precio">$1000</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/lengua.png">
         <p>Lengua</p>
+        <sub>Al escabeche</sub>
         <p id="precio">$1000</p>
       </div>
 
@@ -43,28 +45,28 @@
       <div id="opciones">
         <img src="../assets/img/milanesa.png" v-bind:title="milanga">
         <p>Milanesa</p>
-        <sub>De pollo o ternera acompañada de una guarnición a elección</sub>
+        <sub>De pollo o ternera con guarnición</sub>
         <p id="precio">$1500</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/ñoquis.png">
         <p>Ñoquis</p>
-        <sub>Servidos con salsa rosa, carbonara o bolognesa</sub>
+        <sub>Servidos con salsa a elección</sub>
         <p id="precio">$1300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/pollo.png">
         <p>Pollo</p>
-        <sub>Pollo al horno acompañado con una guarnición a elección</sub>
+        <sub>Pollo al horno con guarnición a elección</sub>
         <p id="precio">$1300</p>
       </div>
 
       <div id="opciones">
         <img src="../assets/img/carne.png">
         <p>Carne</p>
-        <sub>Carne al horno acompañado con una guarnición a elección</sub>
+        <sub>Carne al horno con guarnición a elección</sub>
         <p id="precio">$1800</p>
       </div>
 
@@ -83,6 +85,7 @@
       <div id="opciones">
         <img src="../assets/img/vigilante.png">
         <p>Vigilante</p>
+        <sub>Membrillo o batata con queso</sub>
         <p id="precio">$500</p>
       </div>
 
@@ -172,4 +175,11 @@ h1 {
   font-weight: bold;
 }
 
+img:hover{
+  opacity: 50%;
+}
+
+Footer{
+  margin-top: 10px;
+}
 </style>
