@@ -1,19 +1,10 @@
-// const estado = {
-//     excelente: "./img/emoticonos.png",
-//     buena: "./img/feliz.png",
-//     intermedio: "./img/pensando.png",
-//     mala: "./img/triste.png",
-//     muyMala: "./img/muy-triste.png"
-// };
-
 function experiencia() {
     const a = document.getElementById("animo-input").value;
-
     let imgPath = null;
     let p = null;
 
     if (10 >= a && a > 8) {
-        imgPath = 'trabajo/src/assets/img/emoticonos.png'
+        imgPath = '../assets/img/emoticonos.png'
         p = 'Wow! Estamos agradecidos'
     } else if (8 >= a && a > 6) {
         imgPath = 'trabajo/src/assets/img/feliz.png'
