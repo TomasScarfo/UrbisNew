@@ -16,10 +16,6 @@
         <p>Todos nuestros productos son de elaboración propia:</p>
         <p>carnes, pastas artesanales, minutas y muchos mas.</p>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
 
     </div>
 
