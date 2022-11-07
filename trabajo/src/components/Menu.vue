@@ -104,13 +104,51 @@
       </div>
     </section>
   </div>
+<<<<<<< HEAD
+
+<!--  <div id="contenido">-->
+<!--    <div id="entrada">-->
+<!--      <comprar v-for="(item, index) in entradas"-->
+<!--               v-bind:key="index"-->
+<!--               v-bind:producto="item.producto"-->
+<!--               v-bind:img="item.img"-->
+<!--               v-bind:precio="item.precio"-->
+<!--               v-bind:descripcion="item.descripcion"-->
+<!--      />-->
+<!--    </div>-->
+<!--    <div id="plato">-->
+<!--      <comprar v-for="(item, index) in principal"-->
+<!--               v-bind:key="index"-->
+<!--               v-bind:producto="item.producto"-->
+<!--               v-bind:img="item.img"-->
+<!--               v-bind:precio="item.precio"-->
+<!--               v-bind:descripcion="item.descripcion"-->
+<!--      />-->
+<!--    </div>-->
+<!--    <div id="postre">-->
+<!--      <comprar v-for="(item, index) in postre"-->
+<!--               v-bind:key="index"-->
+<!--               v-bind:producto="item.producto"-->
+<!--               v-bind:img="item.img"-->
+<!--               v-bind:precio="item.precio"-->
+<!--               v-bind:descripcion="item.descripcion"-->
+<!--      />-->
+<!--    </div>-->
+<!--  </div>-->
+
+=======
+  <br>
+>>>>>>> 138fff732d1f09407be37346106647c41d679716
 <Footer/>
 </template>
 
 <script>
+import {entradas, principal, postre} from "@/assets/js/Opciones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Comprar from "@/components/Comprar";
 import TheButtons from "@/components/Botones";
+// import {enviar} from "@/assets/js/Home-JS";
 
 export default {
   name: "Menu-tag",
@@ -118,7 +156,15 @@ export default {
     TheButtons,
     Header,
     Footer,
-      }
+    Comprar
+  },
+  data() {
+    return {
+      entradas: entradas,
+      principal: principal,
+      postre: postre,
+    }
+  }
 }
 
 </script>
@@ -142,14 +188,19 @@ h1 {
 
 }
 
-.principal {
+#plato {
   margin-left: 22%;
 }
 
-.postre {
+#postre {
   margin-left: 22%;
 }
 
+<<<<<<< HEAD
+Footer{
+  margin-top: 10px;
+}
+=======
 #opciones {
   display:flex;
   border: 2px solid grey;
@@ -180,7 +231,6 @@ img:hover{
   opacity: 50%;
 }
 
-Footer{
-  margin-top: 10px;
-}
+
+>>>>>>> 138fff732d1f09407be37346106647c41d679716
 </style>

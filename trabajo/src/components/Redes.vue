@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import {experiencia} from "@/assets/js/Home-JS"
+import {experiencia} from "@/assets/js/reseña";
 import FooterTag from "@/components/Footer";
 import TheHeader from "@/components/Header";
 import TheButtons from "@/components/Botones";
@@ -90,7 +90,7 @@ export default {
   },
   data() {
     return {
-      functExperiencia: experiencia,
+      functExperiencia: experiencia
     }
   }
 }
@@ -147,13 +147,13 @@ textarea{
 
 label{
   display: block;
-  float: center;
+
 }
 
 
 button{
   height: 45px;
-  padding-left: 5px;
+  padding-left:   5px;
   padding-right: 5px;
   margin-bottom: 20px;
   margin-top: 10px;
