@@ -153,7 +153,7 @@ label{
 
 button{
   height: 45px;
-  padding-left: 5px;
+  padding-left:   5px;
   padding-right: 5px;
   margin-bottom: 20px;
   margin-top: 10px;

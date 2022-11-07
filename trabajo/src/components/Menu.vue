@@ -104,13 +104,47 @@
       </div>
     </section>
   </div>
+
+<!--  <div id="contenido">-->
+<!--    <div id="entrada">-->
+<!--      <comprar v-for="(item, index) in entradas"-->
+<!--               v-bind:key="index"-->
+<!--               v-bind:producto="item.producto"-->
+<!--               v-bind:img="item.img"-->
+<!--               v-bind:precio="item.precio"-->
+<!--               v-bind:descripcion="item.descripcion"-->
+<!--      />-->
+<!--    </div>-->
+<!--    <div id="plato">-->
+<!--      <comprar v-for="(item, index) in principal"-->
+<!--               v-bind:key="index"-->
+<!--               v-bind:producto="item.producto"-->
+<!--               v-bind:img="item.img"-->
+<!--               v-bind:precio="item.precio"-->
+<!--               v-bind:descripcion="item.descripcion"-->
+<!--      />-->
+<!--    </div>-->
+<!--    <div id="postre">-->
+<!--      <comprar v-for="(item, index) in postre"-->
+<!--               v-bind:key="index"-->
+<!--               v-bind:producto="item.producto"-->
+<!--               v-bind:img="item.img"-->
+<!--               v-bind:precio="item.precio"-->
+<!--               v-bind:descripcion="item.descripcion"-->
+<!--      />-->
+<!--    </div>-->
+<!--  </div>-->
+
 <Footer/>
 </template>
 
 <script>
+import {entradas, principal, postre} from "@/assets/js/Opciones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Comprar from "@/components/Comprar";
 import TheButtons from "@/components/Botones";
+// import {enviar} from "@/assets/js/Home-JS";
 
 export default {
   name: "Menu-tag",
@@ -118,7 +152,15 @@ export default {
     TheButtons,
     Header,
     Footer,
-      }
+    Comprar
+  },
+  data() {
+    return {
+      entradas: entradas,
+      principal: principal,
+      postre: postre,
+    }
+  }
 }
 
 </script>
@@ -142,42 +184,12 @@ h1 {
 
 }
 
-.principal {
+#plato {
   margin-left: 22%;
 }
 
-.postre {
+#postre {
   margin-left: 22%;
-}
-
-#opciones {
-  display:flex;
-  border: 2px solid grey;
-  border-radius: 15px;
-  flex-direction: column;
-  width: 220px;
-  justify-content: space-around;
-  margin-top: 10px;
-  padding: 5px;
-}
-
-#opciones img{
-  width: 220px;
-  height: 130px;
-  border-radius: 5px;
-}
-
-#opciones p{
-  margin-top: 8px;
-  margin-bottom: 3px;
-}
-
-#precio{
-  font-weight: bold;
-}
-
-img:hover{
-  opacity: 50%;
 }
 
 Footer{

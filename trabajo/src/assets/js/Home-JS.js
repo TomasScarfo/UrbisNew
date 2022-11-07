@@ -30,4 +30,13 @@ function experiencia() {
     msj.innerHTML = p
 }
 
-export {experiencia}
+function enviar() {
+    document.getElementById('form').style.visibility="hidden";
+    document.getElementById('resumen').style.visibility="visible";
+}
+
+function hide() {
+    document.getElementById('form').style.visibility="hidden";
+}
+
+export {experiencia, hide, enviar}
