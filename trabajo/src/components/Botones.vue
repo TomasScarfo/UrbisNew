@@ -35,8 +35,8 @@ export default {
 
 #botones span {
   padding: 10px;
-  text-decoration: rgb(188, 194, 192);
   background-color: black;
+  text-decoration: rgb(188, 194, 192);
   color: white;
   border-radius: 10px;
   cursor: pointer;

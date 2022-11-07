@@ -190,6 +190,8 @@ hr{
 #form-resumen {
   flex-direction: row;
   display: flex;
+  border-radius: 4px;
+  font-family: Calibri;
 }
 
 footer{

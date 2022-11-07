@@ -120,6 +120,7 @@ export default {
   top: 0;
   left: 0;
   transition: box-shadow 1s, top 1s, left 1s;
+  margin-top: -35px;
 }
 
 #intro:hover {
@@ -138,6 +139,7 @@ export default {
   height: 400px;
   place-content: center;
   background-image: url("../assets/img/restaurante-fon.jpg");
+  font-family: sans-serif;
 }
 
 #intro-2{
