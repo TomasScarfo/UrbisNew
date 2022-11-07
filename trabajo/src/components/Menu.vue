@@ -104,6 +104,7 @@
       </div>
     </section>
   </div>
+<<<<<<< HEAD
 
 <!--  <div id="contenido">-->
 <!--    <div id="entrada">-->
@@ -135,6 +136,9 @@
 <!--    </div>-->
 <!--  </div>-->
 
+=======
+  <br>
+>>>>>>> 138fff732d1f09407be37346106647c41d679716
 <Footer/>
 </template>
 
@@ -192,7 +196,41 @@ h1 {
   margin-left: 22%;
 }
 
+<<<<<<< HEAD
 Footer{
   margin-top: 10px;
 }
+=======
+#opciones {
+  display:flex;
+  border: 2px solid grey;
+  border-radius: 15px;
+  flex-direction: column;
+  width: 220px;
+  justify-content: space-around;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+#opciones img{
+  width: 220px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+#opciones p{
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+#precio{
+  font-weight: bold;
+}
+
+img:hover{
+  opacity: 50%;
+}
+
+
+>>>>>>> 138fff732d1f09407be37346106647c41d679716
 </style>
