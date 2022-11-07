@@ -140,6 +140,7 @@ h1 {
 
 #contenido {
   display: flex;
+
 }
 
 .principal {

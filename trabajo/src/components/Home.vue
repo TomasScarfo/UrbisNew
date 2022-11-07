@@ -16,8 +16,6 @@
         <p>Todos nuestros productos son de elaboración propia:</p>
         <p>carnes, pastas artesanales, minutas y muchos mas.</p>
       </div>
-      <br/>
-      <br/>
 
     </div>
 
@@ -38,7 +36,9 @@
     </div>
       <h2>Ver mas platos...</h2>
       <div class="menu-boton">
-        <a v-on:click="$emit('menuEvent', 'carta')">Menú</a>
+        <router-link :to='{name: "Menu"}'>
+          <span>Menú</span>
+        </router-link>
       </div>
     </div>
 
@@ -78,20 +78,6 @@
 
   </div>
 
-  <div id='valoracion'>
-    <h1>Contanos como fue tu experiencia</h1>
-    <img id='animo-img' src="../assets/img/tenedor.png">
-    <div id="form">
-      <fieldset>
-        <legend>Ingrese valoracion entre 1 y 10</legend>
-        <input type="number" name="cara" id="animo-input" min="0" max="10">
-        <button onclick="experiencia">
-          Enviar
-        </button>
-        <h2 id="feedback"></h2>
-      </fieldset>
-    </div>
-  </div>
 
   <Footer/>
 
@@ -110,7 +96,7 @@ export default {
   components: {
     Header,
     Footer,
-    Botones
+    Botones,
   }
 }
 
@@ -121,9 +107,8 @@ export default {
 #intro {
   background-color:gainsboro;
   width: 36%;
-  margin-left: 32%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin: 0 34% 0 22%;
+  padding: 2% 10% 2% 10%;
   text-align: center;
   border-style: solid;
   border-width: 3px;
@@ -135,7 +120,6 @@ export default {
   top: 0;
   left: 0;
   transition: box-shadow 1s, top 1s, left 1s;
-  margin-bottom: 50px;
 }
 
 #intro:hover {
@@ -149,7 +133,7 @@ export default {
 }
 
 #intro-contacto{
-  margin-left: 17%;
+  margin-left: 18%;
   width: 65%;
   height: 400px;
   place-content: center;
@@ -203,18 +187,4 @@ export default {
   height: 100px;
 }
 
-#animo-img {
-  width: 100px;
-}
-
-#valoracion{
-  text-align: center;
-  flex-direction: row;
-}
-
-fieldset {
-  width: 30%;
-  text-align: center;
-  margin-left: 35%;
-}
 </style>

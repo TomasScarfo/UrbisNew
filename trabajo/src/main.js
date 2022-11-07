@@ -14,7 +14,7 @@ const routes = [
     {path: '/', name: "HomeRoute", component: Home},
     {path: '/Menu', name: "Menu", component: Menu},
     {path: '/PedidosOnline', name: "PedidosOnline", component: Pedir},
-    {path: '/Redes', name: "Redes", component: Redes},
+    {path: '/Redes', name: "Reseñas", component: Redes},
 
 
     {path: '/:pathMatch(.*)*', component: NotFound}
