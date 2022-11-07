@@ -104,6 +104,7 @@
       </div>
     </section>
   </div>
+  <br>
 <Footer/>
 </template>
 
@@ -179,7 +180,5 @@ img:hover{
   opacity: 50%;
 }
 
-Footer{
-  margin-top: 10px;
-}
+
 </style>
