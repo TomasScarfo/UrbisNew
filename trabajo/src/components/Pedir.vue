@@ -1,10 +1,10 @@
 <template>
   <Header/>
   <TheButtons/>
+
   <h1>HAGA SU PEDIDO</h1>
-
   <hr>
-
+  <div id="all">
   <form enctype="text/plain" id="form">
 
     <table style="margin: 0 auto;">
@@ -32,33 +32,30 @@
       <tr>
         <td>¿Qué desea encargar?</td>
           <td>
-          <div class="platos">
-            Entrada <select name="entrada" id="" v-model="entrada">
-            <option value="-">-</option>
-            <option value="Gambas">Gambas</option>
-            <option value="Tortilla">Tortilla</option>
-            <option value="Buñuelos">Buñuelos</option>
-            <option value="Lengua">Lengua</option>
-          </select>
+            <div class="platos">
+              Entrada <select name="entrada" id="" v-model="entradaElegida">
+              <Comprar v-for="(item, index) in entradas"
+                      v-bind:key="index"
+                      v-bind:producto="item.producto"/>
+            </select>
+
           </div>
           <div class="platos">
             <br>
-            Plato <select name="princi" id="" v-model="plato">
-            <option value="-">-</option>
-            <option value="Milanesa">Milanesa</option>
-            <option value="Ñoquis">Ñoquis</option>
-            <option value="Carne al horno">Carne al horno</option>
-            <option value="Pollo">Pollo</option>
+
+            Plato <select name="princi" id="" v-model="platoElegido">
+            <Comprar v-for="(item, index) in principal"
+                     v-bind:key="index"
+                     v-bind:producto="item.producto"/>
           </select>
           </div>
             <br>
+
           <div class="platos">
-            Postre <select name="postre" id="" v-model="postre">
-              <option value="-">-</option>
-              <option value="Ensalada de fruta">Ensalada de fruta</option>
-              <option value="Flan">Flan</option>
-              <option value="Helado">Helado</option>
-              <option value="Cafe">Cafe</option>
+            Postre <select name="postre" id="" v-model="postreElegido">
+            <Comprar v-for="(item, index) in postre"
+                     v-bind:key="index"
+                     v-bind:producto="item.producto"/>
             </select>
           </div>
           </td>
@@ -74,49 +71,13 @@
       </tbody>
     </table>
     <hr/>
+
     <footer id="footer">
-      <button type='submit' value="Enviar" v-on:click="enviar">Enviar</button>
+      <button type='submit' value="Enviar">Enviar</button>
       <button type="reset" value="Limpiar">Limpiar</button>
     </footer>
   </form>
-
-  <div id="resumen" style="visibility: collapse">
-    <h1>Resumen de tu Pedido:</h1>
-      <h3>Entrada: {{entrada}}</h3>
-      <h3>Plato Principal: {{plato}}</h3>
-      <h3>Postre: {{postre}}</h3>
-      <h3>Entrega por: {{modoEntrega}}</h3>
-      <h3>Horario: {{horaEntrega}}</h3>
   </div>
-<!--<div id="all">-->
-<!--  <div id="entrada">-->
-<!--    <comprar v-for="(item, index) in entradas"-->
-<!--             v-bind:key="index"-->
-<!--             v-bind:producto="item.producto"-->
-<!--             v-bind:img="item.img"-->
-<!--             v-bind:precio="item.precio"-->
-<!--             v-bind:descripcion="item.descripcion"-->
-<!--        />-->
-<!--  </div>-->
-<!--  <div id="plato">-->
-<!--    <comprar v-for="(item, index) in principal"-->
-<!--             v-bind:key="index"-->
-<!--             v-bind:producto="item.producto"-->
-<!--             v-bind:img="item.img"-->
-<!--             v-bind:precio="item.precio"-->
-<!--             v-bind:descripcion="item.descripcion"-->
-<!--    />-->
-<!--  </div>-->
-<!--  <div id="postre">-->
-<!--    <comprar v-for="(item, index) in postre"-->
-<!--             v-bind:key="index"-->
-<!--             v-bind:producto="item.producto"-->
-<!--             v-bind:img="item.img"-->
-<!--             v-bind:precio="item.precio"-->
-<!--             v-bind:descripcion="item.descripcion"-->
-<!--    />-->
-<!--  </div>-->
-<!--</div>-->
   <Footer/>
 </template>
 
@@ -130,6 +91,12 @@ import Comprar from "@/components/Comprar";
 
 export default {
   name: "Pedir-tag",
+  props: [
+    "producto",
+    "img",
+    "precio",
+    "descripcion"
+  ],
   components: {
     TheButtons,
     Header,
@@ -139,9 +106,9 @@ export default {
   data() {
     return {
       nombre: "",
-      entrada: "",
-      plato: "",
-      // postre: "",
+      entradaElegida: "",
+      platoElegido: "",
+      postreElegido: "",
       horaEntrega: "",
       modoEntrega: "",
       enviar: enviar,
@@ -167,96 +134,73 @@ h1 {
   place-content: center;
 }
 
-<<<<<<< HEAD
-#form-resumen {
-  flex-direction: row;
-  display: flex;
-  border-radius: 4px;
-  font-family: Calibri;
-=======
-#plato {
-  margin-left: 12%;
->>>>>>> 0f450b89665a1e7d3ed2cf993000f92f67e14fe8
+#form {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  border: 1px solid;
+  width: 30%;
+
 }
 
-#postre {
-  margin-left: 12%;
+input{
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: burlywood;
 }
 
-/*#form {*/
-/*  border-collapse: collapse;*/
-/*  font-size: 0.9em;*/
-/*  font-family: sans-serif;*/
-/*  min-width: 400px;*/
-/*  border: 1px solid;*/
-/*  width: 30%;*/
-/*  margin-right: 10%;*/
+button{
+  text-transform: uppercase;
+  background-color: burlywood;
+  border-color: burlywood;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #f3f3f3;
+  width: 100px;
+  height: 20px;
+  margin: 2px;
+}
 
-/*}*/
+button:hover {
+  background-color: saddlebrown;
+  border-color: saddlebrown;
+  opacity: 90%;
+}
 
-/*input{*/
-/*  background-color: #fbfbfb;*/
-/*  border-radius: 5px;*/
-/*  border-style: solid;*/
-/*  border-width: 1px;*/
-/*  border-color: burlywood;*/
-/*}*/
+#form th,
+#form td {
+  padding: 12px 15px;
+}
 
-/*button{*/
-/*  text-transform: uppercase;*/
-/*  background-color: burlywood;*/
-/*  border-color: burlywood;*/
-/*  border-style: solid;*/
-/*  border-radius: 10px;*/
-/*  cursor: pointer;*/
-/*  color: #f3f3f3;*/
-/*  width: 100px;*/
-/*  height: 20px;*/
-/*  margin: 2px;*/
-/*}*/
+#form tbody tr {
+  border-bottom: 1px solid grey;
+}
 
-/*button:hover {*/
-/*  background-color: saddlebrown;*/
-/*  border-color: saddlebrown;*/
-/*  opacity: 90%;*/
-/*}*/
+#form tbody tr:nth-of-type(even) {
+  background-color: burlywood;
+}
 
-/*#form th,*/
-/*#form td {*/
-/*  padding: 12px 15px;*/
-/*}*/
+#form tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
 
-/*#form tbody tr {*/
-/*  border-bottom: 1px solid grey;*/
-/*}*/
+hr{
+  border:#1e253d solid 1px;
+}
 
-/*#form tbody tr:nth-of-type(even) {*/
-/*  background-color: burlywood;*/
-/*}*/
+footer{
+  text-align: center;
+  padding: 10px;
+}
 
-/*#form tbody tr:last-of-type {*/
-/*  border-bottom: 2px solid #009879;*/
-/*}*/
-
-/*hr{*/
-/*  border:#1e253d solid 1px;*/
-/*}*/
-
-/*#resumen {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  width: 50%;*/
-/*}*/
-
-/*footer{*/
-/*  text-align: center;*/
-/*  padding: 10px;*/
-/*}*/
-
-/*.platos {*/
-/*  flex-direction: column;*/
-/*  margin: 2px;*/
-/*}*/
+.platos {
+  flex-direction: column;
+  margin: 2px;
+}
 
 </style>
 

@@ -44,7 +44,6 @@ export default {
 #header-content{
   display: flex;
   flex-direction: row;
-  padding: 10px;
   justify-content: space-around;
   background: #c5b19b;
   border-bottom: 2px solid gray;

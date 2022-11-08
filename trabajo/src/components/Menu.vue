@@ -40,10 +40,10 @@
     </section>
 
     <section class="principal">
-      <b>PRINCIPAL</b>
+      <b>PLATO PRINCIPAL</b>
 
       <div id="opciones">
-        <img src="../assets/img/milanesa.png" v-bind:title="milanga">
+        <img src="../assets/img/milanesa.png">
         <p>Milanesa</p>
         <sub>De pollo o ternera con guarnición</sub>
         <p id="precio">$1500</p>
@@ -104,7 +104,6 @@
       </div>
     </section>
   </div>
-<<<<<<< HEAD
 
 <!--  <div id="contenido">-->
 <!--    <div id="entrada">-->
@@ -136,9 +135,7 @@
 <!--    </div>-->
 <!--  </div>-->
 
-=======
   <br>
->>>>>>> 138fff732d1f09407be37346106647c41d679716
 <Footer/>
 </template>
 
@@ -146,7 +143,6 @@
 import {entradas, principal, postre} from "@/assets/js/Opciones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Comprar from "@/components/Comprar";
 import TheButtons from "@/components/Botones";
 // import {enviar} from "@/assets/js/Home-JS";
 
@@ -156,7 +152,6 @@ export default {
     TheButtons,
     Header,
     Footer,
-    Comprar
   },
   data() {
     return {
@@ -188,19 +183,18 @@ h1 {
 
 }
 
-#plato {
+.principal {
   margin-left: 22%;
 }
 
-#postre {
+.postre {
   margin-left: 22%;
 }
 
-<<<<<<< HEAD
 Footer{
   margin-top: 10px;
 }
-=======
+
 #opciones {
   display:flex;
   border: 2px solid grey;
@@ -215,7 +209,7 @@ Footer{
 #opciones img{
   width: 220px;
   height: 130px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 #opciones p{
@@ -231,6 +225,4 @@ img:hover{
   opacity: 50%;
 }
 
-
->>>>>>> 138fff732d1f09407be37346106647c41d679716
 </style>

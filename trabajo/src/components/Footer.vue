@@ -18,7 +18,7 @@ div{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f3f3f3;
+  background: #c5b19b;
   border-top: 2px solid gray;
   box-shadow: 0 -4px darkgrey;
   margin: 20px;
