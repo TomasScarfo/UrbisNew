@@ -76,7 +76,7 @@
 
     <footer id="footer">
       <router-link :to="{name: 'PagoOnline'}">
-        <button type='submit' value="Enviar">Enviar</button>
+        <button type='submit' value="Enviar" v-on:click="ordenar">Enviar</button>
       </router-link>
       <button type="reset" value="Limpiar">Limpiar</button>
     </footer>
@@ -87,7 +87,6 @@
 
 <script>
 import {entradas, postre, principal} from "@/assets/js/Opciones";
-// import {enviar} from "@/assets/js/Home-JS";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Comprar from "@/components/Comprar";
@@ -98,7 +97,8 @@ export default {
     "producto",
     "img",
     "precio",
-    "descripcion"
+    "descripcion",
+    "item"
   ],
   components: {
     Header,
@@ -116,10 +116,25 @@ export default {
         entradas: entradas,
         principal: principal,
         postre: postre,
+        carrito: [],
+        total: 0
       }
-   }
-}
+   },
+  // methods: {
+  //   agregarCarrito: function () {
+  //     this.agregarCarrito.push(entradas.producto)
+  //     this.agregarCarrito.push(principal.producto)
+  //     this.agregarCarrito.push(postre.producto)
+  //   }
+  //   },
+  //   ordenar() {
+  //     this.$router.push({
+  //       name: "FinalizarPedido",
+  //       query: {total: this.total, carrito: JSON.stringify(this.carrito)}
+  //     })
+  // }
 
+}
 
 </script>
 

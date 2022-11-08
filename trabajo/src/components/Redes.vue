@@ -90,7 +90,7 @@ export default {
   },
   data() {
     return {
-      functExperiencia: experiencia
+      functExperiencia: experiencia,
     }
   }
 }
