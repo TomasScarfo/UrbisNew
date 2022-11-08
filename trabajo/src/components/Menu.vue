@@ -85,6 +85,10 @@ body {
   justify-content: space-around;
 }
 
+hr{
+  border:#1e253d solid 1px;
+}
+
 h1 {
   text-align: center;
 }

@@ -26,11 +26,11 @@ export default {
 
 #all {
   height: auto;
-  width: 25%;
   padding: 15px;
   opacity: 1;
   align-self: center;
-  margin: 36px 37% 30px 39%;
+  text-align: center;
+  margin: 30px 0 30px 0;
 }
 
 span {

@@ -1,10 +1,10 @@
 <template>
   <Header/>
-  <TheButtons/>
+
 
   <h1>HAGA SU PEDIDO</h1>
   <hr>
-  <div id="all">
+  <div id="formulario">
   <form enctype="text/plain" id="form">
 
     <table style="margin: 0 auto;">
@@ -88,7 +88,6 @@
 <script>
 import {entradas, postre, principal} from "@/assets/js/Opciones";
 // import {enviar} from "@/assets/js/Home-JS";
-import TheButtons from "@/components/Botones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Comprar from "@/components/Comprar";
@@ -102,7 +101,6 @@ export default {
     "descripcion"
   ],
   components: {
-    TheButtons,
     Header,
     Footer,
     Comprar
@@ -135,9 +133,10 @@ h1 {
   text-align: center;
 }
 
-#all{
+#formulario{
   display: flex;
   place-content: center;
+  margin-bottom: 40px;
 }
 
 #form {
