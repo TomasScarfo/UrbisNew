@@ -3,8 +3,8 @@
   <TheButtons/>
   <h1>Este es el resumen:</h1>
     <carrito v-for="(item, index) in carrito" v-bind:key="index"
-            v-bind:producto="item['producto']"
-            v-bind:precio="item['precio']"
+            v-bind:producto="item.producto"
+            v-bind:precio="item.precio"
     />
 
   <Footer/>

@@ -2,12 +2,16 @@
   <div id="cart-item-container">
     <span class="item-text">{{ producto}}</span>
     <span class="item-price">$ {{ precio }}</span>
-
   </div>
+
+  <div>
+    Total: {{total}}
+    <input id="order-submit" type="submit" value="Ordenar" v-on:click="ordenar()">
+  </div>
+
 </template>
 
 <script>
-import {entradas, postre, principal} from "@/assets/js/Opciones";
 
 export default {
   name: "Carrito-tag",
@@ -23,17 +27,20 @@ export default {
     }
   },
   methods: {
-    agregarCarrito: function () {
-      this.agregarCarrito.push(entradas.producto)
-      this.agregarCarrito.push(principal.producto)
-      this.agregarCarrito.push(postre.producto)
-    }
-  },
-  ordenar() {
+    agregarCarrito(item) {
+      let foundItem = this.carrito.find((itemCart, index) => {
+        if (foundItem === undefined) {
+          item.subtotal = Number(item["precio"]);
+          this.carrito.push(item);
+      }
+    })
+    },
+    ordenar() {
     this.$router.push({
       name: "FinalizarPedido",
-      query: {total: this.precio, carrito: JSON.stringify(this.carrito)}
-    })
+      query: {carrito: JSON.stringify(this.carrito)}
+      })
+    }
   }
 }
 </script>
