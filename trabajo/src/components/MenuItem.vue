@@ -1,6 +1,6 @@
 <template>
         <div id="opciones">
-          <img :src="'@/assets/img/' + img" alt="Img">
+          <img :src=img alt="Img">
           <p>{{ producto }}</p>
           <sub>{{descripcion}}</sub>
           <p id="precio">$ {{precio}}</p>

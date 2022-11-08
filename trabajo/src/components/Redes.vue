@@ -1,7 +1,7 @@
 <template>
   <TheHeader/>
   <TheButtons/>
-
+  <div id="row">
   <div class="contact_form">
 
     <div class="formulario">
@@ -58,8 +58,8 @@
 
 
   <div id='valoracion'>
-    <h1>Contanos como fue tu experiencia</h1>
-    <img id='animo-img' src="../assets/img/tenedor.png">
+    <h1 id="title2">Contanos como fue tu experiencia</h1>
+    <img id='animo-img' src="../assets/img/tenedor.png" alt="">
     <div id="form">
       <fieldset>
         <legend>Ingrese valoracion entre 1 y 10</legend>
@@ -71,7 +71,7 @@
       </fieldset>
     </div>
   </div>
-
+  </div>
   <FooterTag/>
 </template>
 
@@ -104,9 +104,12 @@ body{
   background-color: burlywood;
 }
 
+#row {
+  display: flex;
+  flex-direction: row;
+}
 
 .contact_form{
-  width: 460px;
   height: auto;
   margin: 50px auto;
   border-radius: 10px;
@@ -114,7 +117,6 @@ body{
   background-color: #fbfbfb;
   padding-left: 30px;
 }
-
 
 input{
   background-color: #fbfbfb;
@@ -128,7 +130,6 @@ input{
   padding-left: 10px;
   margin-bottom: 20px;
 }
-
 
 textarea{
   background-color: #fbfbfb;
@@ -144,12 +145,10 @@ textarea{
   padding-top: 15px;
 }
 
-
 label{
   display: block;
 
 }
-
 
 button{
   height: 45px;
@@ -177,23 +176,20 @@ button p{
   color: #fff;
 }
 
-
 span{
   color: burlywood;
 }
-
 
 .aviso{
   font-size: 13px;
   color: #0e0e0e;
 }
 
-
-#title{
+h1{
   font-size: 39px;
-  text-align: left;
   padding-bottom: 20px;
   color: saddlebrown;
+  text-align: center;
 }
 
 
@@ -201,6 +197,7 @@ h3{
   font-size: 16px;
   padding-bottom: 30px;
   color: #0e0e0e;
+  text-align: center;
 }
 
 
