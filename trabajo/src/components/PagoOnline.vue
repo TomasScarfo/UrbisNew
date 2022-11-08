@@ -14,7 +14,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TheButtons from "@/components/Botones";
-import carrito from "@/components/Carrito";
+// import carrito from "@/components/Carrito";
 
 
 export default {
@@ -30,7 +30,7 @@ export default {
     Header,
     TheButtons,
     Footer,
-    carrito
+    // carrito
   },
   data() {
     return {
