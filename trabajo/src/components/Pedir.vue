@@ -5,7 +5,7 @@
   <h1>HAGA SU PEDIDO</h1>
   <hr>
   <div id="formulario">
-  <form enctype="text/plain" id="form">
+  <form enctype="text/plain" id="form" @submit.prevent="ordenar">
 
     <table style="margin: 0 auto;">
       <tbody>
@@ -19,7 +19,7 @@
       <tr>
         <td>Teléfono</td>
         <td>
-          <input type="tel" name="telefono" id="" maxlength="10" minlength="10">
+          <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
         </td>
       </tr>
       <tr>
@@ -90,6 +90,7 @@ import {entradas, postre, principal} from "@/assets/js/Opciones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Comprar from "@/components/Comprar";
+import axios from "axios";
 
 export default {
   name: "Pedir-tag",
@@ -108,34 +109,37 @@ export default {
   data() {
       return {
         nombre: "",
+        telefono: "",
+        modoEntrega: "",
         entradaElegida: "",
         platoElegido: "",
         postreElegido: "",
         horaEntrega: "",
-        modoEntrega: "",
         entradas: entradas,
         principal: principal,
         postre: postre,
-        carrito: [],
-        total: 0
       }
    },
-  // methods: {
-  //   agregarCarrito: function () {
-  //     this.agregarCarrito.push(entradas.producto)
-  //     this.agregarCarrito.push(principal.producto)
-  //     this.agregarCarrito.push(postre.producto)
-  //   }
-  //   },
-  //   ordenar() {
-  //     this.$router.push({
-  //       name: "FinalizarPedido",
-  //       query: {total: this.total, carrito: JSON.stringify(this.carrito)}
-  //     })
-  // }
-
+  methods: {
+    ordenar() {
+      axios.post("http://localhost:8080/api/v1/ordenar", {
+        user: this.nombre,
+        telefono: this.telefono,
+        entrega: this.modoEntrega,
+        horario: this.horaEntrega,
+        pedido: {
+          entrada: this.entradaElegida,
+          plato: this.platoElegido,
+          postre: this.postreElegido,
+        }
+      })
+          .then(response => {
+            console.log(response)
+            // this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
+          });
+    }
+  },
 }
-
 </script>
 
 <style scoped>
