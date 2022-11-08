@@ -19,7 +19,7 @@
       <tr>
         <td>Teléfono</td>
         <td>
-          <input type="tel" name="telefono" id="" maxlength="10">
+          <input type="tel" name="telefono" id="" maxlength="10" minlength="10">
         </td>
       </tr>
       <tr>
@@ -36,7 +36,8 @@
               Entrada <select name="entrada" id="" v-model="entradaElegida">
               <Comprar v-for="(item, index) in entradas"
                       v-bind:key="index"
-                      v-bind:producto="item.producto"/>
+                      v-bind:producto="item.producto"
+                      v-bind:precio="item.precio"/>
             </select>
 
           </div>
@@ -46,7 +47,9 @@
             Plato <select name="princi" id="" v-model="platoElegido">
             <Comprar v-for="(item, index) in principal"
                      v-bind:key="index"
-                     v-bind:producto="item.producto"/>
+                     v-bind:producto="item.producto"
+                     v-bind:precio="item.precio"/>
+
           </select>
           </div>
             <br>
@@ -55,7 +58,8 @@
             Postre <select name="postre" id="" v-model="postreElegido">
             <Comprar v-for="(item, index) in postre"
                      v-bind:key="index"
-                     v-bind:producto="item.producto"/>
+                     v-bind:producto="item.producto"
+                     v-bind:precio="item.precio"/>
             </select>
           </div>
           </td>
@@ -73,7 +77,9 @@
     <hr/>
 
     <footer id="footer">
-      <button type='submit' value="Enviar">Enviar</button>
+      <router-link :to="{name: 'PagoOnline'}">
+        <button type='submit' value="Enviar">Enviar</button>
+      </router-link>
       <button type="reset" value="Limpiar">Limpiar</button>
     </footer>
   </form>
@@ -83,7 +89,7 @@
 
 <script>
 import {entradas, postre, principal} from "@/assets/js/Opciones";
-import {enviar} from "@/assets/js/Home-JS";
+// import {enviar} from "@/assets/js/Home-JS";
 import TheButtons from "@/components/Botones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -104,21 +110,23 @@ export default {
     Comprar
   },
   data() {
-    return {
-      nombre: "",
-      entradaElegida: "",
-      platoElegido: "",
-      postreElegido: "",
-      horaEntrega: "",
-      modoEntrega: "",
-      enviar: enviar,
-      entradas: entradas,
-      principal: principal,
-      postre: postre,
-    }
-  }
+      return {
+        nombre: "",
+        entradaElegida: "",
+        platoElegido: "",
+        postreElegido: "",
+        horaEntrega: "",
+        modoEntrega: "",
+        entradas: entradas,
+        principal: principal,
+        postre: postre,
+      }
+   }
 }
+
+
 </script>
+
 <style scoped>
 body{
   text-align: center;

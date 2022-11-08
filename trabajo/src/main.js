@@ -8,6 +8,7 @@ import Home from "@/components/Home";
 import Menu from "@/components/Menu";
 import Pedir from "@/components/Pedir";
 import Redes from "@/components/Redes";
+import PagoOnline from "@/components/PagoOnline";
 
 
 const routes = [
@@ -15,7 +16,7 @@ const routes = [
     {path: '/Menu', name: "Menu", component: Menu},
     {path: '/PedidosOnline', name: "PedidosOnline", component: Pedir},
     {path: '/Redes', name: "Reseñas", component: Redes},
-
+    {path: '/PagoOnline', name: "PagoOnline", component: PagoOnline},
 
     {path: '/:pathMatch(.*)*', component: NotFound}
 ];

@@ -1,5 +1,5 @@
 <template>
-    <option value="{{producto}}">{{producto}}</option>
+    <option value="{{producto}}">{{producto}} - $ {{precio}}</option>
 </template>
 
 <script>
