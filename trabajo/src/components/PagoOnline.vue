@@ -2,7 +2,7 @@
   <Header/>
   <TheButtons/>
   <h1>Este es el resumen:</h1>
-    <li> {{entradaElegida}} </li>
+    <li>  </li>
 
   <Footer/>
 </template>
@@ -19,6 +19,9 @@ export default {
     "producto",
     "img",
     "precio",
+    "entrada",
+    "plato",
+    "postre",
     "descripcion",
     "entradaElegida"
   ],
@@ -29,7 +32,6 @@ export default {
   },
   data() {
     return {
-      entradaElegia: "entradaElegida"
     }
   }
 }

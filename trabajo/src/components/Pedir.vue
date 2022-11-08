@@ -35,21 +35,19 @@
             <div class="platos">
               Entrada <select name="entrada" id="" v-model="entradaElegida">
               <Comprar v-for="(item, index) in entradas"
-                      v-bind:key="index"
-                      v-bind:producto="item.producto"
-                      v-bind:precio="item.precio"/>
+                       v-bind:key="index"
+                       v-bind:producto="item.producto"
+                       v-bind:precio="item.precio"/>
             </select>
 
           </div>
-          <div class="platos">
             <br>
-
+            <div class="platos">
             Plato <select name="princi" id="" v-model="platoElegido">
             <Comprar v-for="(item, index) in principal"
                      v-bind:key="index"
                      v-bind:producto="item.producto"
                      v-bind:precio="item.precio"/>
-
           </select>
           </div>
             <br>
