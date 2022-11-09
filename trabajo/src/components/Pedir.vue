@@ -8,28 +8,35 @@
   <div id="formulario">
 
     <form id="form">
+      <div id="ElementosALlenar">
+      <div id="nombreyapell">
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
-
+      </div>
+      <br>
+      <div id="telefono">
         <label>Teléfono</label>
         <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
-
+      </div>
+      <br>
+      <div id="modoentrega">
         <label>Modo de Entrega</label>
         <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega">Takeaway
         <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega">Delivery
+      </div>
+      <br>
+      <div id="eleccionmenu">
+        <u><label>Elija su menú:</label></u>
 
-        <label>¿Qué desea encargar?</label>
             <div class="platos">
-              Entrada <select name="entrada" id="" v-model="entradaElegida">
+              Entrada <select name="entrada" id="Entrada" v-model="entradaElegida">
               <Comprar v-for="(item, index) in entradas"
                        v-bind:key="index"
                        v-bind:producto="item.producto"
                        v-bind:precio="item.precio"/>
             </select>
             </div>
-
             <br>
-
             <div class="platos">
               Plato <select name="princi" id="" v-model="platoElegido">
               <Comprar v-for="(item, index) in principal"
@@ -40,25 +47,28 @@
             </div>
 
             <br>
-
-            <div class="platos">
+          <div class="platos">
               Postre <select name="postre" id="" v-model="postreElegido">
               <Comprar v-for="(item, index) in postre"
                      v-bind:key="index"
                      v-bind:producto="item.producto"
                      v-bind:precio="item.precio"/>
               </select>
-              </div>
-
-        <label>Horario de Entrega</label>
-        <input type="time" name="fecha" id="" v-model="horaEntrega">
-
-        <hr/>
-
+          </div>
+      </div>
+      <br>
+        <div id="horarioentrega">
+          <label>Horario de Entrega</label>
+          <input type="time" name="fecha" id="" v-model="horaEntrega">
+        </div>
+      </div>
+      <hr/>
         <footer id="footer">
           <input type='submit' value="Enviar" v-on:click="ordenar">
           <input type="reset" value="Limpiar">
         </footer>
+
+      <br>
     </form>
   </div>
 
@@ -101,9 +111,6 @@ export default {
         principal: principal,
         postre: postre,
       }
-<<<<<<< HEAD
-   }}
-=======
    },
   methods: {
     ordenar() {
@@ -133,7 +140,7 @@ export default {
     }
   }
 }
->>>>>>> 580260d2cc8934965b2f3a513e987bf5dfd5030c
+
 
 </script>
 
@@ -145,6 +152,11 @@ body{
 
 h1 {
   text-align: center;
+}
+
+#ElementosALlenar{
+  padding-left: 5%;
+  padding-top: 3%;
 }
 
 #formulario{
@@ -160,7 +172,11 @@ h1 {
   min-width: 400px;
   border: 1px solid;
   width: 30%;
+  justify-content: space-around;
+}
 
+#Entrada{
+    margin-top: 2%;
 }
 
 input{
@@ -190,26 +206,6 @@ button:hover {
   opacity: 90%;
 }
 
-#form th,
-#form td {
-  padding: 12px 15px;
-}
-
-#form tbody tr {
-  border-bottom: 1px solid grey;
-}
-
-#form tbody tr:nth-of-type(even) {
-  background-color: burlywood;
-}
-
-#form tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
-hr{
-  border:#1e253d solid 1px;
-}
 
 footer{
   text-align: center;
