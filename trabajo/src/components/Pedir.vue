@@ -16,7 +16,6 @@
     <form>
       <div id="ElementosALlenar">
         <div id="nombreyapell">
->>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
       </div>
