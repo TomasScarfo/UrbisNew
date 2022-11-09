@@ -7,8 +7,8 @@
   <div id="formulario">
   <form enctype="text/plain" id="form" @submit.prevent="ordenar">
 
-    <table style="margin: 0 auto;">
-      <tbody>
+<!--    <table style="margin: 0 auto;">-->
+<!--      <tbody>-->
       <tr>
         <td>Nombre y apellido</td>
         <td>
@@ -70,13 +70,13 @@
           <input type="time" name="fecha" id="" v-model="horaEntrega">
         </td>
       </tr>
-      </tbody>
-    </table>
+<!--      </tbody>-->
+<!--    </table>-->
     <hr/>
 
     <footer id="footer">
       <router-link :to="{name: 'PagoOnline'}">
-        <button type='submit' value="Enviar" v-on:click="ordenar">Enviar</button>
+        <button type='submit' value="Enviar">Enviar</button>
       </router-link>
       <button type="reset" value="Limpiar">Limpiar</button>
     </footer>
@@ -105,7 +105,8 @@ export default {
     Header,
     Footer,
     Comprar
-  },
+  }, $route: undefined,
+
   data() {
       return {
         nombre: "",
@@ -122,24 +123,32 @@ export default {
    },
   methods: {
     ordenar() {
-      axios.post("http://localhost:8080/api/v1/ordenar", {
+      axios.post("http://127.0.0.1:5000/api/v1/ordenar", {
         user: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
-        pedido: {
-          entrada: this.entradaElegida,
-          plato: this.platoElegido,
-          postre: this.postreElegido,
-        }
+        entrada: this.entradaElegida,
+        plato: this.platoElegido,
+        postre: this.postreElegido,
       })
           .then(response => {
             console.log(response)
-            // this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
-          });
+            this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push({name: "NotFound"})
+          })
     }
   },
+  mounted() {
+    if (this.$route.query['entrada'] === undefined) {
+      this.$router.push({name: "PedidosOnline"})
+    }
+  }
 }
+
 </script>
 
 <style scoped>
@@ -175,7 +184,6 @@ input{
   border-width: 1px;
   border-color: burlywood;
 }
-ola
 
 button{
   text-transform: uppercase;

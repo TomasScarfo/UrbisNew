@@ -21,7 +21,7 @@ const routes = [
     {path: '/FinalizarPedido', name: "FinalizarPedido", component: PedidoFinalizado},
 
 
-    {path: '/:pathMatch(.*)*', component: NotFound}
+    {path: '/:pathMatch(.*)*', name: "NotFound", component: NotFound}
 ];
 
 const router = VueRouter.createRouter({
