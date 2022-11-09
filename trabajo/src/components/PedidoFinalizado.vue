@@ -3,7 +3,7 @@
     <img src="../assets/img/success.png" alt="">
 
     <h1>¡ EL PEDIDO SE HA REALIZADO CON EXITO !</h1>
-    <h3>Pronto podra disfrutarlo</h3>
+    <h3>Pronto podrá disfrutarlo</h3>
     <h5>Gracias por confiar en URBIS</h5>
 
     <router-link :to="{name: 'PedidosOnline'}">

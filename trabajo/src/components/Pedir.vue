@@ -6,9 +6,17 @@
   <hr>
 
   <div id="formulario">
+<<<<<<< HEAD
     <form id="form">
       <div id="ElementosALlenar">
       <div id="nombreyapell">
+=======
+
+    <form id="form">
+      <div id="ElementosALlenar">
+      <div id="nombreyapell">
+
+>>>>>>> 8bb160b93398017b4bc7c3ca9ad41104ec20db2e
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
       </div>
@@ -111,9 +119,15 @@ export default {
       postre: postre,
     }
   },
+<<<<<<< HEAD
   methods: {
     ordenar() {
       console.log("Boton Presionado")
+=======
+
+  methods: {
+    ordenar() {
+>>>>>>> 8bb160b93398017b4bc7c3ca9ad41104ec20db2e
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
@@ -121,8 +135,13 @@ export default {
         horario: this.horaEntrega,
         entrada: JSON.stringify(this.entradaElegida),
         plato_principal: JSON.stringify(this.platoElegido),
+<<<<<<< HEAD
         postre: JSON.stringify(this.postreElegido),
       }
+=======
+        postre: JSON.stringify(this.postreElegido)
+      })
+>>>>>>> 8bb160b93398017b4bc7c3ca9ad41104ec20db2e
           .then(response => {
             console.log(response)
             this.$router.push({name: "PedidoFinalizado"})
@@ -133,7 +152,16 @@ export default {
           }))
     }
   },
+<<<<<<< HEAD
 }
+=======
+
+}
+
+
+
+
+>>>>>>> 8bb160b93398017b4bc7c3ca9ad41104ec20db2e
 </script>
 
 <style scoped>
