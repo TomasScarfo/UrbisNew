@@ -1,118 +1,138 @@
 <template>
   <Header/>
-  <TheButtons/>
+
   <h1>HAGA SU PEDIDO</h1>
 
   <hr>
 
-  <form enctype="text/plain" id="form">
+  <div id="formulario">
 
-    <table style="margin: 0 auto;">
-      <tbody>
-      <tr>
-        <td>Nombre y apellido</td>
-        <td>
-          <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
-        </td>
-      </tr>
+    <form id="form">
+        <label>Nombre y apellido</label>
+        <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
 
-      <tr>
-        <td>Teléfono</td>
-        <td>
-          <input type="tel" name="telefono" id="" maxlength="10">
-        </td>
-      </tr>
-      <tr>
-        <td>Modo de Entrega</td>
-        <td>
-          <input type="radio" name="modo" id="" value="Takeaway">Takeaway
-          <input type="radio" name="modo" id="" value="Delivery">Delivery
-        </td>
-      </tr>
-      <tr>
-        <td>¿Qué desea encargar?</td>
-        <td>
-          Entrada <select name="entrada" id="" v-model="entrada">
-          <option value="-">-</option>
-          <option value="Rabas">Gambas</option>
-          <option value="Tortilla">Tortilla</option>
-          <option value="Buñuelos">Buñuelos</option>
-          <option value="Burrata">Lengua</option>
-        </select>
-          <br>
-          Plato <select name="princi" id="" v-model="plato">
-          <option value="-">-</option>
-          <option value="Milanesa">Milanesa</option>
-          <option value="Fideos">Ñoquis</option>
-          <option value="Carne al horno">Carne al horno</option>
-          <option value="Ñoquis">Pollo</option>
-        </select>
-          <br>
-          Postre <select name="postre" id="" v-model="postre">
-          <option value="-">-</option>
-          <option value="Ensalada de fruta">Ensalada de fruta</option>
-          <option value="Flan">Flan</option>
-          <option value="Helado">Helado</option>
-          <option value="Tiramisu">Cafe</option>
-        </select>
-        </td>
-      </tr>
+        <label>Teléfono</label>
+        <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
 
+        <label>Modo de Entrega</label>
+        <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega">Takeaway
+        <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega">Delivery
 
-      <tr>
-        <td>
-          <p>Horario de Entrega</p>
-        </td>
-        <td>
-          <input type="time" name="fecha" id="" v-model="horaEntrega">
-        </td>
-      </tr>
-      </tbody>
-    </table>
-    <hr/>
-    <footer id="footer">
-      <input type='submit' value="Enviar">
-      <input type="reset" value="Limpiar">
-    </footer>
-  </form>
+        <label>¿Qué desea encargar?</label>
+            <div class="platos">
+              Entrada <select name="entrada" id="" v-model="entradaElegida">
+              <Comprar v-for="(item, index) in entradas"
+                       v-bind:key="index"
+                       v-bind:producto="item.producto"
+                       v-bind:precio="item.precio"/>
+            </select>
+            </div>
 
-<!--  <div class="order-items">-->
-<!--    <OrderItem v-for="(item, index) in entradas" v-bind:key="index"-->
-<!--               v-bind:name="item.producto"-->
-<!--               v-bind:description="item.descripcion"-->
-<!--               v-bind:price="item.precio"-->
-<!--    />-->
+            <br>
+
+            <div class="platos">
+              Plato <select name="princi" id="" v-model="platoElegido">
+              <Comprar v-for="(item, index) in principal"
+                     v-bind:key="index"
+                     v-bind:producto="item.producto"
+                     v-bind:precio="item.precio"/>
+            </select>
+            </div>
+
+            <br>
+
+            <div class="platos">
+              Postre <select name="postre" id="" v-model="postreElegido">
+              <Comprar v-for="(item, index) in postre"
+                     v-bind:key="index"
+                     v-bind:producto="item.producto"
+                     v-bind:precio="item.precio"/>
+              </select>
+              </div>
+
+        <label>Horario de Entrega</label>
+        <input type="time" name="fecha" id="" v-model="horaEntrega">
+
+        <hr/>
+
+        <footer id="footer">
+          <input type='submit' value="Enviar" v-on:click="ordenar">
+          <input type="reset" value="Limpiar">
+        </footer>
+    </form>
+  </div>
 
   <Footer/>
+
 </template>
 
 <script>
 import {entradas, postre, principal} from "@/assets/js/Opciones";
-import TheButtons from "@/components/Botones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Comprar from "@/components/Comprar";
+import axios from "axios";
 
 export default {
   name: "Pedir-tag",
+  props: [
+    "producto",
+    "img",
+    "precio",
+    "descripcion",
+    "item"
+  ],
   components: {
-    TheButtons,
     Header,
     Footer,
-  },
+    Comprar
+  }, $route: undefined,
+
   data() {
-    return {
-      entradas: entradas,
-      platoPrincipal: principal,
-      postre: postre,
+      return {
+        nombre: "",
+        telefono: "",
+        modoEntrega: "",
+        entradaElegida: "",
+        platoElegido: "",
+        postreElegido: "",
+        horaEntrega: "",
+        entradas: entradas,
+        principal: principal,
+        postre: postre,
+      }
+   },
+  methods: {
+    ordenar() {
+      console.log("Boton Presionado")
+      axios.post("http://localhost:8080/api/v1/ordenar", {
+        cliente: this.nombre,
+        telefono: this.telefono,
+        entrega: this.modoEntrega,
+        horario: this.horaEntrega,
+        entrada: this.entradaElegida,
+        plato: this.platoElegido,
+        postre: this.postreElegido,
+      })
+          .then(response => {
+            console.log(response)
+            this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push({name: "NotFound"})
+          })
     }
   },
-  props: {
-    producto: String,
-    descripcion: String,
-    precio: Number
+  mounted() {
+    if (this.$route.query['entrada'] === undefined) {
+      this.$router.push({name: "PedidosOnline"})
+    }
   }
 }
+
 </script>
+
 <style scoped>
 body{
   text-align: center;
@@ -123,15 +143,47 @@ h1 {
   text-align: center;
 }
 
+#formulario{
+  display: flex;
+  place-content: center;
+  margin-bottom: 40px;
+}
+
 #form {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
   border: 1px solid;
-  width: 416px;
-  margin-right: 40%;
+  width: 30%;
 
+}
+
+input{
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: burlywood;
+}
+
+button{
+  text-transform: uppercase;
+  background-color: burlywood;
+  border-color: burlywood;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #f3f3f3;
+  width: 100px;
+  height: 20px;
+  margin: 2px;
+}
+
+button:hover {
+  background-color: saddlebrown;
+  border-color: saddlebrown;
+  opacity: 90%;
 }
 
 #form th,
@@ -158,6 +210,11 @@ hr{
 footer{
   text-align: center;
   padding: 10px;
+}
+
+.platos {
+  flex-direction: column;
+  margin: 2px;
 }
 
 </style>

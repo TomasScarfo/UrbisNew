@@ -10,16 +10,12 @@
 
       <div id="intro">
         <h1>Sobre Nosotros</h1>
-        <p>En Urbis buscamos generar una sensación de hogar</p>
-        <p>en las personas que nos visitan todos los mediodias,</p>
-        <p>con platos abundantes y de excelente calidad.</p>
-        <p>Todos nuestros productos son de elaboración propia:</p>
-        <p>carnes, pastas artesanales, minutas y muchos mas.</p>
+        <p>En Urbis buscamos generar una sensación de hogar
+          en las personas que nos visitan todos los mediodías,
+          con platos abundantes y de excelente calidad.
+          Todos nuestros productos son de elaboración propia:
+          carnes, pastas artesanales, minutas y muchos más.</p>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
 
     </div>
 
@@ -109,8 +105,9 @@ export default {
 <style scoped>
 
 #intro {
-  background-color:gainsboro;
+  background-color:#c5b19b;
   width: 36%;
+  line-height: 38px;
   margin: 0 34% 0 22%;
   padding: 2% 10% 2% 10%;
   text-align: center;
@@ -124,6 +121,7 @@ export default {
   top: 0;
   left: 0;
   transition: box-shadow 1s, top 1s, left 1s;
+  margin-top: -35px;
 }
 
 #intro:hover {
@@ -142,6 +140,7 @@ export default {
   height: 400px;
   place-content: center;
   background-image: url("../assets/img/restaurante-fon.jpg");
+  font-family: sans-serif;
 }
 
 #intro-2{

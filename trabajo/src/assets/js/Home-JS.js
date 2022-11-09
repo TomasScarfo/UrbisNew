@@ -4,23 +4,27 @@ function experiencia() {
     let p = null;
 
     if (10 >= a && a > 8) {
+<<<<<<< HEAD
         imgPath = '../trabajo/src/assets/img/emoticonos.png'
+=======
+        imgPath = require('@/assets/img/emoticonos.png')
+>>>>>>> aca282742864663ec4faf3d5fe0f3124782b633b
         p = 'Wow! Estamos agradecidos'
     } else if (8 >= a && a > 6) {
-        imgPath = 'trabajo/src/assets/img/feliz.png'
+        imgPath = require('@/assets/img/feliz.png')
         p = 'Wow! Estamos agradecidos'
     } else if (6 >= a && a > 4) {
-        imgPath = 'trabajo/src/assets/img/pensando.png'
+        imgPath = require('@/assets/img/pensando.png')
         p = 'Gracias por valorarnos!'
     } else if (4 >= a && a > 2) {
-        imgPath = 'trabajo/src/assets/img/triste.png'
+        imgPath = require('@/assets/img/triste.png')
         p = 'Intentaremos mejorar!'
     } else if (a <= 2 && a >= 0) {
-        imgPath = 'trabajo/src/assets/img/muy-triste.png'
+        imgPath = require('@/assets/img/muy-triste.png')
         p = 'Intentaremos mejorar!'
     } else {
         alert('Valor invalido, ingrese un numero entre 1-10')
-        imgPath = "/TP-prog_web/img/tenedor.png"
+        imgPath = require('@/assets/img/tenedor.png')
         p = 'Algo salio Mal'
     }
 
