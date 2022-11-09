@@ -56,7 +56,11 @@
         <hr/>
 
         <footer id="footer">
+<<<<<<< HEAD
           <input type='submit' value="Enviar">
+=======
+          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar" >
+>>>>>>> a2c372103694e071b649c6c5aa0364c5f708cfde
           <input type="reset" value="Limpiar">
         </footer>
     </form>
@@ -89,23 +93,24 @@ export default {
   }, $route: undefined,
 
   data() {
-      return {
-        nombre: "",
-        telefono: "",
-        modoEntrega: "",
-        entradaElegida: "",
-        platoElegido: "",
-        postreElegido: "",
-        horaEntrega: "",
-        entradas: entradas,
-        principal: principal,
-        postre: postre,
-      }
-   },
+    return {
+      nombre: "",
+      telefono: "",
+      modoEntrega: "",
+      entradaElegida: "",
+      platoElegido: "",
+      postreElegido: "",
+      horaEntrega: "",
+      entradas: entradas,
+      principal: principal,
+      postre: postre,
+    }
+  },
+
+
   methods: {
     ordenar() {
-      console.log("Boton Presionado")
-      axios.post("http://localhost:8080/api/v1/ordenar", {
+      axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
@@ -113,10 +118,23 @@ export default {
         entrada: this.entradaElegida,
         plato: this.platoElegido,
         postre: this.postreElegido,
+<<<<<<< HEAD
       },
       )
           .then(resp => console.log(resp))
           .catch(e => console.log('Error!!!', e))
+=======
+      })
+          .then(response => {
+            console.log(response)
+            this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push({name: "NotFound"})
+          })
+
+>>>>>>> a2c372103694e071b649c6c5aa0364c5f708cfde
     }
   },
   // mounted() {
@@ -125,6 +143,7 @@ export default {
   //   }
   // }
 }
+
 
 </script>
 

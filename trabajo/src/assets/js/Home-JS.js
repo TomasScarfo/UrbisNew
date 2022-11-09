@@ -4,7 +4,11 @@ function experiencia() {
     let p = null;
 
     if (10 >= a && a > 8) {
+<<<<<<< HEAD
+        imgPath = '../trabajo/src/assets/img/emoticonos.png'
+=======
         imgPath = require('@/assets/img/emoticonos.png')
+>>>>>>> aca282742864663ec4faf3d5fe0f3124782b633b
         p = 'Wow! Estamos agradecidos'
     } else if (8 >= a && a > 6) {
         imgPath = require('@/assets/img/feliz.png')
