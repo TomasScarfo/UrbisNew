@@ -56,7 +56,6 @@
         <hr/>
 
         <footer id="footer">
-          <input type='submit' value="Enviar">
           <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar" >
           <input type="reset" value="Limpiar">
         </footer>
