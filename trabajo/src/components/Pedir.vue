@@ -117,7 +117,7 @@ export default {
       })
           .then(response => {
             console.log(response)
-            this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+            this.$router.push({name: "FinalizarPedido"})
           })
           .catch(error => {
             console.log(error);
