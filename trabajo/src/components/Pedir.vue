@@ -6,14 +6,7 @@
   <hr>
 
   <div id="formulario">
-<<<<<<< HEAD
     <form id="form">
-      <div id="ElementosALlenar">
-      <div id="nombreyapell">
-      <div id="ElementosALlenar">
-      <div id="nombreyapell">
-=======
-    <form>
       <div id="ElementosALlenar">
         <div id="nombreyapell">
         <label>Nombre y apellido</label>
@@ -67,22 +60,20 @@
           <label>Horario de Entrega</label>
           <input type="time" name="fecha" id="" v-model="horaEntrega">
         </div>
-      </div>
       <hr/>
         <footer id="footer">
           <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()" >
           <input type="reset" value="Limpiar">
         </footer>
-
+      </div>
       <br>
-      </div>
-      </div>
+
     </form>
   </div>
-
   <Footer/>
 
 </template>
+
 
 <script>
 import {entradas, postre, principal} from "@/assets/js/Opciones";
@@ -114,29 +105,19 @@ export default {name: "Pedir-tag", props: [
       principal: principal,
       postre: postre,
     }
-<<<<<<< HEAD
+
   },
-  methods: {
-    ordenar() {
-=======
-  }, methods: {
+   methods: {
     ordenar() {
       console.log("Boton Presionado")
->>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
-<<<<<<< HEAD
         entrada: JSON.stringify(this.entradaElegida),
         plato_principal: JSON.stringify(this.platoElegido),
         postre: JSON.stringify(this.postreElegido),
-=======
-        entrada: this.entradaElegida,
-        plato_principal: this.platoElegido,
-        postre: this.postreElegido
->>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
       })
           .then(response => {
             console.log(response)
@@ -147,12 +128,10 @@ export default {name: "Pedir-tag", props: [
             this.$router.push({name: "ErrorEnPedido"})
           })
     }
-<<<<<<< HEAD
+
   },
 }
-=======
-  },}
->>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
+
 </script>
 
 <style scoped>
