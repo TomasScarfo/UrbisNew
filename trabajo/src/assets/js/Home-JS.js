@@ -4,7 +4,7 @@ function experiencia() {
     let p = null;
 
     if (10 >= a && a > 8) {
-        imgPath = '../assets/img/emoticonos.png'
+        imgPath = '../trabajo/src/assets/img/emoticonos.png'
         p = 'Wow! Estamos agradecidos'
     } else if (8 >= a && a > 6) {
         imgPath = 'trabajo/src/assets/img/feliz.png'
