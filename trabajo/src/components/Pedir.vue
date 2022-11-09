@@ -7,29 +7,44 @@
 
   <div id="formulario">
 
+<<<<<<< HEAD
     <form id="form">
+=======
+<<<<<<< HEAD
+    <form id="form">
+      <div id="ElementosALlenar">
+      <div id="nombreyapell">
+=======
+    <form id="form" method="post" @submit.prevent="ordenar">
+>>>>>>> 00d2c9aed5628fc3c2be5c079faaa71dd3a472e9
+>>>>>>> 2aadc6d747ff6c28d1458d33f8660bce6f9b2651
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
-
+      </div>
+      <br>
+      <div id="telefono">
         <label>Teléfono</label>
         <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
-
+      </div>
+      <br>
+      <div id="modoentrega">
         <label>Modo de Entrega</label>
         <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega">Takeaway
         <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega">Delivery
+      </div>
+      <br>
+      <div id="eleccionmenu">
+        <u><label>Elija su menú:</label></u>
 
-        <label>¿Qué desea encargar?</label>
             <div class="platos">
-              Entrada <select name="entrada" id="" v-model="entradaElegida">
+              Entrada <select name="entrada" id="Entrada" v-model="entradaElegida">
               <Comprar v-for="(item, index) in entradas"
                        v-bind:key="index"
                        v-bind:producto="item.producto"
                        v-bind:precio="item.precio"/>
             </select>
             </div>
-
             <br>
-
             <div class="platos">
               Plato <select name="princi" id="" v-model="platoElegido">
               <Comprar v-for="(item, index) in principal"
@@ -40,25 +55,28 @@
             </div>
 
             <br>
-
-            <div class="platos">
+          <div class="platos">
               Postre <select name="postre" id="" v-model="postreElegido">
               <Comprar v-for="(item, index) in postre"
                      v-bind:key="index"
                      v-bind:producto="item.producto"
                      v-bind:precio="item.precio"/>
               </select>
-              </div>
-
-        <label>Horario de Entrega</label>
-        <input type="time" name="fecha" id="" v-model="horaEntrega">
-
-        <hr/>
-
+          </div>
+      </div>
+      <br>
+        <div id="horarioentrega">
+          <label>Horario de Entrega</label>
+          <input type="time" name="fecha" id="" v-model="horaEntrega">
+        </div>
+      </div>
+      <hr/>
         <footer id="footer">
           <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()">
           <input type="reset" value="Limpiar">
         </footer>
+
+      <br>
     </form>
   </div>
 
@@ -103,29 +121,129 @@ export default {
       }
   },
   methods: {
+<<<<<<< HEAD
     ordenar() {
       console.log("Boton Presionado")
+=======
+
+    ordenar() {
+      console.log("Boton Presionado")
+<<<<<<< HEAD
+=======
+=======
+    ordenar: function () {
+>>>>>>> 884abf4bc6d2c052bfd45d374a59981bb1100e14
+>>>>>>> 23a9ef5a4424e55f93b28a8bccb54d9411584317
+>>>>>>> 41bf0575f2dd100aca0338712afdd57db5fbb32c
+>>>>>>> 2aadc6d747ff6c28d1458d33f8660bce6f9b2651
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
         entrada: this.entradaElegida,
+<<<<<<< HEAD
+        plato: this.platoElegido,
+        postre: this.postreElegido,
+      })
+=======
         plato_principal: this.platoElegido,
         postre: this.postreElegido
       }
+>>>>>>> 41bf0575f2dd100aca0338712afdd57db5fbb32c
           .then(response => {
             console.log(response)
+<<<<<<< HEAD
             this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
+=======
+            this.$router.push({name: "PedidoFinalizado"})
+
+>>>>>>> 2aadc6d747ff6c28d1458d33f8660bce6f9b2651
           })
           .catch(error => {
             console.log(error);
             this.$router.push({name: "ErrorEnPedido"})
-          }))
+          })
     }
+<<<<<<< HEAD
+=======
   },
+<<<<<<< HEAD
+=======
+  // mounted() {
+  //   if (this.$route.query['entrada'] === undefined) {
+  //     this.$router.push({name: "PedidosOnline"})
+  //   }
+  // }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 94f010550d62a90ee48456713fdb2d9ba9f9275b
 
+      return {
+        nombre: "",
+        telefono: "",
+        modoEntrega: "",
+        entradaElegida: "",
+        platoElegido: "",
+        postreElegido: "",
+        horaEntrega: "",
+        entradas: entradas,
+        principal: principal,
+        postre: postre,
+      }
+    },
+
+
+    methods: {
+      ordenar: function () {
+        axios.post("http://localhost:5000/api/v1/ordenar", {
+          cliente: this.nombre,
+          telefono: this.telefono,
+          entrega: this.modoEntrega,
+          horario: this.horaEntrega,
+          entrada: this.entradaElegida,
+          plato: this.platoElegido,
+          postre: this.postreElegido,
+        }
+            .then(response => {
+              console.log(response)
+              this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+            })
+            .catch(error => {
+              console.log(error);
+              this.$router.push({name: "NotFound"})
+            }))
+      }
+    },
+    // mounted() {
+    //   if (this.$route.query['entrada'] === undefined) {
+    //     this.$router.push({name: "PedidosOnline"})
+    //   }
+    // }
+>>>>>>> 41bf0575f2dd100aca0338712afdd57db5fbb32c
+  }
+>>>>>>> 2aadc6d747ff6c28d1458d33f8660bce6f9b2651
+}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+
+
+=======
+=======
+>>>>>>> 00d2c9aed5628fc3c2be5c079faaa71dd3a472e9
+
+<<<<<<< HEAD
+=======
+>>>>>>> 23a9ef5a4424e55f93b28a8bccb54d9411584317
+>>>>>>> 41bf0575f2dd100aca0338712afdd57db5fbb32c
+>>>>>>> 2aadc6d747ff6c28d1458d33f8660bce6f9b2651
 </script>
 
 <style scoped>
@@ -136,6 +254,11 @@ body{
 
 h1 {
   text-align: center;
+}
+
+#ElementosALlenar{
+  padding-left: 5%;
+  padding-top: 3%;
 }
 
 #formulario{
@@ -151,7 +274,11 @@ h1 {
   min-width: 400px;
   border: 1px solid;
   width: 30%;
+  justify-content: space-around;
+}
 
+#Entrada{
+    margin-top: 2%;
 }
 
 input{
@@ -181,26 +308,6 @@ button:hover {
   opacity: 90%;
 }
 
-#form th,
-#form td {
-  padding: 12px 15px;
-}
-
-#form tbody tr {
-  border-bottom: 1px solid grey;
-}
-
-#form tbody tr:nth-of-type(even) {
-  background-color: burlywood;
-}
-
-#form tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
-hr{
-  border:#1e253d solid 1px;
-}
 
 footer{
   text-align: center;

@@ -55,6 +55,8 @@ export default {
   width: 100px;
   height: 100px;
   margin-top: 10px;
+  border-radius: 50%
+ ;
 }
 
 h1{
