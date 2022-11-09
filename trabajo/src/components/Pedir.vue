@@ -117,8 +117,7 @@ export default {
         principal: principal,
         postre: postre,
       }
-   }
-}
+   }}
 
 
 </script>
