@@ -101,6 +101,9 @@ export default {
         principal: principal,
         postre: postre,
       }
+<<<<<<< HEAD
+   }}
+=======
    },
   methods: {
     ordenar() {
@@ -130,6 +133,7 @@ export default {
     }
   }
 }
+>>>>>>> 580260d2cc8934965b2f3a513e987bf5dfd5030c
 
 </script>
 
