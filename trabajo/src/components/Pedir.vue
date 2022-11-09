@@ -29,30 +29,31 @@
 
             <div class="platos">
               Entrada <select name="entrada" id="Entrada" v-model="entradaElegida">
-              <Comprar v-for="(item, index) in entradas"
-                       v-bind:key="index"
-                       v-bind:producto="item.producto"
-                       v-bind:precio="item.precio"/>
+              <option value="Tortilla - $ 700">Tortilla - $ 700</option>
+              <option value="Buñuelos - $ 700">Buñuelos - $ 700</option>
+              <option value="Gambas - $ 1000">Gambas - $ 1000</option>
+              <option value="Lengua - $ 1000">Lengua - $ 1000</option>
             </select>
             </div>
             <br>
             <div class="platos">
               Plato <select name="princi" id="" v-model="platoElegido">
-              <Comprar v-for="(item, index) in principal"
-                     v-bind:key="index"
-                     v-bind:producto="item.producto"
-                     v-bind:precio="item.precio"/>
+              <option value="Milanesa - $ 1500">Milanesa - $ 1500</option>
+              <option value="Ñoquis - $ 1300">Ñoquis - $ 1300</option>
+              <option value="Pollo - $ 1300">Pollo - $ 1300</option>
+              <option value="Carne - $ 1800">Carne - $ 1800</option>
             </select>
             </div>
 
             <br>
           <div class="platos">
-              Postre <select name="postre" id="" v-model="postreElegido">
-              <Comprar v-for="(item, index) in postre"
-                     v-bind:key="index"
-                     v-bind:producto="item.producto"
-                     v-bind:precio="item.precio"/>
-              </select>
+            Postre <select name="postre" id="" v-model="postreElegido">
+            <option value="Flan - $ 500">Flan - $ 500</option>
+            <option value="Vigilante - $ 500">Vigilante - $ 500</option>
+            <option value="Helado - $ 300">Helado - $ 300</option>
+            <option value="Cafe - $ 200">Cafe - $ 200</option>
+
+          </select>
           </div>
       </div>
       <br>
@@ -79,7 +80,6 @@
 import {entradas, postre, principal} from "@/assets/js/Opciones";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Comprar from "@/components/Comprar";
 import axios from "axios";
 
 export default {name: "Pedir-tag", props: [
@@ -91,7 +91,6 @@ export default {name: "Pedir-tag", props: [
   ], components: {
     Header,
     Footer,
-    Comprar
   }, data() {
     return {
       nombre: "",
