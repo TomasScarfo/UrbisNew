@@ -7,7 +7,7 @@
 
   <div id="formulario">
 
-    <form id="form">
+    <form id="form" method="post" @submit.prevent="ordenar">
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
 
@@ -56,7 +56,7 @@
         <hr/>
 
         <footer id="footer">
-          <input type='submit' value="Enviar" v-on:click="ordenar">
+          <input type='submit' value="Enviar">
           <input type="reset" value="Limpiar">
         </footer>
     </form>
@@ -113,22 +113,17 @@ export default {
         entrada: this.entradaElegida,
         plato: this.platoElegido,
         postre: this.postreElegido,
-      })
-          .then(response => {
-            console.log(response)
-            this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
-          })
-          .catch(error => {
-            console.log(error);
-            this.$router.push({name: "NotFound"})
-          })
+      },
+      )
+          .then(resp => console.log(resp))
+          .catch(e => console.log('Error!!!', e))
     }
   },
-  mounted() {
-    if (this.$route.query['entrada'] === undefined) {
-      this.$router.push({name: "PedidosOnline"})
-    }
-  }
+  // mounted() {
+  //   if (this.$route.query['entrada'] === undefined) {
+  //     this.$router.push({name: "PedidosOnline"})
+  //   }
+  // }
 }
 
 </script>
