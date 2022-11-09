@@ -101,14 +101,11 @@ export default {
         principal: principal,
         postre: postre,
       }
-<<<<<<< HEAD
-   }}
-=======
    },
   methods: {
     ordenar() {
       console.log("Boton Presionado")
-      axios.post("http://localhost:8080/api/v1/ordenar", {
+      axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
@@ -133,7 +130,6 @@ export default {
     }
   }
 }
->>>>>>> 580260d2cc8934965b2f3a513e987bf5dfd5030c
 
 </script>
 
