@@ -2,8 +2,8 @@
   <div id="container">
     <img src="../assets/img/success.png" alt="">
 
-    <h1>¡ EL PEDIDO SE HA REALIZADO CON EXITO !</h1>
-    <h3>Pronto podra disfrutarlo</h3>
+    <h1>¡ UPS, se ha producido un error!</h1>
+    <h3>Porfavor regrese a la pagina a revisar los datos ingresados</h3>
     <h5>Gracias por confiar en URBIS</h5>
 
     <router-link :to="{name: 'PedidosOnline'}">
@@ -17,7 +17,7 @@
 <script>
 
 export default {
-  name: "PedidoFinalizado"
+  name: "ErrorEnPedido"
 }
 </script>
 
