@@ -1,37 +1,24 @@
 <template>
   <Header/>
 
-
   <h1>HAGA SU PEDIDO</h1>
+
   <hr>
+
   <div id="formulario">
-  <form enctype="text/plain" id="form" @submit.prevent="ordenar">
 
-<!--    <table style="margin: 0 auto;">-->
-<!--      <tbody>-->
-      <tr>
-        <td>Nombre y apellido</td>
-        <td>
-          <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
-        </td>
-      </tr>
+    <form id="form" @submit.prevent="ordenar">
+        <label>Nombre y apellido</label>
+        <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
 
-      <tr>
-        <td>Teléfono</td>
-        <td>
-          <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
-        </td>
-      </tr>
-      <tr>
-        <td>Modo de Entrega</td>
-        <td>
-          <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega">Takeaway
-          <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega">Delivery
-        </td>
-      </tr>
-      <tr>
-        <td>¿Qué desea encargar?</td>
-          <td>
+        <label>Teléfono</label>
+        <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
+
+        <label>Modo de Entrega</label>
+        <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega">Takeaway
+        <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega">Delivery
+
+        <label>¿Qué desea encargar?</label>
             <div class="platos">
               Entrada <select name="entrada" id="" v-model="entradaElegida">
               <Comprar v-for="(item, index) in entradas"
@@ -39,50 +26,44 @@
                        v-bind:producto="item.producto"
                        v-bind:precio="item.precio"/>
             </select>
+            </div>
 
-          </div>
             <br>
+
             <div class="platos">
-            Plato <select name="princi" id="" v-model="platoElegido">
-            <Comprar v-for="(item, index) in principal"
-                     v-bind:key="index"
-                     v-bind:producto="item.producto"
-                     v-bind:precio="item.precio"/>
-          </select>
-          </div>
-            <br>
-
-          <div class="platos">
-            Postre <select name="postre" id="" v-model="postreElegido">
-            <Comprar v-for="(item, index) in postre"
+              Plato <select name="princi" id="" v-model="platoElegido">
+              <Comprar v-for="(item, index) in principal"
                      v-bind:key="index"
                      v-bind:producto="item.producto"
                      v-bind:precio="item.precio"/>
             </select>
-          </div>
-          </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Horario de Entrega</p>
-        </td>
-        <td>
-          <input type="time" name="fecha" id="" v-model="horaEntrega">
-        </td>
-      </tr>
-<!--      </tbody>-->
-<!--    </table>-->
-    <hr/>
+            </div>
 
-    <footer id="footer">
-      <router-link :to="{name: 'PagoOnline'}">
-        <button type='submit' value="Enviar">Enviar</button>
-      </router-link>
-      <button type="reset" value="Limpiar">Limpiar</button>
-    </footer>
-  </form>
+            <br>
+
+            <div class="platos">
+              Postre <select name="postre" id="" v-model="postreElegido">
+              <Comprar v-for="(item, index) in postre"
+                     v-bind:key="index"
+                     v-bind:producto="item.producto"
+                     v-bind:precio="item.precio"/>
+              </select>
+              </div>
+
+        <label>Horario de Entrega</label>
+        <input type="time" name="fecha" id="" v-model="horaEntrega">
+
+        <hr/>
+
+        <footer id="footer">
+          <input type='submit' value="Enviar">
+          <input type="reset" value="Limpiar">
+        </footer>
+    </form>
   </div>
+
   <Footer/>
+
 </template>
 
 <script>
@@ -123,6 +104,7 @@ export default {
    },
   methods: {
     ordenar() {
+      console.log("Boton Presionado")
       axios.post("http://127.0.0.1:5000/api/v1/ordenar", {
         user: this.nombre,
         telefono: this.telefono,
