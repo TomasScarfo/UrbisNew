@@ -121,7 +121,7 @@ export default {name: "Pedir-tag", props: [
       })
           .then(response => {
             console.log(response)
-            this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
+            this.$router.push({name: "PedidoFinalizado"})
           })
           .catch(error => {
             console.log(error);
