@@ -103,12 +103,9 @@ export default {
     }
   },
   methods: {
-<<<<<<< HEAD
+
     ordenar() {
       console.log("Boton Presionado")
-=======
-    ordenar: function () {
->>>>>>> 884abf4bc6d2c052bfd45d374a59981bb1100e14
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
@@ -117,74 +114,24 @@ export default {
         entrada: this.entradaElegida,
         plato: this.platoElegido,
         postre: this.postreElegido,
-      }
+      })
           .then(response => {
             console.log(response)
-<<<<<<< HEAD
-            this.$router.push({name: "FinalizarPedido"})
-=======
-            this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
->>>>>>> 6e9b7ffaad652e676393166b4fd43e2a48a49b00
+            this.$router.push({name: "PedidoFinalizado"})
+
           })
           .catch(error => {
             console.log(error);
             this.$router.push({name: "ErrorEnPedido"})
-          }))
+          })
     }
-  },
-  // mounted() {
-  //   if (this.$route.query['entrada'] === undefined) {
-  //     this.$router.push({name: "PedidosOnline"})
-  //   }
-  // }
-}
-<<<<<<< HEAD
-=======
->>>>>>> 94f010550d62a90ee48456713fdb2d9ba9f9275b
-
-      return {
-        nombre: "",
-        telefono: "",
-        modoEntrega: "",
-        entradaElegida: "",
-        platoElegido: "",
-        postreElegido: "",
-        horaEntrega: "",
-        entradas: entradas,
-        principal: principal,
-        postre: postre,
-      }
-    },
-
-
-    methods: {
-      ordenar: function () {
-        axios.post("http://localhost:5000/api/v1/ordenar", {
-          cliente: this.nombre,
-          telefono: this.telefono,
-          entrega: this.modoEntrega,
-          horario: this.horaEntrega,
-          entrada: this.entradaElegida,
-          plato: this.platoElegido,
-          postre: this.postreElegido,
-        }
-            .then(response => {
-              console.log(response)
-              this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
-            })
-            .catch(error => {
-              console.log(error);
-              this.$router.push({name: "NotFound"})
-            }))
-      }
-    },
-    // mounted() {
-    //   if (this.$route.query['entrada'] === undefined) {
-    //     this.$router.push({name: "PedidosOnline"})
-    //   }
-    // }
   }
 }
+
+
+
+
+
 
 </script>
 
