@@ -106,7 +106,7 @@ export default {
     ordenar() {
       console.log("Boton Presionado")
       axios.post("http://localhost:8080/api/v1/ordenar", {
-        user: this.nombre,
+        cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
