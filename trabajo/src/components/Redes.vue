@@ -222,6 +222,9 @@ p{
   outline:0;
   border: 1px solid firebrick;
 }
+#form{
+  margin-right: 28%;
+}
 
 
 #animo-img {
@@ -231,6 +234,7 @@ p{
 #valoracion{
   text-align: center;
   flex-direction: row;
+  margin-top: 3.5%;
 }
 
 fieldset {

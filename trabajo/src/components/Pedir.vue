@@ -6,11 +6,17 @@
   <hr>
 
   <div id="formulario">
+<<<<<<< HEAD
     <form id="form">
       <div id="ElementosALlenar">
       <div id="nombreyapell">
       <div id="ElementosALlenar">
       <div id="nombreyapell">
+=======
+    <form>
+      <div id="ElementosALlenar">
+        <div id="nombreyapell">
+>>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
       </div>
@@ -65,7 +71,7 @@
       </div>
       <hr/>
         <footer id="footer">
-          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()">
+          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()" >
           <input type="reset" value="Limpiar">
         </footer>
 
@@ -86,22 +92,17 @@ import Footer from "@/components/Footer";
 import Comprar from "@/components/Comprar";
 import axios from "axios";
 
-export default {
-  name: "Pedir-tag",
-  props: [
+export default {name: "Pedir-tag", props: [
     "producto",
     "img",
     "precio",
     "descripcion",
     "item"
-  ],
-  components: {
+  ], components: {
     Header,
     Footer,
     Comprar
-  },
-
-  data() {
+  }, data() {
     return {
       nombre: "",
       telefono: "",
@@ -114,29 +115,45 @@ export default {
       principal: principal,
       postre: postre,
     }
+<<<<<<< HEAD
   },
   methods: {
     ordenar() {
+=======
+  }, methods: {
+    ordenar() {
+      console.log("Boton Presionado")
+>>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
+<<<<<<< HEAD
         entrada: JSON.stringify(this.entradaElegida),
         plato_principal: JSON.stringify(this.platoElegido),
         postre: JSON.stringify(this.postreElegido),
+=======
+        entrada: this.entradaElegida,
+        plato_principal: this.platoElegido,
+        postre: this.postreElegido
+>>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
       })
           .then(response => {
             console.log(response)
-            this.$router.push({name: "PedidoFinalizado"})
+            this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
           })
           .catch(error => {
             console.log(error);
             this.$router.push({name: "ErrorEnPedido"})
           })
     }
+<<<<<<< HEAD
   },
 }
+=======
+  },}
+>>>>>>> f4f3700e115a529c83c0a8b5e8a3fe3f3ed0a7dd
 </script>
 
 <style scoped>
@@ -160,7 +177,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-#form {
+form {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
