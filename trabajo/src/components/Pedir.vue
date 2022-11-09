@@ -56,7 +56,7 @@
         <hr/>
 
         <footer id="footer">
-          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar" >
+          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()" >
           <input type="reset" value="Limpiar">
         </footer>
     </form>
@@ -86,10 +86,9 @@ export default {
     Header,
     Footer,
     Comprar
-  }, $route: undefined,
+  },
 
   data() {
-<<<<<<< HEAD
       return {
         nombre: "",
         telefono: "",
@@ -106,33 +105,14 @@ export default {
   methods: {
     ordenar() {
       console.log("Boton Presionado")
-=======
-    return {
-      nombre: "",
-      telefono: "",
-      modoEntrega: "",
-      entradaElegida: "",
-      platoElegido: "",
-      postreElegido: "",
-      horaEntrega: "",
-      entradas: entradas,
-      principal: principal,
-      postre: postre,
-    }
-  },
-
-
-  methods: {
-    ordenar: function () {
->>>>>>> 884abf4bc6d2c052bfd45d374a59981bb1100e14
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
         entrada: this.entradaElegida,
-        plato: this.platoElegido,
-        postre: this.postreElegido,
+        plato_principal: this.platoElegido,
+        postre: this.postreElegido
       }
           .then(response => {
             console.log(response)
@@ -150,11 +130,6 @@ export default {
   //   }
   // }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 884abf4bc6d2c052bfd45d374a59981bb1100e14
-
 </script>
 
 <style scoped>
