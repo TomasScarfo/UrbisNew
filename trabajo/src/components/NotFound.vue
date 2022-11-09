@@ -5,7 +5,7 @@
     <img src="../assets/img/NotFound.png" alt="">
 
     <h1>Page Not Found</h1>
-      <h3>Ups! Esta pagina no existe</h3>
+      <h3>¡Ups! Esta pagina no existe</h3>
         <h5>Lamentamos lo sucedido, no encontramos la pagina que nos pediste. </h5>
         <h5>Por favor vuelva a la pagina principal, o contactese con nosotros por nuestras redes. </h5>
 

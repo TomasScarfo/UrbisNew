@@ -56,11 +56,8 @@
         <hr/>
 
         <footer id="footer">
-<<<<<<< HEAD
           <input type='submit' value="Enviar">
-=======
           <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar" >
->>>>>>> a2c372103694e071b649c6c5aa0364c5f708cfde
           <input type="reset" value="Limpiar">
         </footer>
     </form>
@@ -109,7 +106,7 @@ export default {
 
 
   methods: {
-    ordenar() {
+    ordenar: function () {
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
@@ -118,13 +115,7 @@ export default {
         entrada: this.entradaElegida,
         plato: this.platoElegido,
         postre: this.postreElegido,
-<<<<<<< HEAD
-      },
-      )
-          .then(resp => console.log(resp))
-          .catch(e => console.log('Error!!!', e))
-=======
-      })
+      }
           .then(response => {
             console.log(response)
             this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
@@ -132,9 +123,7 @@ export default {
           .catch(error => {
             console.log(error);
             this.$router.push({name: "NotFound"})
-          })
-
->>>>>>> a2c372103694e071b649c6c5aa0364c5f708cfde
+          }))
     }
   },
   // mounted() {
