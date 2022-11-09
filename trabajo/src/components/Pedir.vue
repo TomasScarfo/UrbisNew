@@ -116,7 +116,7 @@ export default {name: "Pedir-tag", props: [
         entrada: this.entradaElegida,
         plato_principal: this.platoElegido,
         postre: this.postreElegido
-      }
+      })
           .then(response => {
             console.log(response)
             this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
@@ -124,7 +124,7 @@ export default {name: "Pedir-tag", props: [
           .catch(error => {
             console.log(error);
             this.$router.push({name: "ErrorEnPedido"})
-          }))
+          })
     }
   },}
 </script>
@@ -150,7 +150,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-#form {
+form {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
