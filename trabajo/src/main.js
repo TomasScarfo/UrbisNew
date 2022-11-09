@@ -8,8 +8,8 @@ import Home from "@/components/Home";
 import Menu from "@/components/Menu";
 import Pedir from "@/components/Pedir";
 import Redes from "@/components/Redes";
-import PagoOnline from "@/components/PagoOnline";
 import PedidoFinalizado from "@/components/PedidoFinalizado";
+import ErrorEnPedido from "@/components/ErrorEnPedido";
 
 
 const routes = [
@@ -17,8 +17,9 @@ const routes = [
     {path: '/Menu', name: "Menu", component: Menu},
     {path: '/PedidosOnline', name: "PedidosOnline", component: Pedir},
     {path: '/Redes', name: "Reseñas", component: Redes},
-    {path: '/PagoOnline', name: "PagoOnline", component: PagoOnline},
-    {path: '/FinalizarPedido', name: "FinalizarPedido", component: PedidoFinalizado},
+
+    {path: '/PedidoFinalizado', name: "PedidoFinalizado", component: PedidoFinalizado},
+    {path: '/Error', name: "ErrorEnPedido", component: ErrorEnPedido},
 
 
     {path: '/:pathMatch(.*)*', name: "NotFound", component: NotFound}
