@@ -56,7 +56,7 @@
         <hr/>
 
         <footer id="footer">
-          <input type='submit' value="Enviar" v-on:click="ordenar">
+          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar" >
           <input type="reset" value="Limpiar">
         </footer>
     </form>
@@ -89,26 +89,24 @@ export default {
   }, $route: undefined,
 
   data() {
-      return {
-        nombre: "",
-        telefono: "",
-        modoEntrega: "",
-        entradaElegida: "",
-        platoElegido: "",
-        postreElegido: "",
-        horaEntrega: "",
-        entradas: entradas,
-        principal: principal,
-        postre: postre,
-      }
-<<<<<<< HEAD
-   }}
-=======
-   },
+    return {
+      nombre: "",
+      telefono: "",
+      modoEntrega: "",
+      entradaElegida: "",
+      platoElegido: "",
+      postreElegido: "",
+      horaEntrega: "",
+      entradas: entradas,
+      principal: principal,
+      postre: postre,
+    }
+  },
+
+
   methods: {
     ordenar() {
-      console.log("Boton Presionado")
-      axios.post("http://localhost:8080/api/v1/ordenar", {
+      axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
@@ -125,6 +123,7 @@ export default {
             console.log(error);
             this.$router.push({name: "NotFound"})
           })
+
     }
   },
   mounted() {
@@ -133,7 +132,7 @@ export default {
     }
   }
 }
->>>>>>> 580260d2cc8934965b2f3a513e987bf5dfd5030c
+
 
 </script>
 
