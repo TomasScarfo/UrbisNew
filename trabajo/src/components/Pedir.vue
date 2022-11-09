@@ -7,7 +7,7 @@
 
   <div id="formulario">
 
-    <form id="form" @submit.prevent="ordenar">
+    <form id="form">
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
 
@@ -56,7 +56,7 @@
         <hr/>
 
         <footer id="footer">
-          <input type='submit' value="Enviar">
+          <input type='submit' value="Enviar" v-on:click="ordenar">
           <input type="reset" value="Limpiar">
         </footer>
     </form>
@@ -105,7 +105,7 @@ export default {
   methods: {
     ordenar() {
       console.log("Boton Presionado")
-      axios.post("http://127.0.0.1:5000/api/v1/ordenar", {
+      axios.post("http://localhost:8080/api/v1/ordenar", {
         user: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
