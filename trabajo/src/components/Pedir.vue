@@ -6,7 +6,7 @@
   <hr>
 
   <div id="formulario">
-    <form id="form" method="post" @submit.prevent="ordenar">
+    <form>
       <div id="ElementosALlenar">
         <div id="nombreyapell">
         <label>Nombre y apellido</label>
@@ -82,22 +82,17 @@ import Footer from "@/components/Footer";
 import Comprar from "@/components/Comprar";
 import axios from "axios";
 
-export default {
-  name: "Pedir-tag",
-  props: [
+export default {name: "Pedir-tag", props: [
     "producto",
     "img",
     "precio",
     "descripcion",
     "item"
-  ],
-  components: {
+  ], components: {
     Header,
     Footer,
     Comprar
-  },
-
-  data() {
+  }, data() {
     return {
       nombre: "",
       telefono: "",
@@ -110,8 +105,7 @@ export default {
       principal: principal,
       postre: postre,
     }
-  },
-  methods: {
+  }, methods: {
     ordenar() {
       console.log("Boton Presionado")
       axios.post("http://localhost:5000/api/v1/ordenar", {
@@ -132,8 +126,7 @@ export default {
             this.$router.push({name: "ErrorEnPedido"})
           }))
     }
-  },
-}
+  },}
 </script>
 
 <style scoped>
