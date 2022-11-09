@@ -5,7 +5,7 @@
   <h1>HAGA SU PEDIDO</h1>
   <hr>
   <div id="formulario">
-  <form enctype="text/plain" id="form" @submit.prevent="ordenar">
+  <form enctype="text/plain" id="form" @submit.prevent="ordenar()">
 
     <table style="margin: 0 auto;">
       <tbody>
@@ -76,7 +76,7 @@
 
     <footer id="footer">
       <router-link :to="{name: 'PagoOnline'}">
-        <button type='submit' value="Enviar" v-on:click="ordenar">Enviar</button>
+        <button type='submit' value="Enviar">Enviar</button>
       </router-link>
       <button type="reset" value="Limpiar">Limpiar</button>
     </footer>
@@ -122,20 +122,18 @@ export default {
    },
   methods: {
     ordenar() {
-      axios.post("http://localhost:8080/api/v1/ordenar", {
+      axios.post("http://localhost:8080/api/v1/ordenar/", {
         user: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
-        pedido: {
-          entrada: this.entradaElegida,
-          plato: this.platoElegido,
-          postre: this.postreElegido,
-        }
+        entrada: this.entradaElegida,
+        plato: this.platoElegido,
+        postre: this.postreElegido,
       })
           .then(response => {
             console.log(response)
-            // this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
+            this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
           });
     }
   },
