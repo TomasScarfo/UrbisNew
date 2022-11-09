@@ -7,7 +7,6 @@
 
   <div id="formulario">
 
-
     <form id="form">
       <div id="ElementosALlenar">
       <div id="nombreyapell">
@@ -66,7 +65,7 @@
       </div>
       <hr/>
         <footer id="footer">
-          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()" >
+          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()">
           <input type="reset" value="Limpiar">
         </footer>
 
@@ -117,7 +116,6 @@ export default {
 
   methods: {
     ordenar() {
-      console.log("Boton Presionado")
       axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
@@ -137,6 +135,7 @@ export default {
           })
     }
   },
+
 }
 
 
