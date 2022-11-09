@@ -7,9 +7,13 @@
 
   <div id="formulario">
 
+<<<<<<< HEAD
     <form id="form">
       <div id="ElementosALlenar">
       <div id="nombreyapell">
+=======
+    <form id="form" method="post" @submit.prevent="ordenar">
+>>>>>>> 00d2c9aed5628fc3c2be5c079faaa71dd3a472e9
         <label>Nombre y apellido</label>
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
       </div>
@@ -64,7 +68,7 @@
       </div>
       <hr/>
         <footer id="footer">
-          <input type='submit' value="Enviar" v-on:click="ordenar">
+          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()" >
           <input type="reset" value="Limpiar">
         </footer>
 
@@ -96,9 +100,10 @@ export default {
     Header,
     Footer,
     Comprar
-  }, $route: undefined,
+  },
 
   data() {
+<<<<<<< HEAD
       return {
         nombre: "",
         telefono: "",
@@ -115,33 +120,112 @@ export default {
   methods: {
     ordenar() {
       console.log("Boton Presionado")
-      axios.post("http://localhost:8080/api/v1/ordenar", {
+=======
+    return {
+      nombre: "",
+      telefono: "",
+      modoEntrega: "",
+      entradaElegida: "",
+      platoElegido: "",
+      postreElegido: "",
+      horaEntrega: "",
+      entradas: entradas,
+      principal: principal,
+      postre: postre,
+    }
+  },
+  methods: {
+<<<<<<< HEAD
+    ordenar() {
+      console.log("Boton Presionado")
+=======
+    ordenar: function () {
+>>>>>>> 884abf4bc6d2c052bfd45d374a59981bb1100e14
+>>>>>>> 23a9ef5a4424e55f93b28a8bccb54d9411584317
+      axios.post("http://localhost:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
         entrada: this.entradaElegida,
-        plato: this.platoElegido,
-        postre: this.postreElegido,
-      })
+        plato_principal: this.platoElegido,
+        postre: this.postreElegido
+      }
           .then(response => {
             console.log(response)
-            this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+<<<<<<< HEAD
+            this.$router.push({name: "FinalizarPedido"})
+=======
+            this.$router.push({name: "PedidoFinalizado", params: {order_id: response.data["order_id"]}})
+>>>>>>> 6e9b7ffaad652e676393166b4fd43e2a48a49b00
           })
           .catch(error => {
             console.log(error);
-            this.$router.push({name: "NotFound"})
-          })
+            this.$router.push({name: "ErrorEnPedido"})
+          }))
     }
   },
-  mounted() {
-    if (this.$route.query['entrada'] === undefined) {
-      this.$router.push({name: "PedidosOnline"})
-    }
+  // mounted() {
+  //   if (this.$route.query['entrada'] === undefined) {
+  //     this.$router.push({name: "PedidosOnline"})
+  //   }
+  // }
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 94f010550d62a90ee48456713fdb2d9ba9f9275b
+
+      return {
+        nombre: "",
+        telefono: "",
+        modoEntrega: "",
+        entradaElegida: "",
+        platoElegido: "",
+        postreElegido: "",
+        horaEntrega: "",
+        entradas: entradas,
+        principal: principal,
+        postre: postre,
+      }
+    },
+
+
+    methods: {
+      ordenar: function () {
+        axios.post("http://localhost:5000/api/v1/ordenar", {
+          cliente: this.nombre,
+          telefono: this.telefono,
+          entrega: this.modoEntrega,
+          horario: this.horaEntrega,
+          entrada: this.entradaElegida,
+          plato: this.platoElegido,
+          postre: this.postreElegido,
+        }
+            .then(response => {
+              console.log(response)
+              this.$router.push({name: "FinalizarPedido", params: {order_id: response.data["order_id"]}})
+            })
+            .catch(error => {
+              console.log(error);
+              this.$router.push({name: "NotFound"})
+            }))
+      }
+    },
+    // mounted() {
+    //   if (this.$route.query['entrada'] === undefined) {
+    //     this.$router.push({name: "PedidosOnline"})
+    //   }
+    // }
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00d2c9aed5628fc3c2be5c079faaa71dd3a472e9
 
+>>>>>>> 23a9ef5a4424e55f93b28a8bccb54d9411584317
 </script>
 
 <style scoped>
