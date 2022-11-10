@@ -2,17 +2,16 @@
   <div id="all">
 
     <router-link :to="{name: 'HomeRoute'}">
-      <span>Inicio</span>
+      <a href="">Inicio</a>
     </router-link>
     <router-link :to='{name: "Menu"}'>
-      <span>Menú</span>
-
+      <a href="">Menú</a>
     </router-link>
     <router-link :to="{name: 'Reseñas'}">
-      <span>Reseñas</span>
+      <a href="">Reseñas</a>
     </router-link>
     <router-link :to="{name: 'PedidosOnline'}">
-      <span id="pedidos"> Pedidos Online </span>
+      <a id="pedidos"> Pedidos Online </a>
     </router-link>
   </div>
 </template>
@@ -34,28 +33,24 @@ export default {
   text-align: center;
   margin: 3% 0 3% 1.5%;
 
+
 }
 
-span {
+a {
   padding: 10px;
   background-color: black;
-  text-decoration: rgb(188, 194, 192);
   color: white;
   border-radius: 10px;
   cursor: pointer;
   margin: 1px;
+  text-decoration: none;
 }
 
-span:hover {
+a:hover {
   background-color: rgb(128, 150, 142);
 
 }
 
-#pedidos {
-  background-color: saddlebrown;
-}
 
-#pedidos:hover {
-  background-color: burlywood;
-}
+
 </style>
