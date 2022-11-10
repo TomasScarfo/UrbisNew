@@ -9,7 +9,7 @@
     <form id="form" @submit.prevent="ordenar()">
       <div id="ElementosALlenar">
         <div id="nombreyapell">
-        <label>Nombre y apellido</label>*
+        <label>Nombre y apellido</label> *
         <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre" required>
       </div>
       <br>
@@ -19,12 +19,14 @@
       </div>
       <br>
       <div id="modoentrega">
-        <label>Modo de Entrega</label>*
+        <label>Modo de Entrega</label> *
         <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega" v-on:click="showDirec = false" required>Takeaway
         <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega" v-on:click="showDirec = true" required>Delivery
-        <label>Ingrese su dirección</label>
-        <input type="text" name="direc" id="" v-model="Direccion" v-if="showDirec">
-
+        <br>
+        <div v-if="showDirec" style="margin: 3px">
+          <label>Ingrese su dirección</label>
+          <input type="text" name="direc" id="" v-model="direccion">
+        </div>
       </div>
       <br>
       <div id="eleccionmenu">
@@ -64,7 +66,7 @@
       </div>
       <br>
         <div id="horarioentrega">
-          <label>Horario de Entrega</label>*
+          <label>Horario de Entrega</label> *
           <input type="time" name="fecha" id="" v-model="horaEntrega" required>
         </div>
       <hr/>
@@ -102,6 +104,7 @@ export default {name: "Pedir-tag", props: [
       nombre: "",
       telefono: "",
       modoEntrega: "",
+      direccion: "",
       entradaElegida: "",
       platoElegido: "",
       postreElegido: "",
@@ -118,7 +121,10 @@ export default {name: "Pedir-tag", props: [
       axios.post("http://127.0.0.1:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
-        entrega: this.modoEntrega,
+        entrega: {
+          modo: this.modoEntrega,
+          direccion: this.direccion,
+        },
         horario: this.horaEntrega,
         pedido: {
           entrada: this.entradaElegida,
