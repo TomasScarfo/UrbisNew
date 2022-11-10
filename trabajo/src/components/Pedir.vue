@@ -22,16 +22,9 @@
         <label>Modo de Entrega</label> *
         <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega" v-on:click="showDirec = false" required>Takeaway
         <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega" v-on:click="showDirec = true" required>Delivery
-<<<<<<< HEAD
+
         <input type="text" name="direc" id="dirección" placeholder="Ingrese su dirección" v-model="direccion" v-if="showDirec">
 
-=======
-        <br>
-        <div v-if="showDirec" style="margin: 3px">
-          <label>Ingrese su dirección</label>
-          <input type="text" name="direc" id="" v-model="direccion">
-        </div>
->>>>>>> 6a2db0318a081c0ec82314e780c4874caee68cea
       </div>
       <br>
       <div id="eleccionmenu">
@@ -128,11 +121,7 @@ export default {name: "Pedir-tag", props: [
         telefono: this.telefono,
         entrega: {
           modo: this.modoEntrega,
-<<<<<<< HEAD
           direc: this.direccion
-=======
-          direccion: this.direccion,
->>>>>>> 6a2db0318a081c0ec82314e780c4874caee68cea
         },
         horario: this.horaEntrega,
         pedido: {
@@ -193,7 +182,7 @@ form {
 }
 
 #dirección{
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 input{
