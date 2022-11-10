@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <img src="../assets/img/success.png" alt="">
+    <img src="../assets/img/error.jpg" alt="">
 
     <h1>¡ UPS, se ha producido un error!</h1>
     <h3>Porfavor regrese a la pagina a revisar los datos ingresados</h3>

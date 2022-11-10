@@ -6,22 +6,25 @@
   <hr>
 
   <div id="formulario">
-    <form id="form">
+    <form id="form" @submit.prevent="ordenar()">
       <div id="ElementosALlenar">
         <div id="nombreyapell">
-        <label>Nombre y apellido</label>
-        <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre">
+        <label>Nombre y apellido</label>*
+        <input type="text" name="nombre" id="" placeholder="Escriba aquí" v-model="nombre" required>
       </div>
       <br>
       <div id="telefono">
-        <label>Teléfono</label>
-        <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono">
+        <label>Teléfono</label>*
+        <input type="tel" name="telefono" id="" maxlength="10" minlength="10" v-model="telefono" required>
       </div>
       <br>
       <div id="modoentrega">
-        <label>Modo de Entrega</label>
-        <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega">Takeaway
-        <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega">Delivery
+        <label>Modo de Entrega</label>*
+        <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega" v-on:click="showDirec = false" required>Takeaway
+        <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega" v-on:click="showDirec = true" required>Delivery
+        <label>Ingrese su dirección</label>
+        <input type="text" name="direc" id="" v-model="Direccion" v-if="showDirec">
+
       </div>
       <br>
       <div id="eleccionmenu">
@@ -29,6 +32,7 @@
 
             <div class="platos">
               Entrada <select name="entrada" id="Entrada" v-model="entradaElegida">
+              <option value=None></option>
               <option value="Tortilla - $ 700">Tortilla - $ 700</option>
               <option value="Buñuelos - $ 700">Buñuelos - $ 700</option>
               <option value="Gambas - $ 1000">Gambas - $ 1000</option>
@@ -38,6 +42,7 @@
             <br>
             <div class="platos">
               Plato <select name="princi" id="" v-model="platoElegido">
+              <option value=None></option>
               <option value="Milanesa - $ 1500">Milanesa - $ 1500</option>
               <option value="Ñoquis - $ 1300">Ñoquis - $ 1300</option>
               <option value="Pollo - $ 1300">Pollo - $ 1300</option>
@@ -48,6 +53,7 @@
             <br>
           <div class="platos">
             Postre <select name="postre" id="" v-model="postreElegido">
+            <option value=None></option>
             <option value="Flan - $ 500">Flan - $ 500</option>
             <option value="Vigilante - $ 500">Vigilante - $ 500</option>
             <option value="Helado - $ 300">Helado - $ 300</option>
@@ -58,12 +64,12 @@
       </div>
       <br>
         <div id="horarioentrega">
-          <label>Horario de Entrega</label>
-          <input type="time" name="fecha" id="" v-model="horaEntrega">
+          <label>Horario de Entrega</label>*
+          <input type="time" name="fecha" id="" v-model="horaEntrega" required>
         </div>
       <hr/>
         <footer id="footer">
-          <input id="order-submit" type='submit' value="Enviar" v-on:click="ordenar()" >
+          <input id="order-submit" type='submit' value="Enviar">
           <input type="reset" value="Limpiar">
         </footer>
       </div>
@@ -109,14 +115,17 @@ export default {name: "Pedir-tag", props: [
    methods: {
     ordenar() {
       console.log("Boton Presionado")
-      axios.post("http://localhost:5000/api/v1/ordenar", {
+      axios.post("http://127.0.0.1:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
         entrega: this.modoEntrega,
         horario: this.horaEntrega,
-        entrada: JSON.stringify(this.entradaElegida),
-        plato_principal: JSON.stringify(this.platoElegido),
-        postre: JSON.stringify(this.postreElegido),
+        pedido: {
+          entrada: this.entradaElegida,
+          plato_principal: this.platoElegido,
+          postre: this.postreElegido,
+        }
+
       })
           .then(response => {
             console.log(response)
@@ -159,7 +168,7 @@ form {
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
-  border: 1px solid;
+  border: 5px solid;
   width: 30%;
   justify-content: space-around;
 }
