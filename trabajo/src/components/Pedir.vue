@@ -22,8 +22,7 @@
         <label>Modo de Entrega</label>*
         <input type="radio" name="modo" id="" value="Takeaway" v-model="modoEntrega" v-on:click="showDirec = false" required>Takeaway
         <input type="radio" name="modo" id="" value="Delivery" v-model="modoEntrega" v-on:click="showDirec = true" required>Delivery
-        <label>Ingrese su dirección</label>
-        <input type="text" name="direc" id="" v-model="Direccion" v-if="showDirec">
+        <input type="text" name="direc" id="dirección" placeholder="Ingrese su dirección" v-model="direccion" v-if="showDirec">
 
       </div>
       <br>
@@ -102,6 +101,7 @@ export default {name: "Pedir-tag", props: [
       nombre: "",
       telefono: "",
       modoEntrega: "",
+      direccion: "",
       entradaElegida: "",
       platoElegido: "",
       postreElegido: "",
@@ -118,7 +118,10 @@ export default {name: "Pedir-tag", props: [
       axios.post("http://127.0.0.1:5000/api/v1/ordenar", {
         cliente: this.nombre,
         telefono: this.telefono,
-        entrega: this.modoEntrega,
+        entrega: {
+          modo: this.modoEntrega,
+          direc: this.direccion
+        },
         horario: this.horaEntrega,
         pedido: {
           entrada: this.entradaElegida,
@@ -175,6 +178,10 @@ form {
 
 #Entrada{
     margin-top: 2%;
+}
+
+#dirección{
+  margin-top: 2%;
 }
 
 input{
