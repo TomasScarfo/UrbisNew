@@ -2,7 +2,7 @@ const entradas = [
     {
         producto: 'Tortilla',
         descripcion: 'Tortilla de papa, verdura o acelga',
-        img: require('@/assets/img/tortilla.png'),
+        img: require('@/assets/img/tortilla1.jpg'),
         precio: 700
     },
     {
@@ -63,7 +63,7 @@ const postre = [
     },{
         producto: 'Helado',
         descripcion: 'Americana, chocolate o dulce de leche',
-        img: require('@/assets/img/helado.png'),
+        img: require('@/assets/img/helado1.webp'),
         precio: 300
     },{
         producto: 'Cafe',
