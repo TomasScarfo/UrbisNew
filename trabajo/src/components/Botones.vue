@@ -32,7 +32,7 @@ export default {
   opacity: 1;
   align-self: center;
   text-align: center;
-  margin: 30px 0 30px 0;
+  margin: 3% 0 3% 1.5%;
 
 }
 
