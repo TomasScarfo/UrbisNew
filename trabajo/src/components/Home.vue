@@ -28,9 +28,10 @@
       <marquee behavior="scroll" direction="left" scrollamount="100" scrolldelay="800">
         <img src="../assets/img/buñelos.png" alt="">
         <img src="../assets/img/milanesa.png" alt="">
-        <img src="../assets/img/tortilla.png" alt="">
+        <img src="../assets/img/tortilla1.jpg" alt="">
         <img src="../assets/img/ñoquis.png" alt="">
         <img src="../assets/img/vigilante.png" alt="">
+
       </marquee>
 
     </div>
@@ -183,7 +184,10 @@ export default {
   text-align: center;
   display: inline-block;
   margin: 10px;
+  border: 2px #0e0e0e solid;
+  padding: 0.8%;
 }
+
 
 .val img{
   width: 100px;

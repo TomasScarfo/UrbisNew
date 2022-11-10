@@ -6,6 +6,7 @@
     </router-link>
     <router-link :to='{name: "Menu"}'>
       <span>Menú</span>
+
     </router-link>
     <router-link :to="{name: 'Reseñas'}">
       <span>Reseñas</span>
