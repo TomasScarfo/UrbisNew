@@ -59,7 +59,7 @@
 
   <div id='valoracion'>
     <h1 id="title2">Contanos como fue tu experiencia</h1>
-    <img id='animo-img' src="../assets/img/tenedor.png" alt="">
+    <img id='animo-img' src="" alt="">
     <div id="form">
       <fieldset>
         <legend>Ingrese valoracion entre 1 y 10</legend>
@@ -234,7 +234,7 @@ p{
 #valoracion{
   text-align: center;
   flex-direction: row;
-  margin-top: 3.5%;
+  margin-top: 3.25%;
 }
 
 fieldset {

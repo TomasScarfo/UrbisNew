@@ -1,7 +1,8 @@
 <template>
   <div id="all">
+
     <router-link :to="{name: 'HomeRoute'}">
-      <span> Inicio</span>
+      <span>Inicio</span>
     </router-link>
     <router-link :to='{name: "Menu"}'>
       <span>Menú</span>
@@ -31,6 +32,7 @@ export default {
   align-self: center;
   text-align: center;
   margin: 30px 0 30px 0;
+
 }
 
 span {
@@ -45,7 +47,7 @@ span {
 
 span:hover {
   background-color: rgb(128, 150, 142);
-  text-decoration: none;
+
 }
 
 #pedidos {
@@ -55,5 +57,4 @@ span:hover {
 #pedidos:hover {
   background-color: burlywood;
 }
-
 </style>
